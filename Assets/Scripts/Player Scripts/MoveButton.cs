@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveButton : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MoveButton : MonoBehaviour
     Vector3 specificPosition;
     bool moveCharacter;
     bool methodExecuted;
+    public Button cancelButton;
 
     private void Start()
     {
@@ -48,8 +50,9 @@ public class MoveButton : MonoBehaviour
 
         if (player != null && !methodExecuted)
         {
+            cancelButton.gameObject.SetActive(true);
             player.GetComponent<characterStats>().wantsToMove = true;
-            methodExecuted = false;
+
         }
         methodExecuted = false;
     }
@@ -59,12 +62,18 @@ public class MoveButton : MonoBehaviour
     {
         if (player.GetComponent<characterStats>().wantsToMove && player.GetComponent<characterStats>().tilesToMoveTo[0] != null)
         {
+            cancelButton.gameObject.SetActive(false);
             WorldTile w = player.GetComponent<characterStats>().tilesToMoveTo[0];
             specificPosition.Set(w.tilePosition.x, w.tilePosition.y, player.transform.position.z);
             moveCharacter = true;
         }
     }
 
+    public void noMove()
+    {
+        player.GetComponent<characterStats>().wantsToMove = false;
+        resetStuff();
+    }
     //reset the used values to be used again
     public void resetStuff()
     {
@@ -74,10 +83,12 @@ public class MoveButton : MonoBehaviour
             player.GetComponent<characterStats>().tilesToMoveTo[i] = null;
         }
 
-        Debug.Log("setting to false");
+        //Debug.Log("setting to false");
         player.GetComponent<characterStats>().wantsToMove = false;
         player.GetComponent<characterStats>().tilesInArray = 0;
         i = 0;
+        cancelButton.gameObject.SetActive(false);
+
         moveCharacter = false;
     }
 }
