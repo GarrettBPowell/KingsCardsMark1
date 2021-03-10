@@ -17,17 +17,19 @@ public class cameraController : MonoBehaviour
             playerCamera.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("hallway"))
         {
-            inHallway = true;
-            hallwayPos = collision.gameObject.transform.localPosition;
+                inHallway = true;
+                hallwayPos = collision.gameObject.transform.position;
+            gameObject.GetComponentInParent<PlayerController>().outOfCombat = true;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        inHallway = false;
+        if (collision.gameObject.tag.Equals("hallway"))
+            inHallway = false;
     }
 }

@@ -10,13 +10,14 @@ public class levelToDict : MonoBehaviour
     {
         var localPlace = new Vector3Int((int)collision.transform.position.x, (int)collision.transform.position.y, (int)collision.transform.position.z);
 
-       
-        Debug.Log(localPlace);
-        if (collision.gameObject.tag == "FloorTile" && !tiles.ContainsKey(localPlace))
-        {   
-            tiles.Add(localPlace, collision.gameObject.GetComponent<WorldTile>());
-            //Debug.Log("added tile " + tiles.ContainsKey(localPlace));
-            
-        }
+        if (collision.gameObject.tag == "FloorTile" && !tiles.ContainsKey(localPlace))  
+            tiles.Add(localPlace, collision.gameObject.GetComponent<WorldTile>()); 
+    }
+
+
+    private void Update()
+    {
+        //Vector3Int place = new Vector3Int(1, 9, 0);
+        //Debug.Log(tiles.ContainsKey(place));
     }
 }

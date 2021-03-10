@@ -38,7 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - floorTile
   - Level Collider
   m_SortingLayers:
   - name: Default
