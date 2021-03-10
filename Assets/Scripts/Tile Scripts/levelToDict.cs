@@ -9,6 +9,8 @@ public class levelToDict : MonoBehaviour
     public void OnTriggerEnter2D (Collider2D collision)
     {
         var localPlace = new Vector3Int((int)collision.transform.position.x, (int)collision.transform.position.y, (int)collision.transform.position.z);
+
+       
         Debug.Log(localPlace);
         if (collision.gameObject.tag == "FloorTile" && !tiles.ContainsKey(localPlace))
         {   
@@ -16,11 +18,5 @@ public class levelToDict : MonoBehaviour
             //Debug.Log("added tile " + tiles.ContainsKey(localPlace));
             
         }
-    }
-
-    private void Update()
-    {
-        Vector3Int place = new Vector3Int(0, 1, 1);
-       // Debug.Log(tiles.ContainsKey(place));
     }
 }

@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     public bool outOfCombat;
     public bool isMovePlayer;
-    Vector3 movePlayer;
+    Vector3Int movePlayer;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         WorldTile moveTile;
 
         if (tiles.Count == 0)
-            tiles = gameObject.GetComponentInParent<levelToDict>().tiles;
+            tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
         if (isMovePlayer)
         {
             if (gameObjectToMove.transform.position == movePlayer)
@@ -34,13 +34,17 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown("w"))
             {
-                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, -1);
+                Debug.Log("w");
+                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
+                Debug.Log(localPlace);
                 try 
                 {
+                    Debug.Log(tiles.TryGetValue(localPlace, out moveTile));
                     tiles.TryGetValue(localPlace, out moveTile);
                     if (moveTile != null && !moveTile.getOccupied())
                     {
-                        movePlayer = new Vector3(localPlace.x, localPlace.y, gameObject.transform.position.z);
+                        movePlayer = localPlace;
+                        Debug.Log("Move: " + movePlayer + "  " + moveTile.transform.position);
                         isMovePlayer = true;
                     }
                 }
@@ -51,13 +55,13 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKeyDown("a"))
             {
-                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x -1, (int)gameObjectToMove.transform.position.y, -1);
+                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x -1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
                 try
                 {
                     tiles.TryGetValue(localPlace, out moveTile);
                     if (moveTile != null && !moveTile.getOccupied())
                     {
-                        movePlayer = new Vector3(localPlace.x, localPlace.y, gameObject.transform.position.z);
+                        movePlayer = localPlace;
                         isMovePlayer = true;
                     }
                 }
@@ -68,13 +72,13 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKeyDown("s"))
             {
-                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, -1);
+                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, (int)gameObjectToMove.transform.position.z);
                 try
                 {
                     tiles.TryGetValue(localPlace, out moveTile);
                     if (moveTile != null && !moveTile.getOccupied())
                     {
-                        movePlayer = new Vector3(localPlace.x, localPlace.y, gameObject.transform.position.z);
+                        movePlayer = localPlace;
                         isMovePlayer = true;
                     }
                 }
@@ -85,13 +89,13 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKeyDown("d"))
             {
-                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x + 1, (int)gameObjectToMove.transform.position.y, -1);
+                var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x + 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
                 try
                 {
                     tiles.TryGetValue(localPlace, out moveTile);
                     if (moveTile != null && !moveTile.getOccupied())
                     {
-                        movePlayer = new Vector3(localPlace.x, localPlace.y, gameObject.transform.position.z);
+                        movePlayer = localPlace;
                         isMovePlayer = true;
                     }
                 }

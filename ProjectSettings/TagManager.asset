@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FloorTile
   - levelCollider
+  - hallway
   layers:
   - Default
   - TransparentFX
