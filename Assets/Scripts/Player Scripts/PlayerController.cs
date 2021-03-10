@@ -24,13 +24,13 @@ public class PlayerController : MonoBehaviour
         if (tiles.Count == 0)
             tiles = gameObject.GetComponentInParent<levelToDict>().tiles;
         if (isMovePlayer)
-        {     
+        {
             if (gameObjectToMove.transform.position == movePlayer)
                 isMovePlayer = false;
-            else
+            
                 gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);
         }
-        else
+        else if (!isMovePlayer)
         {
             if (Input.GetKeyDown("w"))
             {
