@@ -37,7 +37,12 @@ public class PlayerController : MonoBehaviour
             }
             else if (!isMovePlayer)
             {
-                if (Input.GetKeyDown("w"))
+                //get the input
+                float horizontalInput = Input.GetAxis("Horizontal");
+                float verticalInput = Input.GetAxis("Vertical");
+
+                //move up
+                if (verticalInput > 0)
                 {
                     Debug.Log("w");
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
@@ -58,7 +63,9 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Key  is not found y.");
                     }
                 }
-                else if (Input.GetKeyDown("a"))
+
+                //move left
+                else if (horizontalInput < 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x - 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
                     try
@@ -75,7 +82,9 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Key  is not found -x.");
                     }
                 }
-                else if (Input.GetKeyDown("s"))
+
+                //move down
+                else if (verticalInput < 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, (int)gameObjectToMove.transform.position.z);
                     try
@@ -92,7 +101,9 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Key  is not found -y.");
                     }
                 }
-                else if (Input.GetKeyDown("d"))
+
+                //move right
+                else if (horizontalInput > 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x + 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
                     try
