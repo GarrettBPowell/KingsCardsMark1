@@ -36,13 +36,11 @@ public class GameManager : MonoBehaviour
     {
         if (outOfCombat)
         {
-            moveButton.gameObject.GetComponent<Image>().enabled = false;
             attackButton.gameObject.SetActive(false);
         }
 
         else
         {
-            moveButton.gameObject.GetComponent<Image>().enabled = true;
             attackButton.gameObject.SetActive(true);
         }
     }

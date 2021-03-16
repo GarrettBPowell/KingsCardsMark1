@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class MoveButton : MonoBehaviour
 {
     GameObject player;
+    GameManager gameManager;
+
     Vector3 specificPosition;
     bool moveCharacter;
     bool methodExecuted;
     public Button cancelButton;
+    public Button moveButton;
 
     private void Start()
     {
         player = GameObject.Find("character");
+        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
     }
 
     //variable used to move character towards tile i in array
@@ -90,5 +94,8 @@ public class MoveButton : MonoBehaviour
         cancelButton.gameObject.SetActive(false);
 
         moveCharacter = false;
+
+        if(gameManager.GetComponent<GameManager>().outOfCombat)
+            moveButton.gameObject.SetActive(true);
     }
 }
