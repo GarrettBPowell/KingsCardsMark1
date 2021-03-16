@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    GameManager gameManager;
+
     // Start is called before the first frame update
     public GameObject gameObjectToMove;
     public Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
@@ -13,12 +15,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        outOfCombat = gameManager.GetComponent<GameManager>().outOfCombat;
         WorldTile moveTile;
 
         if (tiles.Count == 0)
@@ -125,5 +128,4 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.GetComponent<WorldTile>().setOccupied(false);
         }
     }
-
 }

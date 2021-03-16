@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class cameraController : MonoBehaviour
 {
+    GameManager gameManager;
+
     public Camera playerCamera;
     public Vector3 hallwayPos;
 
+
     public bool inHallway;
     // Update is called once per frame
+
+    private void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+    }
     void Update()
     {
         if (inHallway)
@@ -21,9 +29,9 @@ public class cameraController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("hallway"))
         {
-                inHallway = true;
-                hallwayPos = collision.gameObject.transform.position;
-            gameObject.GetComponentInParent<PlayerController>().outOfCombat = true;
+            inHallway = true;
+            hallwayPos = collision.gameObject.transform.position;
+            gameManager.GetComponent<GameManager>().outOfCombat = true;
         }
     }
 

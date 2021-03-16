@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public int playerHealth = 60;
     public int level = 1;
-    public bool inCombat = false;
+    public bool outOfCombat = false;
 
    
     private void Awake()
