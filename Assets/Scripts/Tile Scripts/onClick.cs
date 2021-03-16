@@ -21,7 +21,7 @@ public class onClick : MonoBehaviour
     {
         if (gameObject.tag == "FloorTile")
         {
-            Debug.Log("Tile Clicked " + gameObject.GetComponent<WorldTile>().getOccupied() + " " + gameObject.GetComponent<WorldTile>().getAddedBool());
+            //Debug.Log("Tile Clicked " + gameObject.GetComponent<WorldTile>().getOccupied() + " " + gameObject.GetComponent<WorldTile>().getAddedBool());
             if (character.GetComponent<characterStats>().wantsToMove)
             {
                 //if tile clicked is not occupied and the player still has tiles left to move
