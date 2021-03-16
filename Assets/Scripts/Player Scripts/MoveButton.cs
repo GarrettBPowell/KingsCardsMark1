@@ -96,6 +96,6 @@ public class MoveButton : MonoBehaviour
         moveCharacter = false;
 
         if(gameManager.GetComponent<GameManager>().outOfCombat)
-            moveButton.gameObject.SetActive(true);
+            moveButton.gameObject.SetActive(false);
     }
 }
