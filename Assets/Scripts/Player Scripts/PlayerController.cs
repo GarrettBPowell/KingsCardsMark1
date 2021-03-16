@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
                 //move up
                 if (verticalInput > 0)
                 {
-                    Debug.Log("w");
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
                     Debug.Log(localPlace);
                     try
@@ -54,7 +53,6 @@ public class PlayerController : MonoBehaviour
                         if (moveTile != null && !moveTile.getOccupied())
                         {
                             movePlayer = localPlace;
-                            Debug.Log("Move: " + movePlayer + "  " + moveTile.transform.position);
                             isMovePlayer = true;
                         }
                     }

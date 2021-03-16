@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Experimental.Rendering.Universal;
 public class flickeringLight : MonoBehaviour
 {
-    public Light2D light;
+    new public Light2D light;
     public float minIntensity = 0f;
     public float maxIntensity = 1f;
     public int smoothing = 5;

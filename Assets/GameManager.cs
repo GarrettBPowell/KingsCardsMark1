@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     //UI STUFF
     public Button moveButton;
     public Button attackButton;
-
-
+    
+    public bool enemiesInRoomDiedHideMoveButton;
     private void Awake()
     {
         GameObject[] gameManager = GameObject.FindGameObjectsWithTag("gameManager");
@@ -34,14 +34,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(enemiesInRoomDiedHideMoveButton)
+        {
+            moveButton.gameObject.SetActive(false);
+            enemiesInRoomDiedHideMoveButton = false;
+        }
+
         if (outOfCombat)
         {
             attackButton.gameObject.SetActive(false);
         }
-
         else
         {
             attackButton.gameObject.SetActive(true);
+            moveButton.gameObject.SetActive(true);
         }
     }
 }

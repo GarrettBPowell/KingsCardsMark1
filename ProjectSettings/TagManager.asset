@@ -9,6 +9,7 @@ TagManager:
   - hallway
   - light
   - gameManager
+  - enemy
   layers:
   - Default
   - TransparentFX
