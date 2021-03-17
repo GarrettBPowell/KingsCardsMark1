@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     GameManager gameManager;
+    public Joystick joystick;
 
-    // Start is called before the first frame update
     public GameObject gameObjectToMove;
     public Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     public bool outOfCombat;
@@ -43,9 +43,11 @@ public class PlayerController : MonoBehaviour
                 //get the input
                 float horizontalInput = Input.GetAxis("Horizontal");
                 float verticalInput = Input.GetAxis("Vertical");
+                float horizontalJoyInput = joystick.Horizontal;
+                float verticalJoyInput = joystick.Vertical;
 
                 //move up
-                if (verticalInput > 0)
+                if (verticalInput > 0 || verticalJoyInput > 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
                     Debug.Log(localPlace);
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
                 }
 
                 //move left
-                else if (horizontalInput < 0)
+                else if (horizontalInput < 0 || horizontalJoyInput < 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x - 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
                     try
@@ -85,7 +87,7 @@ public class PlayerController : MonoBehaviour
                 }
 
                 //move down
-                else if (verticalInput < 0)
+                else if (verticalInput < 0 || verticalJoyInput < 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, (int)gameObjectToMove.transform.position.z);
                     try
@@ -104,7 +106,7 @@ public class PlayerController : MonoBehaviour
                 }
 
                 //move right
-                else if (horizontalInput > 0)
+                else if (horizontalInput > 0 || horizontalJoyInput > 0)
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x + 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
                     try

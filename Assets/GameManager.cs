@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     public int level = 1;
     public bool outOfCombat = true;
 
+    //currently if its a moboile game allow joystick to show
+    private bool isMobile = true;
+
+
     //UI STUFF
+    public Joystick joystick;
     public Button moveButton;
     public Button attackButton;
     
@@ -43,9 +48,12 @@ public class GameManager : MonoBehaviour
         if (outOfCombat)
         {
             attackButton.gameObject.SetActive(false);
+            if(isMobile)
+                joystick.gameObject.SetActive(true);
         }
         else
         {
+            joystick.gameObject.SetActive(false);
             attackButton.gameObject.SetActive(true);
             moveButton.gameObject.SetActive(true);
         }
