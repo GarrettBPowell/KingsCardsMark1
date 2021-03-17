@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
                 //joysstick
                 float horizontalJoyInput = joystick.Horizontal;
                 float verticalJoyInput = joystick.Vertical;
-
+                Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
                 //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
                 bool isVert = false;
                 if (Mathf.Abs(verticalJoyInput) - Mathf.Abs(horizontalJoyInput) > 0)
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log(localPlace);
                     try
                     {
-                        Debug.Log(tiles.TryGetValue(localPlace, out moveTile));
+                        //Debug.Log(tiles.TryGetValue(localPlace, out moveTile));
                         tiles.TryGetValue(localPlace, out moveTile);
                         if (moveTile != null && !moveTile.getOccupied())
                         {
