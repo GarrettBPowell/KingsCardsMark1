@@ -6,7 +6,7 @@ public class EnemiesInRoom : MonoBehaviour
 {
     GameManager gameManager;
 
-    public bool enemiesInRoom = false;
+    public int enemiesInRoom = 0;
     public bool playerInRoom = false;
     void Start()
     {
@@ -16,9 +16,12 @@ public class EnemiesInRoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemiesInRoom && playerInRoom)
+        //player is not out of combat -- enemies in room
+        if (enemiesInRoom > 0 && playerInRoom)
             gameManager.GetComponent<GameManager>().outOfCombat = false;
-        if (!enemiesInRoom && playerInRoom)
+
+        //player is out of combat -- no ememies in room
+        if (enemiesInRoom == 0 && playerInRoom)
         {
             gameManager.GetComponent<GameManager>().outOfCombat = true;
             gameManager.GetComponent<GameManager>().enemiesInRoomDiedHideMoveButton = true;
@@ -27,19 +30,13 @@ public class EnemiesInRoom : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("enemy"))
-            enemiesInRoom = true;
-
-        else if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("Player"))
             playerInRoom = true;
-
-        else
-            enemiesInRoom = false;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
-            playerInRoom = true;
+            playerInRoom = false;
     }
 }

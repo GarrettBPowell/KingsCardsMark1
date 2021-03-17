@@ -10,6 +10,7 @@ TagManager:
   - light
   - gameManager
   - enemy
+  - room
   layers:
   - Default
   - TransparentFX

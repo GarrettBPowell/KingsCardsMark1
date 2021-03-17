@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+        outOfCombat = gameManager.GetComponent<GameManager>().outOfCombat;
     }
 
     // Update is called once per frame
@@ -26,16 +27,18 @@ public class PlayerController : MonoBehaviour
 
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
+
+        if (isMovePlayer)
+        {
+            if (gameObjectToMove.transform.position == movePlayer)
+                isMovePlayer = false;
+
+            gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);
+        }
         if (outOfCombat)
         {
-            if (isMovePlayer)
-            {
-                if (gameObjectToMove.transform.position == movePlayer)
-                    isMovePlayer = false;
-
-                gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);
-            }
-            else if (!isMovePlayer)
+            
+            if (!isMovePlayer)
             {
                 //get the input
                 float horizontalInput = Input.GetAxis("Horizontal");

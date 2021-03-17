@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public int playerHealth = 60;
     public int level = 1;
-    public bool outOfCombat = false;
+    public bool outOfCombat = true;
 
     //UI STUFF
     public Button moveButton;
