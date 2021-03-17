@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-
+        if(!isMobile)
+            joystick.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

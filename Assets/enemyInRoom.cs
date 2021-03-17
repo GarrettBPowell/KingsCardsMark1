@@ -24,13 +24,13 @@ public class enemyInRoom : MonoBehaviour
         }
 
         //enemy leaves tile
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("FloorTile"))
             collision.GetComponent<WorldTile>().setOccupied(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("FloorTile"))
             collision.GetComponent<WorldTile>().setOccupied(false);
     }
 

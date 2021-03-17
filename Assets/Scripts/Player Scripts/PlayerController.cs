@@ -43,11 +43,20 @@ public class PlayerController : MonoBehaviour
                 //get the input
                 float horizontalInput = Input.GetAxis("Horizontal");
                 float verticalInput = Input.GetAxis("Vertical");
+
+                //joysstick
                 float horizontalJoyInput = joystick.Horizontal;
                 float verticalJoyInput = joystick.Vertical;
 
+                //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
+                bool isVert = false;
+                if (Mathf.Abs(verticalJoyInput) - Mathf.Abs(horizontalJoyInput) > 0)
+                    isVert = true;
+                else
+                    isVert = false;
+
                 //move up
-                if (verticalInput > 0 || verticalJoyInput > 0)
+                if (verticalInput > 0 || (verticalJoyInput > 0 && isVert))
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
                     Debug.Log(localPlace);
@@ -87,7 +96,7 @@ public class PlayerController : MonoBehaviour
                 }
 
                 //move down
-                else if (verticalInput < 0 || verticalJoyInput < 0)
+                else if (verticalInput < 0 || (verticalJoyInput < 0 && isVert))
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, (int)gameObjectToMove.transform.position.z);
                     try
