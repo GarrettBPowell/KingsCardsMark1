@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public bool outOfCombat = true;
 
     //currently if its a moboile game allow joystick to show
-    private bool isMobile = true;
+    private bool isMobile = false;
 
 
     //UI STUFF
