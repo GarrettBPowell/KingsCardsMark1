@@ -35,9 +35,10 @@ public class PlayerController : MonoBehaviour
 
             gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);
         }
+
+
         if (outOfCombat)
-        {
-            
+        {          
             if (!isMovePlayer)
             {
                 //get the input
@@ -47,7 +48,8 @@ public class PlayerController : MonoBehaviour
                 //joysstick
                 float horizontalJoyInput = joystick.Horizontal;
                 float verticalJoyInput = joystick.Vertical;
-                Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
+                    //Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
+
                 //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
                 bool isVert = false;
                 if (Mathf.Abs(verticalJoyInput) - Mathf.Abs(horizontalJoyInput) > 0)
