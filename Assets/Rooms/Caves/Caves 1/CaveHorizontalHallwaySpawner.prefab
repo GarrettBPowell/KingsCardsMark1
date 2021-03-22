@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cave1Hallways:
-  - {fileID: 0}
+  - {fileID: 7679279693160866771, guid: 70afc7f1308f9574484a030d6665a924, type: 3}
   levelType: cave1Rooms
