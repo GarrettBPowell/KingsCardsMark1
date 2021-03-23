@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class cameraController : MonoBehaviour
 {
     GameManager gameManager;
@@ -11,7 +10,6 @@ public class cameraController : MonoBehaviour
 
 
     public bool inHallway;
-    // Update is called once per frame
 
     private void Start()
     {
@@ -32,6 +30,7 @@ public class cameraController : MonoBehaviour
             inHallway = true;
             hallwayPos = collision.gameObject.transform.position;
             gameManager.GetComponent<GameManager>().outOfCombat = true;
+
         }
     }
 

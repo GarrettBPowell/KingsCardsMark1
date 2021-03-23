@@ -27,8 +27,10 @@ public class MoveButton : MonoBehaviour
         if(moveCharacter)
         {
             player.transform.position = Vector3.MoveTowards(player.transform.position, specificPosition, Time.deltaTime * 2f);
+            Debug.Log("Stuck 1 " + moveCharacter + " " + specificPosition);
             if (player.transform.position.x == specificPosition.x && player.transform.position.y == specificPosition.y)
             {
+                Debug.Log("Stuck 2");
                 if(i < player.GetComponent<characterStats>().tilesInArray)
                 {
                     WorldTile w = player.GetComponent<characterStats>().tilesToMoveTo[i];
@@ -56,7 +58,6 @@ public class MoveButton : MonoBehaviour
         {
             cancelButton.gameObject.SetActive(true);
             player.GetComponent<characterStats>().wantsToMove = true;
-
         }
         methodExecuted = false;
     }
@@ -95,6 +96,7 @@ public class MoveButton : MonoBehaviour
 
         moveCharacter = false;
 
+        Debug.Log("DID THIS");
         if(gameManager.GetComponent<GameManager>().outOfCombat)
             moveButton.gameObject.SetActive(false);
     }

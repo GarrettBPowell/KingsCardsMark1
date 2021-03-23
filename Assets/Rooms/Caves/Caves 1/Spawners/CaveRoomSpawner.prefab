@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cave1Rooms:
   - {fileID: 5318230785610500131, guid: ada2ca1af74d7764bb878c8f9ae39db3, type: 3}
+  - {fileID: 4911218287744428972, guid: 363cfb8db22434444b47cf893fed4445, type: 3}
+  - {fileID: 6550857751803857006, guid: 12a0e309cf5f2ad45996682405b91b82, type: 3}
   levelType: cave1Rooms
 --- !u!1 &4316783484928341632
 GameObject:
@@ -104,7 +106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 12, y: 12}
   m_EdgeRadius: 0
 --- !u!114 &4653601984727008458
 MonoBehaviour:

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int playerHealth = 60;
     public int level = 1;
     public bool outOfCombat = true;
+    public GameObject character;
 
     //currently if its a moboile game allow joystick to show
     private bool isMobile = false;
@@ -49,14 +50,19 @@ public class GameManager : MonoBehaviour
         if (outOfCombat)
         {
             attackButton.gameObject.SetActive(false);
-            if(isMobile)
-                joystick.gameObject.SetActive(true);
+            if(!moveButton.gameObject.activeSelf)
+            {
+                if(isMobile)
+                    joystick.gameObject.SetActive(true);
+            }
         }
         else
         {
             joystick.gameObject.SetActive(false);
+
             attackButton.gameObject.SetActive(true);
-            moveButton.gameObject.SetActive(true);
+            if(!joystick.gameObject.activeSelf)
+                moveButton.gameObject.SetActive(true);
         }
     }
 }

@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     public bool outOfCombat;
     public bool isMovePlayer;
-    Vector3Int movePlayer;
+
+    Vector3 movePlayer;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         outOfCombat = gameManager.GetComponent<GameManager>().outOfCombat;
         WorldTile moveTile;
 
@@ -31,24 +33,33 @@ public class PlayerController : MonoBehaviour
         if (isMovePlayer)
         {
             if (gameObjectToMove.transform.position == movePlayer)
+            {
                 isMovePlayer = false;
-
+            }
+            Debug.Log("In Move Controller");
             gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);
         }
+        else
+            movePlayer = new Vector3(gameObjectToMove.transform.position.x, gameObjectToMove.transform.position.y, gameObjectToMove.transform.position.z);
 
 
         if (outOfCombat)
-        {          
+        {
+/*            IEnumerator enumerator = waitForSwitch(2.0f);
+            StartCoroutine(enumerator);*/
+
             if (!isMovePlayer)
             {
                 //get the input
                 float horizontalInput = Input.GetAxis("Horizontal");
                 float verticalInput = Input.GetAxis("Vertical");
-
+               
                 //joysstick
                 float horizontalJoyInput = joystick.Horizontal;
                 float verticalJoyInput = joystick.Vertical;
-                    //Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
+
+                Debug.Log("This joystick movement " + horizontalJoyInput + " " + verticalJoyInput);
+                //Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
 
                 //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
                 bool isVert = false;
@@ -61,7 +72,7 @@ public class PlayerController : MonoBehaviour
                 if (verticalInput > 0 || (verticalJoyInput > 0 && isVert))
                 {
                     var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
-                    Debug.Log(localPlace);
+                    //Debug.Log(localPlace);
                     try
                     {
                         //Debug.Log(tiles.TryGetValue(localPlace, out moveTile));
@@ -153,4 +164,10 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.GetComponent<WorldTile>().setOccupied(false);
         }
     }
+
+/*    private IEnumerator waitForSwitch(float waitTime)
+    { 
+            yield return new WaitForSeconds(waitTime);
+            hasPermission = true;
+    }*/
 }

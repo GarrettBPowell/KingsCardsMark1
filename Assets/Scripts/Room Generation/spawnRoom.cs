@@ -15,6 +15,4 @@ public class spawnRoom : MonoBehaviour
             Instantiate(cave1Rooms[Random.Range(0, cave1Rooms.Length)], spawnPosition, Quaternion.identity);
         }
     }
-
-    // Update is called once per frame
 }
