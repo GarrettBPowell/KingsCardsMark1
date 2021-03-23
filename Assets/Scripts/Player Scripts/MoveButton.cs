@@ -9,7 +9,7 @@ public class MoveButton : MonoBehaviour
     GameManager gameManager;
 
     Vector3 specificPosition;
-    bool moveCharacter;
+
     bool methodExecuted;
     public Button cancelButton;
     public Button moveButton;
@@ -18,19 +18,18 @@ public class MoveButton : MonoBehaviour
     {
         player = GameObject.Find("character");
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+        //characterStats charStas = player.GetComponent<characterStats>();
     }
 
     //variable used to move character towards tile i in array
     private int i = 0;
     private void Update()
     {
-        if(moveCharacter)
+        if(gameManager.isInCombatMoving)
         {
             player.transform.position = Vector3.MoveTowards(player.transform.position, specificPosition, Time.deltaTime * 2f);
-            Debug.Log("Stuck 1 " + moveCharacter + " " + specificPosition);
             if (player.transform.position.x == specificPosition.x && player.transform.position.y == specificPosition.y)
             {
-                Debug.Log("Stuck 2");
                 if(i < player.GetComponent<characterStats>().tilesInArray)
                 {
                     WorldTile w = player.GetComponent<characterStats>().tilesToMoveTo[i];
@@ -70,7 +69,7 @@ public class MoveButton : MonoBehaviour
             cancelButton.gameObject.SetActive(false);
             WorldTile w = player.GetComponent<characterStats>().tilesToMoveTo[0];
             specificPosition.Set(w.tilePosition.x, w.tilePosition.y, player.transform.position.z);
-            moveCharacter = true;
+            gameManager.isInCombatMoving = true;
         }
     }
 
@@ -94,7 +93,7 @@ public class MoveButton : MonoBehaviour
         i = 0;
         cancelButton.gameObject.SetActive(false);
 
-        moveCharacter = false;
+        gameManager.isInCombatMoving = false;
 
         Debug.Log("DID THIS");
         if(gameManager.GetComponent<GameManager>().outOfCombat)

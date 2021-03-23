@@ -1591,7 +1591,9 @@ MonoBehaviour:
   playerHealth: 0
   level: 0
   outOfCombat: 1
+  isInCombatMoving: 0
   character: {fileID: 1188174528}
+  isMobile: 1
   joystick: {fileID: 1038931436}
   moveButton: {fileID: 438951865}
   attackButton: {fileID: 581395620}
@@ -2127,7 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbb0174958b5074ab1a1f819bf3bca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 3
+  moveDistance: 5
   wantsToMove: 0
   tilesToMoveTo:
   - {fileID: 0}

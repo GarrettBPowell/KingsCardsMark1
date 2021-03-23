@@ -8,11 +8,15 @@ public class GameManager : MonoBehaviour
 
     public int playerHealth = 60;
     public int level = 1;
+
+    //movement vars
     public bool outOfCombat = true;
+    public bool isInCombatMoving;
+
     public GameObject character;
 
     //currently if its a moboile game allow joystick to show
-    private bool isMobile = false;
+    public bool isMobile = false;
 
 
     //UI STUFF

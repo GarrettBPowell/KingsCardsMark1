@@ -42,107 +42,107 @@ public class PlayerController : MonoBehaviour
         else
             movePlayer = new Vector3(gameObjectToMove.transform.position.x, gameObjectToMove.transform.position.y, gameObjectToMove.transform.position.z);
 
-
-        if (outOfCombat)
+        //add bool wrapper here
+        if (!gameManager.isInCombatMoving)
         {
-/*            IEnumerator enumerator = waitForSwitch(2.0f);
-            StartCoroutine(enumerator);*/
-
-            if (!isMovePlayer)
+            if (outOfCombat)
             {
-                //get the input
-                float horizontalInput = Input.GetAxis("Horizontal");
-                float verticalInput = Input.GetAxis("Vertical");
-               
-                //joysstick
-                float horizontalJoyInput = joystick.Horizontal;
-                float verticalJoyInput = joystick.Vertical;
-
-                Debug.Log("This joystick movement " + horizontalJoyInput + " " + verticalJoyInput);
-                //Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
-
-                //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
-                bool isVert = false;
-                if (Mathf.Abs(verticalJoyInput) - Mathf.Abs(horizontalJoyInput) > 0)
-                    isVert = true;
-                else
-                    isVert = false;
-
-                //move up
-                if (verticalInput > 0 || (verticalJoyInput > 0 && isVert))
+                if (!isMovePlayer)
                 {
-                    var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
-                    //Debug.Log(localPlace);
-                    try
+                    //get the input
+                    float horizontalInput = Input.GetAxis("Horizontal");
+                    float verticalInput = Input.GetAxis("Vertical");
+
+                    //joysstick
+                    float horizontalJoyInput = joystick.Horizontal;
+                    float verticalJoyInput = joystick.Vertical;
+
+                    Debug.Log("This joystick movement " + horizontalJoyInput + " " + verticalJoyInput);
+                    //Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
+
+                    //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
+                    bool isVert = false;
+                    if (Mathf.Abs(verticalJoyInput) - Mathf.Abs(horizontalJoyInput) > 0)
+                        isVert = true;
+                    else
+                        isVert = false;
+
+                    //move up
+                    if (verticalInput > 0 || (verticalJoyInput > 0 && isVert))
                     {
-                        //Debug.Log(tiles.TryGetValue(localPlace, out moveTile));
-                        tiles.TryGetValue(localPlace, out moveTile);
-                        if (moveTile != null && !moveTile.getOccupied())
+                        var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y + 1, (int)gameObjectToMove.transform.position.z);
+                        //Debug.Log(localPlace);
+                        try
                         {
-                            movePlayer = localPlace;
-                            isMovePlayer = true;
+                            //Debug.Log(tiles.TryGetValue(localPlace, out moveTile));
+                            tiles.TryGetValue(localPlace, out moveTile);
+                            if (moveTile != null && !moveTile.getOccupied())
+                            {
+                                movePlayer = localPlace;
+                                isMovePlayer = true;
+                            }
+                        }
+                        catch (KeyNotFoundException)
+                        {
+                            Debug.Log("Key  is not found y.");
                         }
                     }
-                    catch (KeyNotFoundException)
-                    {
-                        Debug.Log("Key  is not found y.");
-                    }
-                }
 
-                //move left
-                else if (horizontalInput < 0 || horizontalJoyInput < 0)
-                {
-                    var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x - 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
-                    try
+                    //move left
+                    else if (horizontalInput < 0 || horizontalJoyInput < 0)
                     {
-                        tiles.TryGetValue(localPlace, out moveTile);
-                        if (moveTile != null && !moveTile.getOccupied())
+                        var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x - 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
+                        try
                         {
-                            movePlayer = localPlace;
-                            isMovePlayer = true;
+                            tiles.TryGetValue(localPlace, out moveTile);
+                            if (moveTile != null && !moveTile.getOccupied())
+                            {
+                                movePlayer = localPlace;
+                                isMovePlayer = true;
+                            }
+                        }
+                        catch (KeyNotFoundException)
+                        {
+                            Debug.Log("Key  is not found -x.");
                         }
                     }
-                    catch (KeyNotFoundException)
-                    {
-                        Debug.Log("Key  is not found -x.");
-                    }
-                }
 
-                //move down
-                else if (verticalInput < 0 || (verticalJoyInput < 0 && isVert))
-                {
-                    var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, (int)gameObjectToMove.transform.position.z);
-                    try
+                    //move down
+                    else if (verticalInput < 0 || (verticalJoyInput < 0 && isVert))
                     {
-                        tiles.TryGetValue(localPlace, out moveTile);
-                        if (moveTile != null && !moveTile.getOccupied())
+                        var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x, (int)gameObjectToMove.transform.position.y - 1, (int)gameObjectToMove.transform.position.z);
+                        try
                         {
-                            movePlayer = localPlace;
-                            isMovePlayer = true;
+                            tiles.TryGetValue(localPlace, out moveTile);
+                            if (moveTile != null && !moveTile.getOccupied())
+                            {
+                                movePlayer = localPlace;
+                                isMovePlayer = true;
+                            }
+                        }
+                        catch (KeyNotFoundException)
+                        {
+                            Debug.Log("Key  is not found -y.");
                         }
                     }
-                    catch (KeyNotFoundException)
-                    {
-                        Debug.Log("Key  is not found -y.");
-                    }
-                }
 
-                //move right
-                else if (horizontalInput > 0 || horizontalJoyInput > 0)
-                {
-                    var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x + 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
-                    try
+                    //move right
+                    else if (horizontalInput > 0 || horizontalJoyInput > 0)
                     {
-                        tiles.TryGetValue(localPlace, out moveTile);
-                        if (moveTile != null && !moveTile.getOccupied())
+                        var localPlace = new Vector3Int((int)gameObjectToMove.transform.position.x + 1, (int)gameObjectToMove.transform.position.y, (int)gameObjectToMove.transform.position.z);
+                        try
                         {
-                            movePlayer = localPlace;
-                            isMovePlayer = true;
+                            tiles.TryGetValue(localPlace, out moveTile);
+                            if (moveTile != null && !moveTile.getOccupied())
+                            {
+                                movePlayer = localPlace;
+                                isMovePlayer = true;
+                            }
                         }
-                    }
-                    catch (KeyNotFoundException)
-                    {
-                        Debug.Log("Key  is not found x.");
+                        catch (KeyNotFoundException)
+                        {
+                            Debug.Log("Key  is not found x.");
+                        }
                     }
                 }
             }
@@ -164,10 +164,4 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.GetComponent<WorldTile>().setOccupied(false);
         }
     }
-
-/*    private IEnumerator waitForSwitch(float waitTime)
-    { 
-            yield return new WaitForSeconds(waitTime);
-            hasPermission = true;
-    }*/
 }
