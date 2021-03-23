@@ -97,7 +97,6 @@ public class MoveButton : MonoBehaviour
 
         gameManager.isInCombatMoving = false;
 
-        Debug.Log("DID THIS");
         if(gameManager.outOfCombat)
             moveButton.gameObject.SetActive(false);
     }
