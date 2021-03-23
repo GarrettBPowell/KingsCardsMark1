@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caveLayouts:
   - {fileID: 3528556758891751448, guid: fb427ddebd7d93f44a76d9223dd3ca79, type: 3}
+  - {fileID: 3628158642786554962, guid: 93068f97783e6124a8eff78ebe2b346a, type: 3}
   levelType: caves
