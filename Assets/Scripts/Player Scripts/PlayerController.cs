@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
             {
                 isMovePlayer = false;
             }
-            Debug.Log("In Move Controller");
+
             gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);
         }
         else
@@ -56,9 +56,6 @@ public class PlayerController : MonoBehaviour
                     //joysstick
                     float horizontalJoyInput = joystick.Horizontal;
                     float verticalJoyInput = joystick.Vertical;
-
-                    Debug.Log("This joystick movement " + horizontalJoyInput + " " + verticalJoyInput);
-                    //Debug.Log(horizontalJoyInput + "   " + verticalJoyInput);
 
                     //is used to make sure the direction the joystick is going gets the larger value, either vert or horiz
                     bool isVert = false;
