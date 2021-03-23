@@ -13,7 +13,7 @@ public class spawnHallway : MonoBehaviour
         Vector3 spawnPosition = gameObject.transform.position;
         if (levelType.Equals("cave1Rooms"))
         {
-            Instantiate(cave1Hallways[Random.Range(0, cave1Hallways.Length)], spawnPosition, Quaternion.identity);
+            Instantiate(cave1Hallways[Random.Range(0, cave1Hallways.Length)], spawnPosition, Quaternion.identity, gameObject.transform);
         }
     }
 

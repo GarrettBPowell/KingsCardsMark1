@@ -12,7 +12,7 @@ public class spawnRoom : MonoBehaviour
         Vector3 spawnPosition = gameObject.transform.position;
         if(levelType.Equals("cave1Rooms"))
         {
-            Instantiate(cave1Rooms[Random.Range(0, cave1Rooms.Length)], spawnPosition, Quaternion.identity);
+            Instantiate(cave1Rooms[Random.Range(0, cave1Rooms.Length)], spawnPosition, Quaternion.identity, gameObject.transform);
         }
     }
 }

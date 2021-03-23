@@ -1029,6 +1029,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4429247653225675790, guid: d1b97b4f80afd5d47b95d63a78ddb41c, type: 3}
   m_PrefabInstance: {fileID: 1984621632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &536655438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536655439}
+  m_Layer: 0
+  m_Name: Room Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536655439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536655438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &581395618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2767,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 202866745}
     m_Modifications:
+    - target: {fileID: 4712363127960536488, guid: a796390aa34bec1468d629260f75e230, type: 3}
+      propertyPath: roomParent
+      value: 
+      objectReference: {fileID: 536655439}
     - target: {fileID: 5596342105675710022, guid: a796390aa34bec1468d629260f75e230, type: 3}
       propertyPath: m_Name
       value: CaveLayoutSpawner
