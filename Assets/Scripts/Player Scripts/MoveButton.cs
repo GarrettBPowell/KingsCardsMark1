@@ -7,6 +7,7 @@ public class MoveButton : MonoBehaviour
 {
     GameObject player;
     GameManager gameManager;
+    characterStats charStats;
 
     Vector3 specificPosition;
 
@@ -18,21 +19,22 @@ public class MoveButton : MonoBehaviour
     {
         player = GameObject.Find("character");
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
-        //characterStats charStas = player.GetComponent<characterStats>();
+        charStats = player.GetComponent<characterStats>();
     }
 
     //variable used to move character towards tile i in array
     private int i = 0;
     private void Update()
     {
-        if(gameManager.isInCombatMoving)
+        if (gameManager.isInCombatMoving)
         {
+            charStats = player.GetComponent<characterStats>();
             player.transform.position = Vector3.MoveTowards(player.transform.position, specificPosition, Time.deltaTime * 2f);
             if (player.transform.position.x == specificPosition.x && player.transform.position.y == specificPosition.y)
             {
-                if(i < player.GetComponent<characterStats>().tilesInArray)
+                if(i < charStats.tilesInArray)
                 {
-                    WorldTile w = player.GetComponent<characterStats>().tilesToMoveTo[i];
+                    WorldTile w = charStats.tilesToMoveTo[i];
                     specificPosition.Set(w.tilePosition.x, w.tilePosition.y, player.transform.position.z);
                     i++;
                 }
@@ -47,7 +49,7 @@ public class MoveButton : MonoBehaviour
     //basically the button handler - first click activates it to accept tile inputs and store in array - second click executes the movements
     public void changePlayerMove() 
     {
-        if (player.GetComponent<characterStats>().wantsToMove)
+        if (charStats.wantsToMove)
         {
             doTheMove();
             methodExecuted = true;
@@ -56,7 +58,7 @@ public class MoveButton : MonoBehaviour
         if (player != null && !methodExecuted)
         {
             cancelButton.gameObject.SetActive(true);
-            player.GetComponent<characterStats>().wantsToMove = true;
+            charStats.wantsToMove = true;
         }
         methodExecuted = false;
     }
@@ -64,10 +66,10 @@ public class MoveButton : MonoBehaviour
     //preps where the char will move by setting the movement - udpate handles the movement smoothly
     public void doTheMove()
     {
-        if (player.GetComponent<characterStats>().wantsToMove && player.GetComponent<characterStats>().tilesToMoveTo[0] != null)
+        if (charStats.wantsToMove && charStats.tilesToMoveTo[0] != null)
         {
             cancelButton.gameObject.SetActive(false);
-            WorldTile w = player.GetComponent<characterStats>().tilesToMoveTo[0];
+            WorldTile w = charStats.tilesToMoveTo[0];
             specificPosition.Set(w.tilePosition.x, w.tilePosition.y, player.transform.position.z);
             gameManager.isInCombatMoving = true;
         }
@@ -75,28 +77,28 @@ public class MoveButton : MonoBehaviour
 
     public void noMove()
     {
-        player.GetComponent<characterStats>().wantsToMove = false;
+       charStats.wantsToMove = false;
         resetStuff();
     }
     //reset the used values to be used again
     public void resetStuff()
     {
-        for (int i = 0; i < player.GetComponent<characterStats>().tilesInArray; i++)
+        for (int i = 0; i <charStats.tilesInArray; i++)
         {
-            player.GetComponent<characterStats>().tilesToMoveTo[i].GetComponent<WorldTile>().setAddedBool(false);
-            player.GetComponent<characterStats>().tilesToMoveTo[i] = null;
+            charStats.tilesToMoveTo[i].GetComponent<WorldTile>().setAddedBool(false);
+            charStats.tilesToMoveTo[i] = null;
         }
 
         //Debug.Log("setting to false");
-        player.GetComponent<characterStats>().wantsToMove = false;
-        player.GetComponent<characterStats>().tilesInArray = 0;
+        charStats.wantsToMove = false;
+        charStats.tilesInArray = 0;
         i = 0;
         cancelButton.gameObject.SetActive(false);
 
         gameManager.isInCombatMoving = false;
 
         Debug.Log("DID THIS");
-        if(gameManager.GetComponent<GameManager>().outOfCombat)
+        if(gameManager.outOfCombat)
             moveButton.gameObject.SetActive(false);
     }
 }
