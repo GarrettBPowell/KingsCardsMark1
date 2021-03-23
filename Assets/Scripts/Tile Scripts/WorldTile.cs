@@ -38,9 +38,9 @@ public class WorldTile : MonoBehaviour
     {
         if(addedToMoveArray)
         {
-            thisSprite.color = new Color(0, 0, 0, 1);
+            thisSprite.color = new Color(0, 1, 0, 1);
         }
-        else if(!addedToMoveArray && thisSprite.color == new Color(0, 0, 0, 1))
+        else if(!addedToMoveArray && thisSprite.color == new Color(0, 1, 0, 1))
         {
             thisSprite.color = Color.white;
         }

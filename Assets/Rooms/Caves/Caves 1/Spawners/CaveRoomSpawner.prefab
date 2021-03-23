@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 5318230785610500131, guid: ada2ca1af74d7764bb878c8f9ae39db3, type: 3}
   - {fileID: 4911218287744428972, guid: 363cfb8db22434444b47cf893fed4445, type: 3}
   - {fileID: 6550857751803857006, guid: 12a0e309cf5f2ad45996682405b91b82, type: 3}
+  - {fileID: 8513241043402401254, guid: f8c97baaa8a32c7438e8058307b6d09b, type: 3}
   levelType: cave1Rooms
 --- !u!1 &4316783484928341632
 GameObject:
