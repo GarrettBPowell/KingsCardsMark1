@@ -13,6 +13,10 @@ public class characterStats : MonoBehaviour
         public int tilesInArray; //number of tiles in above array
     //
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();

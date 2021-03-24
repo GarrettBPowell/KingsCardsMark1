@@ -7,7 +7,10 @@ public class GameManager : MonoBehaviour
 {
 
     public int playerHealth = 60;
+
+    //level variables
     public int level = 1;
+    public int area = 1;
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(transform.root.gameObject);
     }
     void Start()
     {

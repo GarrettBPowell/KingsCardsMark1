@@ -11,6 +11,7 @@ public class SettingSeed : MonoBehaviour
 
     private void Awake()
     {
+
         if(useStringSeed)
             seed = stringSeed.GetHashCode();
         
@@ -19,5 +20,6 @@ public class SettingSeed : MonoBehaviour
             seed = Random.Range(0, 99999);
 
         Random.InitState(seed);
+        DontDestroyOnLoad(transform.root.gameObject);
     }
 }
