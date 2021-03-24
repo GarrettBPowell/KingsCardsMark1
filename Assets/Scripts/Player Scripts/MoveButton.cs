@@ -18,7 +18,7 @@ public class MoveButton : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("character");
-        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         charStats = player.GetComponent<characterStats>();
     }
 

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         outOfCombat = gameManager.GetComponent<GameManager>().outOfCombat;
     }
 

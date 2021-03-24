@@ -11,6 +11,7 @@ TagManager:
   - gameManager
   - enemy
   - room
+  - playerUICanvas
   layers:
   - Default
   - TransparentFX

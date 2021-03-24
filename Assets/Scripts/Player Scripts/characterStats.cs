@@ -19,7 +19,7 @@ public class characterStats : MonoBehaviour
     }
     private void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 }
 

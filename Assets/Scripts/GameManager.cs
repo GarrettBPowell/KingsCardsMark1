@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    GameManager gameManager;
 
     public int playerHealth = 60;
 
@@ -31,17 +32,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        GameObject[] gameManager = GameObject.FindGameObjectsWithTag("gameManager");
-
-        if (gameManager.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
+        gameManager = GameObject.FindObjectOfType<GameManager>();
 
         DontDestroyOnLoad(transform.root.gameObject);
     }
     void Start()
     {
+        level = 1;
+        area = 1;
         //if the controls are not mobile controls, dont enable the joystick
         if(!isMobile)
             joystick.gameObject.SetActive(false);
