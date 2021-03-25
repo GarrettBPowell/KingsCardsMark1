@@ -8,6 +8,8 @@ public class GetLevelNumber : MonoBehaviour
 {
     GameManager gameManager;
     Canvas canvas;
+    GameObject character;
+
     public Text levelNumber;
     private string levelToLoad;
     void Start()
@@ -18,6 +20,11 @@ public class GetLevelNumber : MonoBehaviour
             if (can.CompareTag("playerUICanvas"))
                 canvas = can;
         }
+
+        character = GameObject.FindGameObjectWithTag("Player");
+        character.GetComponent<SpriteRenderer>().enabled = false;
+        
+
 
         //get the game manager
         gameManager = GameObject.FindObjectOfType<GameManager>();
@@ -66,6 +73,8 @@ public class GetLevelNumber : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         SceneManager.LoadScene(levelToLoad);
+        character.GetComponent<SpriteRenderer>().enabled = true;
+        character.transform.position = Vector2.zero;
         canvas.gameObject.SetActive(true);
     }
 }

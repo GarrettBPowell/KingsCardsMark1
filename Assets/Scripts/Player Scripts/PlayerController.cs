@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,13 +12,23 @@ public class PlayerController : MonoBehaviour
     public Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     public bool outOfCombat;
     public bool isMovePlayer;
+    public string currentScene;
 
     Vector3 movePlayer;
-
     void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         outOfCombat = gameManager.GetComponent<GameManager>().outOfCombat;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
     // Update is called once per frame
@@ -145,6 +156,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        //go get dict if the level is not the level screen which has 0 tiles
+        if(!SceneManager.GetActiveScene().name.Equals("Level Screen"))
+            tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FloorTile")
