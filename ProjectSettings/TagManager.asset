@@ -12,6 +12,7 @@ TagManager:
   - enemy
   - room
   - playerUICanvas
+  - minimap walls
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Minimap
   - floorTile
   - Level Collider
   m_SortingLayers:
