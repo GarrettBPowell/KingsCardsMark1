@@ -68,6 +68,7 @@ public class MoveButton : MonoBehaviour
     {
         if (charStats.wantsToMove && charStats.tilesToMoveTo[0] != null)
         {
+            moveButton.interactable = false;
             cancelButton.gameObject.SetActive(false);
             WorldTile w = charStats.tilesToMoveTo[0];
             specificPosition.Set(w.tilePosition.x, w.tilePosition.y, player.transform.position.z);
@@ -96,6 +97,7 @@ public class MoveButton : MonoBehaviour
         cancelButton.gameObject.SetActive(false);
 
         gameManager.isInCombatMoving = false;
+        moveButton.interactable = true;
 
         if(gameManager.outOfCombat)
             moveButton.gameObject.SetActive(false);
