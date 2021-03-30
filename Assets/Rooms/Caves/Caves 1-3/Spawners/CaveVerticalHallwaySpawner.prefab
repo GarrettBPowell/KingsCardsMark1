@@ -46,4 +46,6 @@ MonoBehaviour:
   cave1Hallways:
   - {fileID: 4933366753573620234, guid: 7ef6c2ea18bdf004588f0c5cc09c6781, type: 3}
   - {fileID: 6080631235767173167, guid: dea37aeddc7954a4793ac9baf768e661, type: 3}
+  - {fileID: 8971707915550524955, guid: 32c3fdf66b84f1f449224331019e9b45, type: 3}
+  - {fileID: 2352127231572884508, guid: 301ca6a3b851323429c00e9f6a58f75b, type: 3}
   levelType: cave1Rooms
