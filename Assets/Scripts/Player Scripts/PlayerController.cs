@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
             if (gameObjectToMove.transform.position == movePlayer)
             {
                 isMovePlayer = false;
+                gameManager.playerTurn = false;
             }
 
             gameObjectToMove.transform.position = Vector3.MoveTowards(gameObjectToMove.transform.position, movePlayer, Time.deltaTime * 2f);

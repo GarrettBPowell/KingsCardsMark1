@@ -8,6 +8,10 @@ public class EnemiesInRoom : MonoBehaviour
 
     public int enemiesInRoom = 0;
     public bool playerInRoom = false;
+    public List<GameObject> enemiesInRoomList = new List<GameObject>();
+    int i = 0;
+
+    //Script is used to communicate with everything in the room -- mainly getting what enemies are in the room
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
@@ -23,8 +27,18 @@ public class EnemiesInRoom : MonoBehaviour
         //player is out of combat -- no ememies in room
         if (enemiesInRoom == 0 && playerInRoom)
         {
-            gameManager.GetComponent<GameManager>().outOfCombat = true;
-            gameManager.GetComponent<GameManager>().enemiesInRoomDiedHideMoveButton = true;
+            gameManager.outOfCombat = true;
+            gameManager.enemiesInRoomDiedHideMoveButton = true;
+        }
+
+        if (!gameManager.playerTurn && playerInRoom)
+        {
+            gameManager.enemyMoving = true;
+
+            IEnumerator coroutine = WaitAndPrint(1.0f);
+            StartCoroutine(coroutine);
+
+            gameManager.playerTurn = true;
         }
     }
 
@@ -38,5 +52,17 @@ public class EnemiesInRoom : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
             playerInRoom = false;
+    }
+
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        while (i < enemiesInRoomList.Count)
+        {
+            enemiesInRoomList[i].GetComponent<Enemy>().enemyTurn = true;
+            yield return new WaitForSeconds(waitTime);
+            i++;
+        }
+        i = 0;
+        gameManager.enemyMoving = false;
     }
 }

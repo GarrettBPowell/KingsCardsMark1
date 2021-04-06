@@ -101,5 +101,7 @@ public class MoveButton : MonoBehaviour
 
         if(gameManager.outOfCombat)
             moveButton.gameObject.SetActive(false);
+
+        gameManager.playerTurn = false;
     }
 }

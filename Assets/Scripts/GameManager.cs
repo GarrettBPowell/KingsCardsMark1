@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public bool isInCombatMoving; //tells the out of combat player controller if the in combat controller is still moving the player
 
     public GameObject character;
+    public bool playerTurn = true;
+    public bool enemyMoving = false;
 
     //currently if its a moboile game allow joystick to show
     public bool isMobile = false;
@@ -48,6 +50,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (enemyMoving)
+        {
+            moveButton.interactable = false;
+            attackButton.interactable = false;
+        }
+        else
+        {
+            moveButton.interactable = true;
+            attackButton.interactable = true;
+        }
         if(enemiesInRoomDiedHideMoveButton)
         {
             moveButton.gameObject.SetActive(false);
@@ -56,6 +68,7 @@ public class GameManager : MonoBehaviour
 
         if (outOfCombat)
         {
+            playerTurn = true;
             attackButton.gameObject.SetActive(false);
             if(!moveButton.gameObject.activeSelf)
             {

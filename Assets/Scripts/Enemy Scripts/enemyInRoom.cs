@@ -8,11 +8,13 @@ public class enemyInRoom : MonoBehaviour
     Collider2D tileEnemyIsOn;
     private bool loadedRoom = false;
 
+    //script is used from enemies to tell room that they are in it
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("room") && !loadedRoom)
         {
             collision.gameObject.GetComponent<EnemiesInRoom>().enemiesInRoom += 1;
+            collision.gameObject.GetComponent<EnemiesInRoom>().enemiesInRoomList.Add(gameObject);
             room = collision.gameObject;
             loadedRoom = true;
         }
