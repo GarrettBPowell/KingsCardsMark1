@@ -13,8 +13,7 @@ public class Enemy : MonoBehaviour
 
     int xdist = 0;
     int ydist = 0;
-    WorldTile tiletoCheck = new WorldTile();
-
+    WorldTile tiletoCheck;
     // Update is called once per frame
     void Update()
     {
