@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     bool checkSecondPos = false; //if enemy can not move to tile in direction of greatest distance -- it checks if it can move to a tile in the direction of the lesser distance
     Vector3 enemyMove;
 
+    public string enemyType;
+
     int xdist = 0;
     int ydist = 0;
     WorldTile tiletoCheck;
@@ -145,6 +147,10 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+        }
+        else if (Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1)
+        {
+            
         }
         else
             enemyTurn = false;
