@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cancelButton: {fileID: 1294871320}
-  moveButton: {fileID: 0}
+  moveButton: {fileID: 1159997009}
 --- !u!114 &1294871320
 MonoBehaviour:
   m_ObjectHideFlags: 0
