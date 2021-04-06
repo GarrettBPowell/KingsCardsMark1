@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     GameManager gameManager;
-
+    public int playerMaxHealth = 60;
     public int playerHealth = 60;
+    public List<string> playerStatusEffects = new List<string>();
 
     //level variables
     public int level = 1;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     public Joystick joystick;
     public Button moveButton;
     public Button attackButton;
+    public Text healthText;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
@@ -50,6 +52,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
+
         if (enemyMoving)
         {
             moveButton.interactable = false;

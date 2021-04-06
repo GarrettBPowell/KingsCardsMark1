@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    GameManager gameManager;
+
     public bool enemyTurn = false;
     public Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     public bool moveEnemy = false;
@@ -11,12 +13,21 @@ public class Enemy : MonoBehaviour
     bool checkSecondPos = false; //if enemy can not move to tile in direction of greatest distance -- it checks if it can move to a tile in the direction of the lesser distance
     Vector3 enemyMove;
 
+    //enemy data
     public string enemyType;
+    public int enemyHealth;
+    public int enemyDamage;
 
     int xdist = 0;
     int ydist = 0;
     WorldTile tiletoCheck;
-    // Update is called once per frame
+
+
+    void Start()
+    {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
     void Update()
     {
 
@@ -148,10 +159,26 @@ public class Enemy : MonoBehaviour
                     enemyTurn = false;
             }
         }
-        else if (Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1)
+        //enemy is a melee type and is 1 block away from the character, it attacks
+        else if ((Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1) && enemyType.Equals("melee"))
         {
-            
-        }
+            Debug.Log("Attack player");
+            int damageToDoToPlayer = enemyDamage;
+
+            foreach (string s in gameManager.playerStatusEffects)
+            {
+                switch (s)
+                {
+                    //defense reduces immediate damage going to be taken by 25%
+                    case "defense":
+                        damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
+                        break; 
+                }
+            }
+
+            gameManager.playerHealth -= damageToDoToPlayer;
+            enemyTurn = false;
+        }   
         else
             enemyTurn = false;
     }
