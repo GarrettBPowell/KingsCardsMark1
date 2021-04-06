@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
         int ydist = (int)gameObject.transform.position.y - (int)playerPos.y;
 
         WorldTile tiletoCheck = new WorldTile();
-        Debug.Log(playerPos + " " + xdist + " " + ydist);
         //if x dist is the greatest move in x direction
         if (Mathf.Abs(xdist) > Mathf.Abs(ydist))
         {
