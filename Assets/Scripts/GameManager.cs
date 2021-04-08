@@ -11,17 +11,15 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, GameObject> UICardDict = new Dictionary<string, GameObject>();
     public List<GameObject> allCardsToAddToDict;
 
+//PLAYER STUFF
     //cards player has
     public List<GameObject> playerDeck;
     public List<GameObject> playerHand;
 
+    //play stats, effects, anything else
     public int playerMaxHealth = 60;
     public int playerHealth = 60;
     public List<string> playerStatusEffects = new List<string>();
-
-    //level variables
-    public int level = 1;
-    public int area = 1;
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
@@ -30,6 +28,12 @@ public class GameManager : MonoBehaviour
     public GameObject character;
     public bool playerTurn = true;
     public bool enemyMoving = false;
+
+
+    //level variables
+    public int level = 1;
+    public int area = 1;
+
 
     //currently if its a moboile game allow joystick to show
     public bool isMobile = false;

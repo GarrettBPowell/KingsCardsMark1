@@ -96,6 +96,11 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+            else if (!checkSecondPos)
+            {
+                checkSecondPos = true;
+                checkY();
+            }
             else
                 enemyTurn = false;
         }
@@ -115,6 +120,11 @@ public class Enemy : MonoBehaviour
                 }
                 else
                     enemyTurn = false;
+            }
+            else if (!checkSecondPos)
+            {
+                checkSecondPos = true;
+                checkY();
             }
             else
                 enemyTurn = false;
@@ -162,6 +172,11 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+            else if (!checkSecondPos)
+            {
+                checkSecondPos = true;
+                checkX();
+            }
             else
                 enemyTurn = false;
         }
@@ -181,6 +196,11 @@ public class Enemy : MonoBehaviour
                 }
                 else
                     enemyTurn = false;
+            }
+            else if (!checkSecondPos)
+            {
+                checkSecondPos = true;
+                checkX();
             }
             else
                 enemyTurn = false;
