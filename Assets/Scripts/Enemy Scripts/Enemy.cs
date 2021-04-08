@@ -96,6 +96,8 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+            else
+                enemyTurn = false;
         }
         else if (xdist > 0)
         {
@@ -114,6 +116,27 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+            else
+                enemyTurn = false;
+        }
+        //enemy is a melee type and is 1 block away from the character, it attacks
+        else if ((Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1) && enemyType.Equals("melee"))
+        {
+            int damageToDoToPlayer = enemyDamage;
+
+            foreach (string s in gameManager.playerStatusEffects)
+            {
+                switch (s)
+                {
+                    //defense reduces immediate damage going to be taken by 25%
+                    case "defense":
+                        damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
+                        break;
+                }
+            }
+
+            gameManager.playerHealth -= damageToDoToPlayer;
+            enemyTurn = false;
         }
         else
             enemyTurn = false;
@@ -139,6 +162,8 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+            else
+                enemyTurn = false;
         }
         else if (ydist > 0)
         {
@@ -157,6 +182,8 @@ public class Enemy : MonoBehaviour
                 else
                     enemyTurn = false;
             }
+            else
+                enemyTurn = false;
         }
         //enemy is a melee type and is 1 block away from the character, it attacks
         else if ((Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1) && enemyType.Equals("melee"))

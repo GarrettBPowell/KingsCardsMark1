@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Button moveButton;
     public Button attackButton;
     public Text healthText;
+    public Slider healthSlider;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
     {
 
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
+        healthSlider.value = playerHealth;
 
         if (enemyMoving)
         {
