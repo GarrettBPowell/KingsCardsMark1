@@ -6,6 +6,15 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     GameManager gameManager;
+
+    //get access to all cards and their data
+    public Dictionary<string, GameObject> UICardDict = new Dictionary<string, GameObject>();
+    public List<GameObject> allCardsToAddToDict;
+
+    //cards player has
+    public List<GameObject> playerDeck;
+    public List<GameObject> playerHand;
+
     public int playerMaxHealth = 60;
     public int playerHealth = 60;
     public List<string> playerStatusEffects = new List<string>();
@@ -37,6 +46,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
+
+        //adds all cards in array to dict for easier access/faster look up
+        foreach (GameObject g in allCardsToAddToDict)
+        {
+            UICardDict.Add(g.name, g);
+
+        }    
 
         DontDestroyOnLoad(transform.root.gameObject);
     }
