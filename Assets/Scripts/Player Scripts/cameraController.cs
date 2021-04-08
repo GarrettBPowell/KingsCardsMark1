@@ -17,9 +17,9 @@ public class cameraController : MonoBehaviour
     }
     void Update()
     {
-        if (inHallway)
-            playerCamera.transform.position = new Vector3(hallwayPos.x, hallwayPos.y, -10);
-        else
+       /* if (inHallway)
+            playerCamera.transform.position = new Vector3(hallwayPos.x, hallwayPos.y, -10);*/
+        
             playerCamera.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10);
     }
 

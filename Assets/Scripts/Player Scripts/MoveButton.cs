@@ -14,6 +14,7 @@ public class MoveButton : MonoBehaviour
     bool methodExecuted;
     public Button cancelButton;
     public Button moveButton;
+    public bool cancelButtonClicked = false;
 
     private void Start()
     {
@@ -79,6 +80,7 @@ public class MoveButton : MonoBehaviour
     public void noMove()
     {
        charStats.wantsToMove = false;
+        cancelButtonClicked = true;
         resetStuff();
     }
     //reset the used values to be used again
@@ -102,6 +104,10 @@ public class MoveButton : MonoBehaviour
         if(gameManager.outOfCombat)
             moveButton.gameObject.SetActive(false);
 
-        gameManager.playerTurn = false;
+        if (!cancelButtonClicked)
+            gameManager.playerTurn = false;
+        else
+            cancelButtonClicked = false;
+   
     }
 }
