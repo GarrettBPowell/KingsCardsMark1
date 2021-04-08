@@ -7,13 +7,17 @@ public class Card : ScriptableObject
 {
 
 	public new string name;
+
+	public string cardType;
+	public string cardArea;
+
+	[TextArea(1, 3)]
 	public string description;
 
-	public Sprite artwork;
+	public List<Sprite> cardSprites;
 
 	public int manaCost;
-	public int attack;
-	public int health;
+	public int damage;
 
 	public void Print()
 	{

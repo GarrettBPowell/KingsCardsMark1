@@ -69,7 +69,6 @@ public class Enemy : MonoBehaviour
         {
             checkX();
         }
-
         //if y dist is the greatest move in x direction
         else 
         {
@@ -162,7 +161,6 @@ public class Enemy : MonoBehaviour
         //enemy is a melee type and is 1 block away from the character, it attacks
         else if ((Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1) && enemyType.Equals("melee"))
         {
-            Debug.Log("Attack player");
             int damageToDoToPlayer = enemyDamage;
 
             foreach (string s in gameManager.playerStatusEffects)
