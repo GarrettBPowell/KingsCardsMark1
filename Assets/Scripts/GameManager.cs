@@ -7,11 +7,19 @@ public class GameManager : MonoBehaviour
 {
     GameManager gameManager;
 
-    public int playerHealth = 60;
+    //get access to all cards and their data
+    public Dictionary<string, GameObject> UICardDict = new Dictionary<string, GameObject>();
+    public List<GameObject> allCardsToAddToDict;
 
-    //level variables
-    public int level = 1;
-    public int area = 1;
+//PLAYER STUFF
+    //cards player has
+    public List<GameObject> playerDeck;
+    public List<GameObject> playerHand;
+
+    //play stats, effects, anything else
+    public int playerMaxHealth = 60;
+    public int playerHealth = 60;
+    public List<string> playerStatusEffects = new List<string>();
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
@@ -21,6 +29,12 @@ public class GameManager : MonoBehaviour
     public bool playerTurn = true;
     public bool enemyMoving = false;
 
+
+    //level variables
+    public int level = 1;
+    public int area = 1;
+
+
     //currently if its a moboile game allow joystick to show
     public bool isMobile = false;
 
@@ -29,12 +43,21 @@ public class GameManager : MonoBehaviour
     public Joystick joystick;
     public Button moveButton;
     public Button attackButton;
+    public Text healthText;
+    public Slider healthSlider;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
     private void Awake()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
+
+        //adds all cards in array to dict for easier access/faster look up
+        foreach (GameObject g in allCardsToAddToDict)
+        {
+            UICardDict.Add(g.name, g);
+
+        }    
 
         DontDestroyOnLoad(transform.root.gameObject);
     }
@@ -50,6 +73,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
+        healthSlider.value = playerHealth;
+
         if (enemyMoving)
         {
             moveButton.interactable = false;
