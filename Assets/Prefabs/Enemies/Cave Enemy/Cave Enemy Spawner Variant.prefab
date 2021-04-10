@@ -13,12 +13,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: enemies.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
       objectReference: {fileID: 3596727476392630598, guid: bd4c7c44ba666a7449577f1377630ed1, type: 3}
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 4947616999521150828, guid: 4759b536725447643a049f67d3abaec6, type: 3}
     - target: {fileID: 6610025987847888107, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: m_Name
       value: Cave Enemy Spawner Variant
