@@ -14,6 +14,7 @@ TagManager:
   - playerUICanvas
   - minimap walls
   - card
+  - crystal
   layers:
   - Default
   - TransparentFX

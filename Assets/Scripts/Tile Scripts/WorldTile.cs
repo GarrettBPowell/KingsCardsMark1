@@ -21,16 +21,17 @@ public class WorldTile : MonoBehaviour
         originalColor = thisSprite.color;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //will need one for enemy
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
+            setOccupied(true);
+        else if (collision.gameObject.CompareTag("crystal"))
             setOccupied(true);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
             setOccupied(false);
     }
 
