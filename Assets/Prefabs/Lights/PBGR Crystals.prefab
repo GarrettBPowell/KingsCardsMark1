@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 3986686315873330266}
   - component: {fileID: 5584073424112118588}
   - component: {fileID: 5151472979588023670}
+  - component: {fileID: 5514432695054104796}
   m_Layer: 0
   m_Name: LightOrbLightPurple
   m_TagString: crystal
@@ -117,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 3986686315873330267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 3986686314106081059}
   m_Father: {fileID: 0}
@@ -163,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: a309ee79573822846947ac71e6b039fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2af59f7e33b9b054d81ce8f87c6fd007, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -221,3 +222,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5514432695054104796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986686315873330267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df812f76cd73541409b8ab736b96d249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystalSprites:
+  - {fileID: 21300000, guid: 2af59f7e33b9b054d81ce8f87c6fd007, type: 3}
+  - {fileID: 21300000, guid: f762591b485288040bbd6fb4f17a8430, type: 3}
+  - {fileID: 21300000, guid: f104cb2a20771d7479e74d8779515f97, type: 3}
+  - {fileID: 21300000, guid: 47a93616d0d91eb4c8978eee98aab2a9, type: 3}
+  crystalLightColors:
+  - {r: 0.79607844, g: 0.62352943, b: 0.9607843, a: 1}
+  - {r: 0.2756764, g: 0.8941822, b: 0.990566, a: 1}
+  - {r: 0.25943398, g: 1, b: 0.73514926, a: 1}
+  - {r: 0.9528302, g: 0.35882437, b: 0.26517445, a: 1}
+  light: {fileID: 3986686314106081060}
