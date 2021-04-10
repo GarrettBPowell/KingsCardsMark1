@@ -340,21 +340,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50dbbe24b638b974cab293965c42a35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allCardsToAddToDict: []
+  playerDeck: []
+  playerHand: []
   playerMaxHealth: 60
   playerHealth: 60
   playerStatusEffects: []
-  level: 0
-  area: 1
   outOfCombat: 1
   isInCombatMoving: 0
   character: {fileID: 1734379071}
   playerTurn: 1
   enemyMoving: 0
+  level: 0
+  area: 1
   isMobile: 1
   joystick: {fileID: 1730329074}
   moveButton: {fileID: 1159997009}
   attackButton: {fileID: 788467080}
   healthText: {fileID: 621206898}
+  healthSlider: {fileID: 0}
   enemiesInRoomDiedHideMoveButton: 0
 --- !u!224 &299733684 stripped
 RectTransform:
@@ -6014,7 +6018,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -11276,6 +11280,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4906236927377203180, guid: 93f1e29dacd82ab48b836d037da66974, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959031565736357700, guid: 93f1e29dacd82ab48b836d037da66974, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959031565736357700, guid: 93f1e29dacd82ab48b836d037da66974, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
