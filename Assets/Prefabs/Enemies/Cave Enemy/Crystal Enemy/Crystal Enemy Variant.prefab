@@ -167,6 +167,18 @@ PrefabInstance:
       propertyPath: enemyType
       value: ranged
       objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415915, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: enemyZone
+      value: cave
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415915, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: projectiles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415915, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: projectiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 8115375503551047200, guid: 3b162f5c47a90244cac8dd4829279fca, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
 --- !u!1 &4947616999521150828 stripped

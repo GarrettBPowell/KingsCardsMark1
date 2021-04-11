@@ -35,6 +35,7 @@ public class enemyInRoom : MonoBehaviour
 
     private void OnDestroy()
     {
+        room.GetComponent<EnemiesInRoom>().enemiesInRoomList.Remove(gameObject);
         room.GetComponent<EnemiesInRoom>().enemiesInRoom -= 1;
 
         //makes sure tile is no longer occupied when enemy is killed

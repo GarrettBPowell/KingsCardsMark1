@@ -13,13 +13,18 @@ public class Enemy : MonoBehaviour
     bool checkSecondPos = false; //if enemy can not move to tile in direction of greatest distance -- it checks if it can move to a tile in the direction of the lesser distance
     Vector3 enemyMove;
 
+    public Vector3 playerPos;
+
     //enemy data
     public string enemyType;
+    public string enemyZone;
     public int enemyHealth;
     public int enemyDamage;
 
-    int xdist = 0;
-    int ydist = 0;
+    public List<GameObject> projectiles;
+
+    public static int xdist = 0;
+    public static int ydist = 0;
     WorldTile tiletoCheck;
 
 
@@ -58,7 +63,7 @@ public class Enemy : MonoBehaviour
     public void prepMove()
     {
         gettingMove = true;
-        Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
         xdist = (int)gameObject.transform.position.x - (int)playerPos.x;
         ydist = (int)gameObject.transform.position.y - (int)playerPos.y;
@@ -78,8 +83,18 @@ public class Enemy : MonoBehaviour
 
     public void checkX()
     {
+        //if ranged enemy then fire
+        if((Mathf.Abs(xdist) == 0 ||  Mathf.Abs(ydist) == 0) && enemyType.Equals("ranged"))
+        {
+            if (enemyZone.Equals("cave"))
+            {
+                spawnProjectile();
+            }
+
+            enemyTurn = false;
+        }
         //if neg
-        if (xdist < 0)
+        else if (xdist < 0)
         {
             enemyMove = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y, 0);
 
@@ -132,21 +147,7 @@ public class Enemy : MonoBehaviour
         //enemy is a melee type and is 1 block away from the character, it attacks
         else if ((Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1) && enemyType.Equals("melee"))
         {
-            int damageToDoToPlayer = enemyDamage;
-
-            foreach (string s in gameManager.playerStatusEffects)
-            {
-                switch (s)
-                {
-                    //defense reduces immediate damage going to be taken by 25%
-                    case "defense":
-                        damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
-                        break;
-                }
-            }
-
-            gameManager.playerHealth -= damageToDoToPlayer;
-            enemyTurn = false;
+            attackPlayer();
         }
         else
             enemyTurn = false;
@@ -154,8 +155,18 @@ public class Enemy : MonoBehaviour
 
     public void checkY()
     {
+        //if ranged enemy then fire
+        if ((Mathf.Abs(xdist) == 0 || Mathf.Abs(ydist) == 0) && enemyType.Equals("ranged"))
+        {
+            if (enemyZone.Equals("cave"))
+            {
+                spawnProjectile();
+            }
+
+            enemyTurn = false;
+        }
         //if neg
-        if (ydist < 0)
+        else if (ydist < 0)
         {
             enemyMove = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0);
 
@@ -208,23 +219,50 @@ public class Enemy : MonoBehaviour
         //enemy is a melee type and is 1 block away from the character, it attacks
         else if ((Mathf.Abs(xdist) + Mathf.Abs(ydist) == 1) && enemyType.Equals("melee"))
         {
-            int damageToDoToPlayer = enemyDamage;
-
-            foreach (string s in gameManager.playerStatusEffects)
-            {
-                switch (s)
-                {
-                    //defense reduces immediate damage going to be taken by 25%
-                    case "defense":
-                        damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
-                        break; 
-                }
-            }
-
-            gameManager.playerHealth -= damageToDoToPlayer;
-            enemyTurn = false;
+            attackPlayer();
         }   
         else
             enemyTurn = false;
     }
+
+    public void attackPlayer()
+    {
+        int damageToDoToPlayer = enemyDamage;
+
+        foreach (string s in gameManager.playerStatusEffects)
+        {
+            switch (s)
+            {
+                //defense reduces immediate damage going to be taken by 25%
+                case "defense":
+                    damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
+                    break;
+            }
+        }
+
+        gameManager.playerHealth -= damageToDoToPlayer;
+        enemyTurn = false;
+
+        if (enemyType.Equals("projectile"))
+            Destroy(gameObject);
+    }
+
+    public void spawnProjectile()
+    {
+        if (xdist == 0)
+        {
+            if (ydist < 0)
+                Instantiate(projectiles[0], new Vector2(gameObject.transform.position.x, transform.position.y + 0.5f), Quaternion.identity, gameObject.transform);
+            else
+                Instantiate(projectiles[0], new Vector2(gameObject.transform.position.x, transform.position.y - 0.5f), Quaternion.identity, gameObject.transform);
+        }
+        else
+        {
+            if (xdist < 0)
+                Instantiate(projectiles[0], new Vector2(gameObject.transform.position.x + 0.5f, transform.position.y), Quaternion.identity, gameObject.transform);
+            else
+                Instantiate(projectiles[0], new Vector2(gameObject.transform.position.x - 0.5f, transform.position.y), Quaternion.identity, gameObject.transform);
+        }
+    }
+    
 }
