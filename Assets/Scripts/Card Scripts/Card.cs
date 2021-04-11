@@ -14,14 +14,15 @@ public class Card : ScriptableObject
 	[TextArea(1, 3)]
 	public string description;
 
-	public List<Sprite> cardSprites;
+	public Sprite cardSprite;
 
-	public int manaCost;
+	public int statusEffect;
 	public int damage;
 
+	
 	public void Print()
 	{
-		Debug.Log(name + ": " + description + " The card costs: " + manaCost);
+		Debug.Log(name + ": " + description + " The card costs: " + damage);
 	}
 
 }

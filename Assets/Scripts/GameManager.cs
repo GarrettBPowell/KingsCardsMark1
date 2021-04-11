@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
 //PLAYER STUFF
     //cards player has
     public List<GameObject> playerDeck;
+    public List<GameObject> discardPile;
     public List<GameObject> playerHand;
+    public int numCardsToDraw = 3;
 
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
     public Button attackButton;
     public Text healthText;
     public Slider healthSlider;
+    public Image handDeckUI;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
@@ -94,6 +97,7 @@ public class GameManager : MonoBehaviour
         {
             playerTurn = true;
             attackButton.gameObject.SetActive(false);
+            handDeckUI.enabled = false;
             if(!moveButton.gameObject.activeSelf)
             {
                 if(isMobile)
@@ -104,6 +108,7 @@ public class GameManager : MonoBehaviour
         {
             joystick.gameObject.SetActive(false);
 
+            handDeckUI.enabled = true;
             attackButton.gameObject.SetActive(true);
             if(!joystick.gameObject.activeSelf)
                 moveButton.gameObject.SetActive(true);
