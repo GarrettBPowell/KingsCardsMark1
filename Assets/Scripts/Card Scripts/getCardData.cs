@@ -9,6 +9,8 @@ public class getCardData : MonoBehaviour
     public Image cardSpriteUI;
     public Text Description;
     public Text Name;
+
+   // public int indexInGameManagerList;
     // Start is called before the first frame update
     void Start()
     { 

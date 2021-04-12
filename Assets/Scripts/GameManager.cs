@@ -12,10 +12,13 @@ public class GameManager : MonoBehaviour
 
 //PLAYER STUFF
     //cards player has
-    public List<GameObject> playerDeck;
-    public List<GameObject> discardPile;
-    public List<GameObject> playerHand;
+    public List<GameObject> playerDeck; //cards player can pull from
+    public List<GameObject> playerHand; //cards in hand
+    public List<GameObject> discardPile; //its a discard pile
+    
     public int numCardsToDraw = 3;
+
+    public bool displayHand = true;
 
     //play stats, effects, anything else
     public int playerMaxHealth = 60;

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
+    GameManager gameManager;
 
     [SerializeField] private Canvas canvas;
 
@@ -12,10 +13,14 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     WorldTile tileDroppedOn;
 
+    private void Start()
+    {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
     private void Awake() {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        canvas =
         canvas = GetComponentInParent<Canvas>();
     }
 
@@ -44,10 +49,8 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 if (tileDroppedOn.getObject().CompareTag("enemy"))
                 { 
                     enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
-                    Debug.Log(enemyToAttack.enemyHealth);
                     gameObject.GetComponent<getCardData>().card.attack(enemyToAttack.GetComponent<Enemy>());
-                    Debug.Log(enemyToAttack.enemyHealth);
-                    
+                    Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
                     Destroy(gameObject);
                 }
             }
@@ -58,6 +61,10 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     private void Update()
     {
+        if(gameManager.outOfCombat || !gameManager.playerTurn)
+        {
+            Destroy(gameObject);
+        }
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
     }

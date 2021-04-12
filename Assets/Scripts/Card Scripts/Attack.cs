@@ -26,8 +26,10 @@ public class Attack : MonoBehaviour
                 shuffle();
             GameObject g = gameManager.playerDeck[0];
             gameManager.playerHand.Add(g);
-            gameManager.discardPile.Add(g);
+
             gameManager.playerDeck.RemoveAt(0);
+
+            gameManager.displayHand = true;
         }
     }
     
@@ -46,7 +48,7 @@ public class Attack : MonoBehaviour
             gameManager.playerDeck.Add(c);
             
         }
-        for (int i = 0; i < gameManager.discardPile.Count; i++)
-            gameManager.discardPile.RemoveAt(0);
+        gameManager.discardPile.RemoveRange(0, gameManager.discardPile.Count);
     }
+
 }
