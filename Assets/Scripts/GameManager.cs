@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
         healthSlider.value = playerHealth;
 
-        if (enemyMoving)
+        if (enemyMoving || isInCombatMoving)
         {
             moveButton.interactable = false;
             attackButton.interactable = false;
@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
             playerTurn = true;
             attackButton.gameObject.SetActive(false);
             handDeckUI.enabled = false;
+            wantsToAttack = false;
             if(!moveButton.gameObject.activeSelf)
             {
                 if(isMobile)
