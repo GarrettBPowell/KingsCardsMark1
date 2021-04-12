@@ -41,7 +41,6 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void OnEndDrag(PointerEventData eventData) {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-        Debug.Log("drop");
 
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int dictKey = new Vector3Int(0,0,0);
@@ -91,7 +90,6 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     private void Update()
     {
-        Debug.Log(gameManager.playerTurn);
         if(gameManager.outOfCombat || !gameManager.playerTurn || gameManager.enemyMoving)
         {
             Destroy(gameObject);

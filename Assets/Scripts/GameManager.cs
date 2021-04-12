@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
     
     public int numCardsToDraw = 3;
 
+    //hand cards
     public bool displayHand = true;
+    public bool drawExtra = false;
 
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
