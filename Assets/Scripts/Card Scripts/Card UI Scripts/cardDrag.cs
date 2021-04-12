@@ -13,6 +13,9 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     WorldTile tileDroppedOn;
 
+
+    //spawn position
+    private Vector2 cardPosition;
     private void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
@@ -22,6 +25,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+        cardPosition = gameObject.transform.position;
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -62,7 +66,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
-            if(tileDroppedOn.getOccupied())
+            if (tileDroppedOn.getOccupied())
             {
                 Enemy enemyToAttack;
                 if (tileDroppedOn.getObject().CompareTag("enemy"))
@@ -74,8 +78,14 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                     Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
                     Destroy(gameObject);
                 }
+                else
+                    gameObject.transform.position = cardPosition;
             }
+            else
+                gameObject.transform.position = cardPosition;
         }
+        else
+            gameObject.transform.position = cardPosition;
         gameObject.transform.localScale = new Vector2(1f, 1f);
     }
 
