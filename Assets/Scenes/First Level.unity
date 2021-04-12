@@ -332,6 +332,7 @@ MonoBehaviour:
   start: {fileID: 2039053863}
   HandDeck: {fileID: 2039053863}
   howManyAdded: 0
+  drewThisTurn: 0
   moveButton: {fileID: 4906236927373231540}
   attackButton: {fileID: 4906236927980039789}
   cancelAttackButton: {fileID: 4906236927757816923}
@@ -496,6 +497,7 @@ MonoBehaviour:
   start: {fileID: 0}
   HandDeck: {fileID: 0}
   howManyAdded: 0
+  drewThisTurn: 0
   moveButton: {fileID: 4906236927373231540}
   attackButton: {fileID: 4906236927980039789}
   cancelAttackButton: {fileID: 4906236927757816923}
@@ -1143,6 +1145,7 @@ MonoBehaviour:
   start: {fileID: 0}
   HandDeck: {fileID: 0}
   howManyAdded: 0
+  drewThisTurn: 0
   moveButton: {fileID: 4906236927373231540}
   attackButton: {fileID: 4906236927980039789}
   cancelAttackButton: {fileID: 4906236927757816923}
@@ -1256,7 +1259,6 @@ GameObject:
   - component: {fileID: 1188174533}
   - component: {fileID: 1188174534}
   - component: {fileID: 1188174536}
-  - component: {fileID: 1188174535}
   m_Layer: 0
   m_Name: character
   m_TagString: Player
@@ -1425,18 +1427,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   tilesInArray: 0
---- !u!114 &1188174535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188174528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9b39cfa23cb4c4c8e035e7e727bcdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1188174536
 MonoBehaviour:
   m_ObjectHideFlags: 0
