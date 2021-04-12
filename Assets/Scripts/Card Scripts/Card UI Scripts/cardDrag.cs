@@ -40,7 +40,29 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         Debug.Log("drop");
 
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int dictKey = new Vector3Int(Mathf.RoundToInt(worldPosition.x), Mathf.RoundToInt((int)worldPosition.y), 0);
+        Vector3Int dictKey = new Vector3Int(0,0,0);
+
+        Debug.Log(worldPosition);
+        //best round x
+        if ((worldPosition.x > 0 && worldPosition.x % 1 <= 0.5) || (worldPosition.x < 0 && worldPosition.x % 1 <= -0.5))
+            dictKey = new Vector3Int(Mathf.FloorToInt(worldPosition.x), dictKey.y, 0);
+        else
+        {
+            dictKey = new Vector3Int(Mathf.RoundToInt(worldPosition.x), dictKey.y, 0);
+            Debug.Log("else 1");
+        }
+
+
+        //best round y
+        if ((worldPosition.y > 0 && worldPosition.y % 1 <= 0.5) || (worldPosition.y < 0 && worldPosition.y % 1 <= -0.5))
+            dictKey = new Vector3Int(dictKey.x, Mathf.FloorToInt(worldPosition.y), 0);
+        else
+        {
+            dictKey = new Vector3Int(dictKey.x, Mathf.RoundToInt(worldPosition.y), 0);
+            Debug.Log("else 2");
+        }
+
+
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
             if(tileDroppedOn.getOccupied())

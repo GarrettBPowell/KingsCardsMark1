@@ -18,6 +18,7 @@ public class Attack : MonoBehaviour
         gapFromOneItemToTheNextOne = 1.0f;
     }
 
+    //normal draw card function
     public void draw()
     {
         for(int i = 0; i < gameManager.numCardsToDraw; i++)
@@ -32,7 +33,23 @@ public class Attack : MonoBehaviour
             gameManager.displayHand = true;
         }
     }
-    
+
+    //if card causes you to draw extra cards
+    public void drawExtra(int cardsToDraw)
+    {
+        for (int i = 0; i <cardsToDraw; i++)
+        {
+            if (gameManager.playerDeck.Count == 0)
+                shuffle();
+            GameObject g = gameManager.playerDeck[0];
+            gameManager.playerHand.Add(g);
+
+            gameManager.playerDeck.RemoveAt(0);
+
+            gameManager.displayHand = true;
+        }
+    }
+
     public void shuffle()
     {
         int index = 0;
