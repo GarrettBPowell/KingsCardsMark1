@@ -113,5 +113,7 @@ public class MoveButton : MonoBehaviour
             cancelButtonClicked = false;
 
         gameObject.GetComponent<Button>().interactable = true;
+        gameManager.attackButton.GetComponent<Attack>().drewThisTurn = false;
+        gameManager.cancelAttackHit = false;
     }
 }

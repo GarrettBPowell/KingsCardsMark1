@@ -973,6 +973,7 @@ MonoBehaviour:
   discardPile: []
   numCardsToDraw: 3
   displayHand: 1
+  drawExtra: 0
   playerMaxHealth: 60
   playerHealth: 60
   playerStatusEffects: []
@@ -1988,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.26415092, g: 0.17817727, b: 0.17817727, a: 0.23921569}
+  m_Color: {r: 0.26415092, g: 0.17817727, b: 0.17817727, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

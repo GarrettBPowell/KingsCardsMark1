@@ -16,6 +16,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     //spawn position
     private Vector2 cardPosition;
+    bool moved;
     private void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
@@ -89,17 +90,24 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
 
     private void Update()
-    {
+    {  
         if(gameManager.outOfCombat || !gameManager.playerTurn || gameManager.enemyMoving)
         {
             Destroy(gameObject);
         }
         if (gameManager.cancelAttackHit)
         {
-            gameObject.SetActive(false);
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, -2000);
+            moved = true;
         }
         else if (gameManager.playerTurn && !gameManager.cancelAttackHit)
-            gameObject.SetActive(true);
+        {
+            if (moved)
+            {
+                gameObject.transform.position = cardPosition;
+                moved = false;
+            }
+        }
 
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;

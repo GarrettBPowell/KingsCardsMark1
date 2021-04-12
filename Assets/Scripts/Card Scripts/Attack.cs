@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
     public Transform HandDeck; //The hand panel reference
     public float howManyAdded; // How many cards I added so far
 
+    public bool drewThisTurn = false;
 
     //buttons
     public Button moveButton;
@@ -47,6 +48,7 @@ public class Attack : MonoBehaviour
         attackButton.interactable = true;
         endTurnButton.gameObject.SetActive(false);
         gameManager.wantsToAttack = false;
+        attackButton.GetComponent<Attack>().drewThisTurn = false;
     }
 
     public void cancelAttack()
@@ -65,13 +67,14 @@ public class Attack : MonoBehaviour
     public void draw()
     {
         gameManager.wantsToAttack = true;
-        if (!gameManager.cancelAttackHit)
+        attackButton.interactable = false;
+
+        cancelAttackButton.gameObject.SetActive(true);
+        endTurnButton.gameObject.SetActive(true);
+
+        if (!drewThisTurn)
         {
-            attackButton.interactable = false;
-
-            cancelAttackButton.gameObject.SetActive(true);
-            endTurnButton.gameObject.SetActive(true);
-
+            drewThisTurn = true;
             for (int i = 0; i < gameManager.numCardsToDraw; i++)
             {
                 if (gameManager.playerDeck.Count == 0)
