@@ -9,29 +9,83 @@ public class Attack : MonoBehaviour
     public Transform start;  //Location where to start adding my cards
     public Transform HandDeck; //The hand panel reference
     public float howManyAdded; // How many cards I added so far
-    float gapFromOneItemToTheNextOne; //the gap I need between each card
 
+
+    //buttons
+    public Button moveButton;
+    public Button attackButton;
+    public Button cancelAttackButton;
+    public Button endTurnButton;
+
+    
     void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         howManyAdded = 0.0f;
-        gapFromOneItemToTheNextOne = 1.0f;
+    }
+
+    private void Update()
+    {
+        if(gameManager.playerAttacked)
+        {
+            cancelAttackButton.gameObject.SetActive(false);
+        }
+        if(gameManager.outOfCombat)
+        {
+            cancelAttackButton.gameObject.SetActive(false);
+            endTurnButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void endTurn()
+    {
+        gameManager.playerTurn = false;
+        gameManager.playerAttacked = false;
+
+        cancelAttackButton.gameObject.SetActive(false);
+        moveButton.gameObject.SetActive(true);
+        attackButton.interactable = true;
+        endTurnButton.gameObject.SetActive(false);
+        gameManager.wantsToAttack = false;
+    }
+
+    public void cancelAttack()
+    {
+        if (!gameManager.playerAttacked)
+        {
+            gameManager.cancelAttackHit = true;
+            endTurnButton.gameObject.SetActive(false);
+            attackButton.interactable = true;
+            cancelAttackButton.gameObject.SetActive(false);
+            gameManager.wantsToAttack = false;
+        }
     }
 
     //normal draw card function
     public void draw()
     {
-        for(int i = 0; i < gameManager.numCardsToDraw; i++)
+        gameManager.wantsToAttack = true;
+        if (!gameManager.cancelAttackHit)
         {
-            if (gameManager.playerDeck.Count == 0)
-                shuffle();
-            GameObject g = gameManager.playerDeck[0];
-            gameManager.playerHand.Add(g);
+            attackButton.interactable = false;
 
-            gameManager.playerDeck.RemoveAt(0);
+            cancelAttackButton.gameObject.SetActive(true);
+            endTurnButton.gameObject.SetActive(true);
 
-            gameManager.displayHand = true;
+            for (int i = 0; i < gameManager.numCardsToDraw; i++)
+            {
+                if (gameManager.playerDeck.Count == 0)
+                    shuffle();
+                GameObject g = gameManager.playerDeck[0];
+                gameManager.playerHand.Add(g);
+
+                gameManager.playerDeck.RemoveAt(0);
+
+                gameManager.displayHand = true;
+            }
         }
+        else
+            gameManager.cancelAttackHit = false;
     }
 
     //if card causes you to draw extra cards

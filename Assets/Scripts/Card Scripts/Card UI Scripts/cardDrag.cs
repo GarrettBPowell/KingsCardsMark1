@@ -42,14 +42,12 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int dictKey = new Vector3Int(0,0,0);
 
-        Debug.Log(worldPosition);
         //best round x
         if ((worldPosition.x > 0 && worldPosition.x % 1 <= 0.5) || (worldPosition.x < 0 && worldPosition.x % 1 <= -0.5))
             dictKey = new Vector3Int(Mathf.FloorToInt(worldPosition.x), dictKey.y, 0);
         else
         {
             dictKey = new Vector3Int(Mathf.RoundToInt(worldPosition.x), dictKey.y, 0);
-            Debug.Log("else 1");
         }
 
 
@@ -59,7 +57,6 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         else
         {
             dictKey = new Vector3Int(dictKey.x, Mathf.RoundToInt(worldPosition.y), 0);
-            Debug.Log("else 2");
         }
 
 
@@ -69,24 +66,33 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             {
                 Enemy enemyToAttack;
                 if (tileDroppedOn.getObject().CompareTag("enemy"))
-                { 
+                {
+                    gameManager.playerAttacked = true;
+
                     enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
                     gameObject.GetComponent<getCardData>().card.attack(enemyToAttack.GetComponent<Enemy>());
                     Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
                     Destroy(gameObject);
                 }
             }
-            Debug.Log(dictKey);
         }
         gameObject.transform.localScale = new Vector2(1f, 1f);
     }
 
     private void Update()
     {
-        if(gameManager.outOfCombat || !gameManager.playerTurn)
+        Debug.Log(gameManager.playerTurn);
+        if(gameManager.outOfCombat || !gameManager.playerTurn || gameManager.enemyMoving)
         {
             Destroy(gameObject);
         }
+        if (gameManager.cancelAttackHit)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (gameManager.playerTurn && !gameManager.cancelAttackHit)
+            gameObject.SetActive(true);
+
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
     }

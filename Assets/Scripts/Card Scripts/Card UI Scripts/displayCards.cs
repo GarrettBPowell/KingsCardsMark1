@@ -19,7 +19,7 @@ public class displayCards : MonoBehaviour
             int distOver = gameManager.playerHand.Count * 150;
             foreach(GameObject c in gameManager.playerHand)
             {
-                Vector3 pos = new Vector3(gameObject.transform.position.x - distOver, gameObject.transform.position.y, 0);
+                Vector3 pos = new Vector3(300 +gameObject.transform.position.x - distOver, gameObject.transform.position.y, 0);
                 gameManager.discardPile.Add(c);
                 Instantiate(c, pos, Quaternion.identity, gameObject.transform);
                 //cardsToDestroy.Add(c);

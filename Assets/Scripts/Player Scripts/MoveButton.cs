@@ -50,6 +50,7 @@ public class MoveButton : MonoBehaviour
     //basically the button handler - first click activates it to accept tile inputs and store in array - second click executes the movements
     public void changePlayerMove() 
     {
+        gameManager.playerWantsToMove = true;
         if (charStats.wantsToMove)
         {
             doTheMove();
@@ -79,13 +80,14 @@ public class MoveButton : MonoBehaviour
 
     public void noMove()
     {
-       charStats.wantsToMove = false;
+        charStats.wantsToMove = false;
         cancelButtonClicked = true;
         resetStuff();
     }
     //reset the used values to be used again
     public void resetStuff()
     {
+        gameManager.playerWantsToMove = false;
         for (int i = 0; i <charStats.tilesInArray; i++)
         {
             charStats.tilesToMoveTo[i].GetComponent<WorldTile>().setAddedBool(false);

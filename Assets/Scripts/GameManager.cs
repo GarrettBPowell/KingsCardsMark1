@@ -28,11 +28,16 @@ public class GameManager : MonoBehaviour
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
     public bool isInCombatMoving; //tells the out of combat player controller if the in combat controller is still moving the player
+    public bool playerWantsToMove;
 
     public GameObject character;
     public bool playerTurn = true;
     public bool enemyMoving = false;
 
+    //attack vars
+    public bool playerAttacked = false;
+    public bool wantsToAttack = false;
+    public bool cancelAttackHit = false;
 
     //level variables
     public int level = 1;
@@ -112,9 +117,19 @@ public class GameManager : MonoBehaviour
             joystick.gameObject.SetActive(false);
 
             handDeckUI.enabled = true;
-            attackButton.gameObject.SetActive(true);
-            if(!joystick.gameObject.activeSelf)
-                moveButton.gameObject.SetActive(true);
+            if(!playerWantsToMove)
+                attackButton.gameObject.SetActive(true);
+            else
+                attackButton.gameObject.SetActive(false);
+            if (!wantsToAttack)
+            {
+                if (!joystick.gameObject.activeSelf)
+                    moveButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                moveButton.gameObject.SetActive(false);
+            }
         }
     }
 }
