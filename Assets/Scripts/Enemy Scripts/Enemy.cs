@@ -35,7 +35,8 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-
+        if (enemyHealth <= 0)
+            Destroy(gameObject);
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
         

@@ -19,10 +19,17 @@ public class Card : ScriptableObject
 	public int statusEffect;
 	public int damage;
 
+
+
 	
 	public void Print()
 	{
 		Debug.Log(name + ": " + description + " The card costs: " + damage);
+	}
+
+	public void attack(Enemy enemy)
+	{
+		enemy.enemyHealth -= damage;
 	}
 
 }

@@ -20,7 +20,6 @@ public class Attack : MonoBehaviour
 
     public void draw()
     {
-        Debug.Log("here");
         for(int i = 0; i < gameManager.numCardsToDraw; i++)
         {
             if (gameManager.playerDeck.Count == 0)
@@ -30,24 +29,6 @@ public class Attack : MonoBehaviour
             gameManager.discardPile.Add(g);
             gameManager.playerDeck.RemoveAt(0);
         }
-
-        //FitCards();
-
-    }
-
-    public void FitCards()
-    {
-        if (gameManager.playerHand.Count == 0) //if list is null, stop function
-            return;
-
-        GameObject cardUI = gameManager.playerHand[0]; //Reference to first image in my list
-
-       // cardUI.transform.position = start.position; //relocating my card to the Start Position
-        //cardUI.transform.position += new Vector3((howManyAdded * gapFromOneItemToTheNextOne), 0, 0); // Moving my card 1f to the right
-        //cardUI.transform.SetParent(HandDeck); //Setting ym card parent to be the Hand Panel
-
-        gameManager.playerHand.RemoveAt(0);
-        howManyAdded++;
     }
     
     public void shuffle()

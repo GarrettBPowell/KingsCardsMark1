@@ -26,18 +26,31 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
 
     public void OnDrag(PointerEventData eventData) {
-        Debug.Log(canvas.scaleFactor);
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData) {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        Debug.Log("drop");
 
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int dictKey = new Vector3Int(Mathf.RoundToInt(worldPosition.x), Mathf.RoundToInt((int)worldPosition.y), 0);
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
+            if(tileDroppedOn.getOccupied())
+            {
+                Enemy enemyToAttack;
+                if (tileDroppedOn.getObject().CompareTag("enemy"))
+                { 
+                    enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
+                    Debug.Log(enemyToAttack.enemyHealth);
+                    gameObject.GetComponent<getCardData>().card.attack(enemyToAttack.GetComponent<Enemy>());
+                    Debug.Log(enemyToAttack.enemyHealth);
+                    
+                    Destroy(gameObject);
+                }
+            }
             Debug.Log(dictKey);
         }
         gameObject.transform.localScale = new Vector2(1f, 1f);
