@@ -23,6 +23,7 @@ public class enemyInRoom : MonoBehaviour
         if (collision.gameObject.CompareTag("FloorTile"))
         {
             collision.GetComponent<WorldTile>().setOccupied(true);
+            collision.GetComponent<WorldTile>().setObject(gameObject);
             tileEnemyIsOn = collision;
         }
     }
@@ -30,7 +31,10 @@ public class enemyInRoom : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("FloorTile"))
+        {
             collision.GetComponent<WorldTile>().setOccupied(false);
+            collision.GetComponent<WorldTile>().setObject(null);
+        }
     }
 
     private void OnDestroy()

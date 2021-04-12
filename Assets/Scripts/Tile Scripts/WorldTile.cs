@@ -12,6 +12,8 @@ public class WorldTile : MonoBehaviour
     public Vector3 tilePosition;
     private SpriteRenderer thisSprite;
     private Color originalColor;
+
+    public GameObject objectOnTile;
     private void Awake()
     {
         var localPlace = new Vector3Int((int)gameObject.transform.position.x, (int)gameObject.transform.position.y, (int)gameObject.transform.position.z);
@@ -79,5 +81,15 @@ public class WorldTile : MonoBehaviour
     public bool getOccupied()
     {
         return occupied;
+    }
+
+    public GameObject getObject()
+    {
+        return objectOnTile;
+    }
+
+    public void setObject(GameObject collision)
+    {
+        objectOnTile = collision;
     }
 }

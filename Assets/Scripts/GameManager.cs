@@ -12,8 +12,15 @@ public class GameManager : MonoBehaviour
 
 //PLAYER STUFF
     //cards player has
-    public List<GameObject> playerDeck;
-    public List<GameObject> playerHand;
+    public List<GameObject> playerDeck; //cards player can pull from
+    public List<GameObject> playerHand; //cards in hand
+    public List<GameObject> discardPile; //its a discard pile
+    
+    public int numCardsToDraw = 3;
+
+    //hand cards
+    public bool displayHand = true;
+    public bool drawExtra = false;
 
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
@@ -23,11 +30,16 @@ public class GameManager : MonoBehaviour
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
     public bool isInCombatMoving; //tells the out of combat player controller if the in combat controller is still moving the player
+    public bool playerWantsToMove;
 
     public GameObject character;
     public bool playerTurn = true;
     public bool enemyMoving = false;
 
+    //attack vars
+    public bool playerAttacked = false;
+    public bool wantsToAttack = false;
+    public bool cancelAttackHit = false;
 
     //level variables
     public int level = 1;
@@ -44,6 +56,7 @@ public class GameManager : MonoBehaviour
     public Button attackButton;
     public Text healthText;
     public Slider healthSlider;
+    public Image handDeckUI;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
@@ -74,7 +87,7 @@ public class GameManager : MonoBehaviour
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
         healthSlider.value = playerHealth;
 
-        if (enemyMoving)
+        if (enemyMoving || isInCombatMoving)
         {
             moveButton.interactable = false;
             attackButton.interactable = false;
@@ -94,6 +107,8 @@ public class GameManager : MonoBehaviour
         {
             playerTurn = true;
             attackButton.gameObject.SetActive(false);
+            handDeckUI.enabled = false;
+            wantsToAttack = false;
             if(!moveButton.gameObject.activeSelf)
             {
                 if(isMobile)
@@ -104,9 +119,20 @@ public class GameManager : MonoBehaviour
         {
             joystick.gameObject.SetActive(false);
 
-            attackButton.gameObject.SetActive(true);
-            if(!joystick.gameObject.activeSelf)
-                moveButton.gameObject.SetActive(true);
+            handDeckUI.enabled = true;
+            if(!playerWantsToMove)
+                attackButton.gameObject.SetActive(true);
+            else
+                attackButton.gameObject.SetActive(false);
+            if (!wantsToAttack)
+            {
+                if (!joystick.gameObject.activeSelf)
+                    moveButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                moveButton.gameObject.SetActive(false);
+            }
         }
     }
 }
