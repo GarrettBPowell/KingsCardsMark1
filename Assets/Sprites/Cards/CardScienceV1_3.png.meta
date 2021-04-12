@@ -1,0 +1,1932 @@
+fileFormatVersion: 2
+guid: 66b455eabb04ae049b2797fc03b1d2e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5797987850275968274
+    second: CardScienceV1_3_0
+  - first:
+      213: -1022000610950033633
+    second: CardScienceV1_3_1
+  - first:
+      213: -2236378799552006621
+    second: CardScienceV1_3_2
+  - first:
+      213: -4077729740435555186
+    second: CardScienceV1_3_3
+  - first:
+      213: -8548071067627756265
+    second: CardScienceV1_3_4
+  - first:
+      213: -1077204589285899347
+    second: CardScienceV1_3_5
+  - first:
+      213: -1781568088692537680
+    second: CardScienceV1_3_6
+  - first:
+      213: -1356627835348795808
+    second: CardScienceV1_3_7
+  - first:
+      213: -4192663141034736347
+    second: CardScienceV1_3_8
+  - first:
+      213: -5807378664844590476
+    second: CardScienceV1_3_9
+  - first:
+      213: 5130956362225430185
+    second: CardScienceV1_3_10
+  - first:
+      213: -4402802223600834248
+    second: CardScienceV1_3_11
+  - first:
+      213: -4107848299078292755
+    second: CardScienceV1_3_12
+  - first:
+      213: -8977347498862908210
+    second: CardScienceV1_3_13
+  - first:
+      213: -1733793269727558487
+    second: CardScienceV1_3_14
+  - first:
+      213: 5199120747287873557
+    second: CardScienceV1_3_15
+  - first:
+      213: 3503641812314298858
+    second: CardScienceV1_3_16
+  - first:
+      213: -1253955870250775553
+    second: CardScienceV1_3_17
+  - first:
+      213: 4503077507022280024
+    second: CardScienceV1_3_18
+  - first:
+      213: -2669806269793722079
+    second: CardScienceV1_3_19
+  - first:
+      213: -29271536426729124
+    second: CardScienceV1_3_20
+  - first:
+      213: -2744240443583696563
+    second: CardScienceV1_3_21
+  - first:
+      213: 2780411601976661624
+    second: CardScienceV1_3_22
+  - first:
+      213: 1744731474660604150
+    second: CardScienceV1_3_23
+  - first:
+      213: -7178913787023726724
+    second: CardScienceV1_3_24
+  - first:
+      213: -7244711813887038594
+    second: CardScienceV1_3_25
+  - first:
+      213: -5333686439276961293
+    second: CardScienceV1_3_26
+  - first:
+      213: -4454496016137789334
+    second: CardScienceV1_3_27
+  - first:
+      213: 8942303448474606734
+    second: CardScienceV1_3_28
+  - first:
+      213: 2539220493790732777
+    second: CardScienceV1_3_29
+  - first:
+      213: 8270892870027986124
+    second: CardScienceV1_3_30
+  - first:
+      213: 6853817118191581860
+    second: CardScienceV1_3_31
+  - first:
+      213: -8468205245085413617
+    second: CardScienceV1_3_32
+  - first:
+      213: 1501239537343037199
+    second: CardScienceV1_3_33
+  - first:
+      213: -6258433762418878859
+    second: CardScienceV1_3_34
+  - first:
+      213: -3520016828368208567
+    second: CardScienceV1_3_35
+  - first:
+      213: 6661575652115211115
+    second: CardScienceV1_3_36
+  - first:
+      213: 2746199878106706279
+    second: CardScienceV1_3_37
+  - first:
+      213: 9068356715945491166
+    second: CardScienceV1_3_38
+  - first:
+      213: 6604860147149320707
+    second: CardScienceV1_3_39
+  - first:
+      213: -4922842564307519153
+    second: CardScienceV1_3_40
+  - first:
+      213: 3407753571679737517
+    second: CardScienceV1_3_41
+  - first:
+      213: -4467796234881307738
+    second: CardScienceV1_3_42
+  - first:
+      213: 2508473309160633021
+    second: CardScienceV1_3_43
+  - first:
+      213: -2796586503716384867
+    second: CardScienceV1_3_44
+  - first:
+      213: -1374556122527884467
+    second: CardScienceV1_3_45
+  - first:
+      213: 2656492804411412369
+    second: CardScienceV1_3_46
+  - first:
+      213: -5230698635660104782
+    second: CardScienceV1_3_47
+  - first:
+      213: -7142848622475081782
+    second: CardScienceV1_3_48
+  - first:
+      213: -8787216720047154378
+    second: CardScienceV1_3_49
+  - first:
+      213: -7029370484382500448
+    second: CardScienceV1_3_50
+  - first:
+      213: 1931126122171298694
+    second: CardScienceV1_3_51
+  - first:
+      213: 8563534240204471340
+    second: CardScienceV1_3_52
+  - first:
+      213: -5937214533435205225
+    second: CardScienceV1_3_53
+  - first:
+      213: 2502583334019176726
+    second: CardScienceV1_3_54
+  - first:
+      213: -3440593094111880514
+    second: CardScienceV1_3_55
+  - first:
+      213: -9010005452944616636
+    second: CardScienceV1_3_56
+  - first:
+      213: 8336837289831814948
+    second: CardScienceV1_3_57
+  - first:
+      213: -6484586006948601755
+    second: CardScienceV1_3_58
+  - first:
+      213: 3912282095566644014
+    second: CardScienceV1_3_59
+  - first:
+      213: -3600760417838252270
+    second: CardScienceV1_3_60
+  - first:
+      213: 2004407189158170184
+    second: CardScienceV1_3_61
+  - first:
+      213: -6889004426475621475
+    second: CardScienceV1_3_62
+  - first:
+      213: -8180466097428595000
+    second: CardScienceV1_3_63
+  - first:
+      213: 4378789416773917938
+    second: CardScienceV1_3_64
+  - first:
+      213: -5498093659680887456
+    second: CardScienceV1_3_65
+  - first:
+      213: -4535592160971799942
+    second: CardScienceV1_3_66
+  - first:
+      213: -4074037142618602469
+    second: CardScienceV1_3_67
+  - first:
+      213: 4469557650476252251
+    second: CardScienceV1_3_68
+  - first:
+      213: 126257531595297354
+    second: CardScienceV1_3_69
+  - first:
+      213: -6586634513764253979
+    second: CardScienceV1_3_70
+  - first:
+      213: 8322432601049841083
+    second: CardScienceV1_3_71
+  - first:
+      213: -5537767449206777571
+    second: CardScienceV1_3_72
+  - first:
+      213: 9027225603588764440
+    second: CardScienceV1_3_73
+  - first:
+      213: -6387482269995324337
+    second: CardScienceV1_3_74
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CardScienceV1_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea254ce4c8698fa0800000000000000
+      internalID: -5797987850275968274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 476
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f4710fbdf11d1f0800000000000000
+      internalID: -1022000610950033633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 476
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326fc75a459c6f0e0800000000000000
+      internalID: -2236378799552006621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 476
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cfa43e76ef867c0800000000000000
+      internalID: -4077729740435555186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 476
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715e04357a62f5980800000000000000
+      internalID: -8548071067627756265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 442
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3813122200d01f0800000000000000
+      internalID: -1077204589285899347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 442
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b64f4233499647e0800000000000000
+      internalID: -1781568088692537680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 442
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06eb0a5eb2a4c2de0800000000000000
+      internalID: -1356627835348795808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 442
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52540cf361ba0d5c0800000000000000
+      internalID: -4192663141034736347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 442
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47281c58fdb086fa0800000000000000
+      internalID: -5807378664844590476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae2a7060a1d43740800000000000000
+      internalID: 5130956362225430185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 408
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839e8f564ba16e2c0800000000000000
+      internalID: -4402802223600834248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 408
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deaee3e7cbdfdf6c0800000000000000
+      internalID: -4107848299078292755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 408
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecce809830e0a6380800000000000000
+      internalID: -8977347498862908210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 408
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a40deb053450f7e0800000000000000
+      internalID: -1733793269727558487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 374
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518057606ccf62840800000000000000
+      internalID: 5199120747287873557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 374
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9133b4aaf6f9030800000000000000
+      internalID: 3503641812314298858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 374
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbcfad97cd099ee0800000000000000
+      internalID: -1253955870250775553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_18
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 374
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8555d1262252e7e30800000000000000
+      internalID: 4503077507022280024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 374
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121a5d5c751f2fad0800000000000000
+      internalID: -2669806269793722079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51414551b1089ff0800000000000000
+      internalID: -29271536426729124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_21
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 340
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41feed2bdf7ae9d0800000000000000
+      internalID: -2744240443583696563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 340
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8769139ee91069620800000000000000
+      internalID: 2780411601976661624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_23
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 340
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8b69f3808863810800000000000000
+      internalID: 1744731474660604150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 340
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77eb4b32ff5f5c90800000000000000
+      internalID: -7178913787023726724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bef294dfc957b90800000000000000
+      internalID: -7244711813887038594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_26
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 306
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1249b4170faf5b0800000000000000
+      internalID: -5333686439276961293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 306
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60e6b869737e22c0800000000000000
+      internalID: -4454496016137789334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 306
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c5418ab91791c70800000000000000
+      internalID: 8942303448474606734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 306
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1e9c2f59f1d3320800000000000000
+      internalID: 2539220493790732777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc444558e3d18c270800000000000000
+      internalID: 8270892870027986124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_31
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 272
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aafc4d1b56ad1f50800000000000000
+      internalID: 6853817118191581860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 272
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f85913234ea7a80800000000000000
+      internalID: -8468205245085413617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 272
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f7a12c76975d410800000000000000
+      internalID: 1501239537343037199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 272
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57616b4d6a39529a0800000000000000
+      internalID: -6258433762418878859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d37bd2853662fc0800000000000000
+      internalID: -3520016828368208567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_36
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 238
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63e7b4d2cba27c50800000000000000
+      internalID: 6661575652115211115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 238
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76175c83d367c1620800000000000000
+      internalID: 2746199878106706279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_38
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 238
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda757e036649dd70800000000000000
+      internalID: 9068356715945491166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 238
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30238fd4f4d29ab50800000000000000
+      internalID: 6604860147149320707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49f64525cc8eabb0800000000000000
+      internalID: -4922842564307519153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 204
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da61a0281d5ca4f20800000000000000
+      internalID: 3407753571679737517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 204
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab621beef23ff1c0800000000000000
+      internalID: -4467796234881307738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_43
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 204
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db271192f23efc220800000000000000
+      internalID: 2508473309160633021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 204
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f455e44678039d0800000000000000
+      internalID: -2796586503716384867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b13e04d789cece0800000000000000
+      internalID: -1374556122527884467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_46
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 170
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fc2538122cdd420800000000000000
+      internalID: 2656492804411412369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 170
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbeb56ed43d867b0800000000000000
+      internalID: -5230698635660104782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_48
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 170
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac70cf4b5018fdc90800000000000000
+      internalID: -7142848622475081782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 170
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b573523f88d0680800000000000000
+      internalID: -8787216720047154378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9f3c3a9c8a27e90800000000000000
+      internalID: -7029370484382500448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_51
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 136
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6837f700afcbcca10800000000000000
+      internalID: 1931126122171298694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_52
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 136
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c38491509c7d670800000000000000
+      internalID: 8563534240204471340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_53
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 136
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799de4ba6d6ca9da0800000000000000
+      internalID: -5937214533435205225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 136
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61996057846fab220800000000000000
+      internalID: 2502583334019176726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba9cc85fce8040d0800000000000000
+      internalID: -3440593094111880514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_56
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 102
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44357e017c706f280800000000000000
+      internalID: -9010005452944616636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_57
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 102
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427d7aa385562b370800000000000000
+      internalID: 8336837289831814948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_58
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 102
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5602c5c226f1206a0800000000000000
+      internalID: -6484586006948601755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 102
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23ee5776d73b4630800000000000000
+      internalID: 3912282095566644014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fb6754a77870ec0800000000000000
+      internalID: -3600760417838252270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_61
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 68
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e030ff7b511db10800000000000000
+      internalID: 2004407189158170184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 68
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93b3df39f65560a0800000000000000
+      internalID: -6889004426475621475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_63
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 68
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce74a52d65297e80800000000000000
+      internalID: -8180466097428595000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_64
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 68
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc9c0556c594cc30800000000000000
+      internalID: 4378789416773917938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06da4e852f8d2b3b0800000000000000
+      internalID: -5498093659680887456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_66
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 34
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72ca3fc5f65e01c0800000000000000
+      internalID: -4535592160971799942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_67
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 34
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b148870ddcc1677c0800000000000000
+      internalID: -4074037142618602469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_68
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 34
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c34cb900f070e30800000000000000
+      internalID: 4469557650476252251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 34
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4294f85e8e80c100800000000000000
+      internalID: 126257531595297354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eef0c5aec29794a0800000000000000
+      internalID: -6586634513764253979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_71
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdb4b44b583f7370800000000000000
+      internalID: 8322432601049841083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_72
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d191f4568d5e523b0800000000000000
+      internalID: -5537767449206777571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_73
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8133831bbd5274d70800000000000000
+      internalID: 9027225603588764440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardScienceV1_3_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ca2dfb7ba1b57a0800000000000000
+      internalID: -6387482269995324337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
