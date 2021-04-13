@@ -14,16 +14,18 @@ public class displayCards : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.playerHand.Count > 0 && gameManager.displayHand && gameManager.drawExtra > 0)
+        if (gameManager.playerHand.Count > 0 && gameManager.displayHand && gameManager.drewExtraCards)
         {
+            gameManager.drewExtraCards = false;
             gameManager.displayHand = false;
-            int distOver = gameManager.playerHand.Count * 150;
+            int distOver = 150;
             foreach (GameObject c in gameManager.playerHand)
             {
-                Vector3 pos = new Vector3(lastCardPos.x - distOver, gameObject.transform.position.y, 0);
+                Vector3 pos = new Vector3(lastCardPos.x + distOver, gameObject.transform.position.y, 0);
                 gameManager.discardPile.Add(c);
                 Instantiate(c, pos, Quaternion.identity, gameObject.transform);
-                distOver -= 150;
+                lastCardPos = pos;
+                distOver += 150;
             }
             gameManager.playerHand.RemoveRange(0, gameManager.playerHand.Count);
         }
@@ -31,14 +33,14 @@ public class displayCards : MonoBehaviour
         else if (gameManager.playerHand.Count > 0 && gameManager.displayHand)
         {
             gameManager.displayHand = false;
-            int distOver = gameManager.playerHand.Count * 150;
+            int distOver = 0;
             foreach(GameObject c in gameManager.playerHand)
             {
-                Vector3 pos = new Vector3(gameObject.transform.position.x - distOver, gameObject.transform.position.y, 0);
+                Vector3 pos = new Vector3(gameObject.transform.position.x + distOver, gameObject.transform.position.y, 0);
                 gameManager.discardPile.Add(c);
                 Instantiate(c, pos, Quaternion.identity, gameObject.transform);
                 lastCardPos = pos;
-                distOver -= 150;
+                distOver += 150;
             }
             gameManager.playerHand.RemoveRange(0, gameManager.playerHand.Count);
         }
