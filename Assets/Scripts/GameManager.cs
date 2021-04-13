@@ -138,6 +138,7 @@ public class GameManager : MonoBehaviour
         if(drawExtra > 0)
         {
             attackButton.GetComponent<Attack>().drawExtra(drawExtra);
+            drawExtra = 0;
         }
     }
 }
