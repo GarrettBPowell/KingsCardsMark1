@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
+public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler {
     GameManager gameManager;
 
     [SerializeField] private Canvas canvas;
@@ -29,6 +29,31 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         cardPosition = gameObject.transform.position;
         canAttackEnemy = gameObject.GetComponent<getCardData>().card.canAttackEnemy;
     }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (gameObject.transform.localScale.y == 1f)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 100);
+            gameObject.transform.localScale = new Vector2(.8f, .8f);
+        }
+        else
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 100);
+            gameObject.transform.localScale = new Vector2(1f, 1f);
+        }
+    }
+               /* public void OnPointerEnter(PointerEventData eventData)
+                {
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 100);
+                    gameObject.transform.localScale = new Vector2(1f, 1f);
+                }
+
+                public void OnPointerExit(PointerEventData eventData)
+                {
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 100);
+                    gameObject.transform.localScale = new Vector2(0.8f, 0.8f);
+                }*/
 
     public void OnBeginDrag(PointerEventData eventData) {
         canvasGroup.alpha = .2f;
@@ -133,7 +158,9 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         }
         else
             gameObject.transform.position = cardPosition;
-        gameObject.transform.localScale = new Vector2(1f, 1f);
+
+        //change back
+        gameObject.transform.localScale = new Vector2(.8f, .8f);
     }
 
     private void Update()
