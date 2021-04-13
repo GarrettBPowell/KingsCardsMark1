@@ -19,7 +19,7 @@ MonoBehaviour:
   cardType: Knight
   cardArea: Start
   descriptions:
-  - 'Deal 2 Damage, Draw 2  '
+  - 'Deal 2 Damage, Draw 1  '
   - 'Deal 4 Damage, Draw 2  '
   - 'Deal 8 Damage, Draw 3  '
   cardSprites:
@@ -29,7 +29,7 @@ MonoBehaviour:
   statusEffects: 
   damages: 020000000400000008000000
   statusEffectName: draw
-  defenses: 020000000200000003000000
+  defenses: 010000000200000003000000
   heals: 
   upgradable: 1
   upgradeNum: 0

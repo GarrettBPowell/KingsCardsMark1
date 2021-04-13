@@ -68,7 +68,7 @@ Transform:
   - {fileID: 4001781482140209672}
   - {fileID: 1687656688373062139}
   m_Father: {fileID: 7859270177318454986}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3579294976584093726
 GameObject:
@@ -134,7 +134,7 @@ Transform:
   - {fileID: 4147156891031676991}
   - {fileID: 7203523000471045371}
   m_Father: {fileID: 7859270177318454986}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4151716035583801652
 GameObject:
@@ -163,7 +163,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8115602626884911627}
   - {fileID: 5188566522394254990}
   - {fileID: 1753928544836487140}
   - {fileID: 4278315252042256503}
@@ -199,7 +198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7859270177318454986}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5613052144800830934
 GameObject:
@@ -225,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5613052144800830934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6544026302905882}
@@ -345,7 +344,7 @@ Transform:
   - {fileID: 1781876326568699633}
   - {fileID: 1295002717468996681}
   - {fileID: 6162293988389477811}
-  m_Father: {fileID: 7859270177318454986}
+  m_Father: {fileID: 4278315252042256503}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7415813645595815614
@@ -378,9 +377,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8115602626884911627}
   m_Father: {fileID: 7859270177318454986}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6330438950017775284
 BoxCollider2D:
@@ -422,6 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesInRoom: 0
   playerInRoom: 0
+  enemiesInRoomList: []
 --- !u!50 &1271333639418516771
 Rigidbody2D:
   serializedVersion: 4

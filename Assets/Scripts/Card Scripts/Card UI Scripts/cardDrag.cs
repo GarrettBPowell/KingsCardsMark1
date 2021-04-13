@@ -70,10 +70,12 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             Card c = gameObject.GetComponent<getCardData>().card;
             gameManager.playerAttacked = true;
 
+            //if card lets you draw more
             if(c.statusEffectName != null && c.statusEffectName.Equals("draw"))
             {
                 gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
             }
+
             if (!canAttackEnemy)
             {
                 if (c.heals.Count > 0)
@@ -82,12 +84,26 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 }
                 else if (c.statusEffectName != "")
                 {
-                    Debug.Log(c.statusEffectName);
                     c.addEffect(gameManager);
                 }
                 else if(c.defenses.Count > 0)
                 {
                     c.defend(gameManager);
+                }
+                Destroy(gameObject);
+            }
+            else if(c.cardType.Equals("Queen"))
+            {
+                foreach(GameObject g in tileDroppedOn.GetComponentInParent<EnemiesInRoom>().enemiesInRoomList)
+                {
+                    Dictionary<string, int> checkDict = g.GetComponent<Enemy>().enemyStatusEffects;
+
+                    if (checkDict.ContainsKey(c.statusEffectName))
+                    {
+                        g.GetComponent<Enemy>().enemyStatusEffects[c.statusEffectName] += c.statusEffects[0 + c.upgradeNum];
+                    }
+                    else
+                        g.GetComponent<Enemy>().enemyStatusEffects.Add(c.statusEffectName, c.statusEffects[0 + c.upgradeNum]);
                 }
                 Destroy(gameObject);
             }

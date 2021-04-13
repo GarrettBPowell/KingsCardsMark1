@@ -64,7 +64,7 @@ Transform:
   - {fileID: 4619451828936187500}
   - {fileID: 2459821517243337054}
   m_Father: {fileID: 2108319671764449245}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1468971274488754445
 GameObject:
@@ -106,7 +106,7 @@ Transform:
   - {fileID: 6322029149702861479}
   - {fileID: 6646156235688392797}
   m_Father: {fileID: 2108319671764449245}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4430047095817783517
 GameObject:
@@ -138,9 +138,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 68561780521857820}
   m_Father: {fileID: 2108319671764449245}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &7271760063598619040
 BoxCollider2D:
@@ -182,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesInRoom: 0
   playerInRoom: 0
+  enemiesInRoomList: []
 --- !u!50 &7664720936858586135
 Rigidbody2D:
   serializedVersion: 4
@@ -240,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4446860616162256065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8089804985915723533}
@@ -375,7 +377,7 @@ Transform:
   - {fileID: 6318805717834073496}
   - {fileID: 5179668275873662139}
   - {fileID: 1229850585283813639}
-  m_Father: {fileID: 2108319671764449245}
+  m_Father: {fileID: 2938233510910673619}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5318230785610500131
@@ -405,7 +407,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 68561780521857820}
   - {fileID: 4058447807211941785}
   - {fileID: 6861629536599655257}
   - {fileID: 2938233510910673619}
@@ -478,7 +479,7 @@ Transform:
   - {fileID: 3383563194832803222}
   - {fileID: 4184870257598002431}
   m_Father: {fileID: 2108319671764449245}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &52160125662536022
 PrefabInstance:
