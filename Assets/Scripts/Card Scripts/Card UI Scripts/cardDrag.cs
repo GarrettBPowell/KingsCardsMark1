@@ -96,14 +96,22 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             {
                 foreach(GameObject g in tileDroppedOn.GetComponentInParent<EnemiesInRoom>().enemiesInRoomList)
                 {
-                    Dictionary<string, int> checkDict = g.GetComponent<Enemy>().enemyStatusEffects;
-
-                    if (checkDict.ContainsKey(c.statusEffectName))
+                    if (c.statusEffectName != "")
                     {
-                        g.GetComponent<Enemy>().enemyStatusEffects[c.statusEffectName] += c.statusEffects[0 + c.upgradeNum];
+                        Dictionary<string, int> checkDict = g.GetComponent<Enemy>().enemyStatusEffects;
+
+                        if (checkDict.ContainsKey(c.statusEffectName))
+                        {
+                            g.GetComponent<Enemy>().enemyStatusEffects[c.statusEffectName] += c.statusEffects[0 + c.upgradeNum];
+                        }
+                        else
+                            g.GetComponent<Enemy>().enemyStatusEffects.Add(c.statusEffectName, c.statusEffects[0 + c.upgradeNum]);
                     }
-                    else
-                        g.GetComponent<Enemy>().enemyStatusEffects.Add(c.statusEffectName, c.statusEffects[0 + c.upgradeNum]);
+
+                    if(c.damages.Count > 0)
+                    {
+                        c.attack(gameManager, g.GetComponent<Enemy>());
+                    }
                 }
                 Destroy(gameObject);
             }

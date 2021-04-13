@@ -1094,6 +1094,7 @@ MonoBehaviour:
   - {fileID: 4958458311979956018, guid: efc732a3036de424cb5fdde67166dbb3, type: 3}
   - {fileID: 397522471657736981, guid: 3fdc630307483c649a58c32a46bdc960, type: 3}
   - {fileID: 8604107796671057354, guid: 055f1766eb7c6c04e9200ddaf4ac3d7e, type: 3}
+  - {fileID: 2248528264595422801, guid: aac4f2e4b78fa324c86c069996c666c2, type: 3}
   playerDeck:
   - {fileID: 218085366985666744, guid: 26c9b26ab88f05e4d85548d593978994, type: 3}
   - {fileID: 218085366985666744, guid: 26c9b26ab88f05e4d85548d593978994, type: 3}
@@ -1110,6 +1111,7 @@ MonoBehaviour:
   - {fileID: 4958458311979956018, guid: efc732a3036de424cb5fdde67166dbb3, type: 3}
   - {fileID: 8604107796671057354, guid: 055f1766eb7c6c04e9200ddaf4ac3d7e, type: 3}
   - {fileID: 8604107796671057354, guid: 055f1766eb7c6c04e9200ddaf4ac3d7e, type: 3}
+  - {fileID: 2248528264595422801, guid: aac4f2e4b78fa324c86c069996c666c2, type: 3}
   playerHand: []
   discardPile: []
   numCardsToDraw: 3
