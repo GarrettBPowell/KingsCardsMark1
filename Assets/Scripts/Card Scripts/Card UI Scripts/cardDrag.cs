@@ -13,7 +13,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     WorldTile tileDroppedOn;
 
-
+    bool canAttackEnemy;
     //spawn position
     private Vector2 cardPosition;
     bool moved;
@@ -27,10 +27,11 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
         cardPosition = gameObject.transform.position;
+        canAttackEnemy = gameObject.GetComponent<getCardData>().card.canAttackEnemy;
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
-        canvasGroup.alpha = .3f;
+        canvasGroup.alpha = .2f;
         canvasGroup.blocksRaycasts = false;
         gameObject.transform.localScale = new Vector2(0.5f, 0.5f);
     }
@@ -66,23 +67,37 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
-            if (tileDroppedOn.getOccupied())
+            if (!canAttackEnemy)
             {
-                Enemy enemyToAttack;
+                Debug.Log("here");
+                Card c = gameObject.GetComponent<getCardData>().card;
+                if (c.heals.Count > 0)
+                {
+                    c.heal(gameManager);
+                    Destroy(gameObject);
+                }
+                else if (c.statusEffectName != null)
+                {
+                    c.addEffect(gameManager);
+                    Destroy(gameObject);
+                }
+            }
+            else if (tileDroppedOn.getOccupied())
+            {       
                 if (tileDroppedOn.getObject().CompareTag("enemy"))
                 {
+                    Enemy enemyToAttack;
                     gameManager.playerAttacked = true;
 
                     enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
-                    gameObject.GetComponent<getCardData>().card.attack(enemyToAttack.GetComponent<Enemy>());
+                    gameObject.GetComponent<getCardData>().card.attack(gameManager, enemyToAttack.GetComponent<Enemy>());
                     Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
                     Destroy(gameObject);
                 }
                 else
                     gameObject.transform.position = cardPosition;
-            }
-            else
-                gameObject.transform.position = cardPosition;
+            } 
+            gameObject.transform.position = cardPosition;
         }
         else
             gameObject.transform.position = cardPosition;

@@ -229,18 +229,12 @@ public class Enemy : MonoBehaviour
     public void attackPlayer()
     {
         int damageToDoToPlayer = enemyDamage;
-
-        foreach (string s in gameManager.playerStatusEffects)
+        if(gameManager.playerStatusEffects.ContainsKey("defense"))
         {
-            switch (s)
-            {
-                //defense reduces immediate damage going to be taken by 25%
-                case "defense":
-                    damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
-                    break;
-            }
+            damageToDoToPlayer = Mathf.FloorToInt(damageToDoToPlayer * 0.75f);
         }
 
+        
         gameManager.playerHealth -= damageToDoToPlayer;
         enemyTurn = false;
 

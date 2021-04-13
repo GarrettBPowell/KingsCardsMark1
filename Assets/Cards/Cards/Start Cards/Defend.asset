@@ -10,21 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
-  m_Name: CrystalSmash
+  m_Name: Defend
   m_EditorClassIdentifier: 
   names:
-  - Crystal Smash
-  cardType: Pawn
-  cardArea: Caves
+  - Defend
+  - Defend+
+  - Defend++
+  cardType: Rook
+  cardArea: Start
   descriptions:
-  - Deal 6 Damage
+  - Gain 4 Defense
+  - Gain 7 Defense
+  - Gain 10 Defense
   cardSprites:
-  - {fileID: 5199120747287873557, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4077729740435555186, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4192663141034736347, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -8977347498862908210, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   statusEffects: 
-  damages: 06000000
+  damages: 
   statusEffectName: 
-  defenses: 
+  defenses: 04000000070000000a000000
   heals: 
-  upgradable: 0
+  upgradable: 1
   upgradeNum: 0
-  canAttackEnemy: 1

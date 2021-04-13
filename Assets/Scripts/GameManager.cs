@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
     public int playerHealth = 60;
-    public List<string> playerStatusEffects = new List<string>();
+    public Dictionary<string, int> playerStatusEffects = new Dictionary<string, int>();
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public bool playerWantsToMove;
 
     public GameObject character;
+    public string playerFacing;
     public bool playerTurn = true;
     public bool enemyMoving = false;
 
@@ -68,7 +69,6 @@ public class GameManager : MonoBehaviour
             UICardDict.Add(g.name, g);
 
         }    
-
         DontDestroyOnLoad(transform.root.gameObject);
     }
     void Start()
