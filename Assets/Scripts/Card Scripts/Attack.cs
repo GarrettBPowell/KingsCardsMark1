@@ -105,7 +105,7 @@ public class Attack : MonoBehaviour
             gameManager.playerDeck.RemoveAt(0);
 
             gameManager.displayHand = true;
-            gameManager.drawExtra = true;
+            gameManager.drawExtra = 0;
         }
     }
 

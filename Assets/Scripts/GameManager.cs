@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     //hand cards
     public bool displayHand = true;
-    public bool drawExtra = false;
+    public int drawExtra = 0;
 
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
@@ -133,6 +133,11 @@ public class GameManager : MonoBehaviour
             {
                 moveButton.gameObject.SetActive(false);
             }
+        }
+
+        if(drawExtra > 0)
+        {
+            attackButton.GetComponent<Attack>().drawExtra(drawExtra);
         }
     }
 }

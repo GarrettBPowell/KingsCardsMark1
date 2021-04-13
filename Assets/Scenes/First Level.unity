@@ -969,6 +969,7 @@ MonoBehaviour:
   - {fileID: 8652811836966421538, guid: acbc73bc81881f248aa431ada5caac0e, type: 3}
   - {fileID: 4958458311979956018, guid: efc732a3036de424cb5fdde67166dbb3, type: 3}
   - {fileID: 397522471657736981, guid: 3fdc630307483c649a58c32a46bdc960, type: 3}
+  - {fileID: 8604107796671057354, guid: 055f1766eb7c6c04e9200ddaf4ac3d7e, type: 3}
   playerDeck:
   - {fileID: 218085366985666744, guid: 26c9b26ab88f05e4d85548d593978994, type: 3}
   - {fileID: 218085366985666744, guid: 26c9b26ab88f05e4d85548d593978994, type: 3}
@@ -983,6 +984,8 @@ MonoBehaviour:
   - {fileID: 8652811836966421538, guid: acbc73bc81881f248aa431ada5caac0e, type: 3}
   - {fileID: 8652811836966421538, guid: acbc73bc81881f248aa431ada5caac0e, type: 3}
   - {fileID: 4958458311979956018, guid: efc732a3036de424cb5fdde67166dbb3, type: 3}
+  - {fileID: 8604107796671057354, guid: 055f1766eb7c6c04e9200ddaf4ac3d7e, type: 3}
+  - {fileID: 8604107796671057354, guid: 055f1766eb7c6c04e9200ddaf4ac3d7e, type: 3}
   playerHand: []
   discardPile: []
   numCardsToDraw: 3
@@ -990,7 +993,6 @@ MonoBehaviour:
   drawExtra: 0
   playerMaxHealth: 60
   playerHealth: 60
-  playerStatusEffects: []
   outOfCombat: 1
   isInCombatMoving: 0
   playerWantsToMove: 0

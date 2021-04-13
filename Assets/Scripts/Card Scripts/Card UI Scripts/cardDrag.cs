@@ -67,10 +67,14 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
+            Card c = gameObject.GetComponent<getCardData>().card;
+
+            if(c.statusEffectName != null && c.statusEffectName.Equals("draw"))
+            {
+                gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
+            }
             if (!canAttackEnemy)
             {
-                Debug.Log("here");
-                Card c = gameObject.GetComponent<getCardData>().card;
                 if (c.heals.Count > 0)
                 {
                     c.heal(gameManager);

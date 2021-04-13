@@ -14,7 +14,7 @@ public class displayCards : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.playerHand.Count > 0 && gameManager.displayHand && gameManager.drawExtra)
+        if (gameManager.playerHand.Count > 0 && gameManager.displayHand && gameManager.drawExtra > 0)
         {
             gameManager.displayHand = false;
             int distOver = gameManager.playerHand.Count * 150;
