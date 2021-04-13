@@ -234,6 +234,16 @@ public class Enemy : MonoBehaviour
             damageToDoToPlayer = Mathf.FloorToInt(damageToDoToPlayer * 0.75f);
         }
 
+        if(damageToDoToPlayer - gameManager.playerDefense < 0)
+        {
+            gameManager.playerDefense -= damageToDoToPlayer;
+            damageToDoToPlayer = 0;       
+        }
+        else
+        {
+            damageToDoToPlayer -= gameManager.playerDefense;
+            gameManager.playerDefense = 0;
+        }
         
         gameManager.playerHealth -= damageToDoToPlayer;
         enemyTurn = false;

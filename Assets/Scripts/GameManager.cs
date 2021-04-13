@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
     public int playerHealth = 60;
+    public int playerDefense = 0;
+    public int playerMaxDefense = 60;
     public Dictionary<string, int> playerStatusEffects = new Dictionary<string, int>();
 
     //movement vars
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
     public Text healthText;
     public Slider healthSlider;
     public Image handDeckUI;
+    public Slider defenseSlider;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
@@ -84,9 +87,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerMaxDefense != playerMaxHealth)
+        {
+            playerMaxDefense = playerMaxHealth;
+            healthSlider.maxValue = playerMaxHealth;
+        }
 
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
         healthSlider.value = playerHealth;
+        defenseSlider.value = playerDefense;
 
         if (enemyMoving || isInCombatMoving)
         {

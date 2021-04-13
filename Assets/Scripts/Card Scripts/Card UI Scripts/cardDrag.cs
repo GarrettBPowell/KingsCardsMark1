@@ -68,6 +68,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
             Card c = gameObject.GetComponent<getCardData>().card;
+            gameManager.playerAttacked = true;
 
             if(c.statusEffectName != null && c.statusEffectName.Equals("draw"))
             {
@@ -78,20 +79,23 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 if (c.heals.Count > 0)
                 {
                     c.heal(gameManager);
-                    Destroy(gameObject);
                 }
-                else if (c.statusEffectName != null)
+                else if (c.statusEffectName != "")
                 {
+                    Debug.Log(c.statusEffectName);
                     c.addEffect(gameManager);
-                    Destroy(gameObject);
                 }
+                else if(c.defenses.Count > 0)
+                {
+                    c.defend(gameManager);
+                }
+                Destroy(gameObject);
             }
             else if (tileDroppedOn.getOccupied())
             {       
                 if (tileDroppedOn.getObject().CompareTag("enemy"))
                 {
                     Enemy enemyToAttack;
-                    gameManager.playerAttacked = true;
 
                     enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
                     gameObject.GetComponent<getCardData>().card.attack(gameManager, enemyToAttack.GetComponent<Enemy>());

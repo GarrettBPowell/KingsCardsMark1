@@ -61,4 +61,9 @@ public class Card : ScriptableObject
 			gameManager.playerStatusEffects.Add(statusEffectName, statusEffects[0 + upgradeNum]);
         }
     }
+
+	public void defend(GameManager gameManager)
+    {
+		gameManager.playerDefense += defenses[0 + upgradeNum];
+    }
 }
