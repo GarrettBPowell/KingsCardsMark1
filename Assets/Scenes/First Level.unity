@@ -1114,7 +1114,7 @@ MonoBehaviour:
   - {fileID: 2248528264595422801, guid: aac4f2e4b78fa324c86c069996c666c2, type: 3}
   playerHand: []
   discardPile: []
-  numCardsToDraw: 3
+  numCardsToDraw: 5
   displayHand: 1
   drawExtra: 0
   drewExtraCards: 0
