@@ -15,6 +15,7 @@ TagManager:
   - minimap walls
   - card
   - crystal
+  - titleCanvas
   layers:
   - Default
   - TransparentFX
