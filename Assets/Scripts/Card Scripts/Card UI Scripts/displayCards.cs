@@ -13,7 +13,7 @@ public class displayCards : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 5; i++)
         {
             cardLocationArr[i] = new Vector3(pos.x + 375f * i, pos.y);
         }
