@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 537291150}
   - component: {fileID: 537291149}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Queen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,6 +239,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2e6f8248b064886b5109936932ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprites:
+  - {fileID: 4378789416773917938, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -6387482269995324337, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 126257531595297354, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -2669806269793722079, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2539220493790732777, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -7178913787023726724, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -8787216720047154378, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 3912282095566644014, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2502583334019176726, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -6258433762418878859, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -2796586503716384867, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 6604860147149320707, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -8548071067627756265, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1733793269727558487, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1733793269727558487, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   position: {x: 0, y: 0}
   moveTo: {x: 0, y: 0}
   canWidth: 0
@@ -294,7 +310,7 @@ GameObject:
   - component: {fileID: 838607635}
   - component: {fileID: 838607634}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,6 +347,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2e6f8248b064886b5109936932ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprites:
+  - {fileID: -6889004426475621475, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -5537767449206777571, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4074037142618602469, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1253955870250775553, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4454496016137789334, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2780411601976661624, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -5230698635660104782, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 8336837289831814948, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 8563534240204471340, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -8468205245085413617, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4467796234881307738, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2746199878106706279, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -2236378799552006621, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4107848299078292755, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1356627835348795808, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   position: {x: 0, y: 0}
   moveTo: {x: 0, y: 0}
   canWidth: 0
@@ -372,98 +404,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838607632}
-  m_CullTransparentMesh: 1
---- !u!1 &872608727
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 872608728}
-  - component: {fileID: 872608731}
-  - component: {fileID: 872608730}
-  - component: {fileID: 872608729}
-  m_Layer: 5
-  m_Name: Image (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &872608728
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872608727}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1290631639}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 677, y: -108}
-  m_SizeDelta: {x: 120, y: 170}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &872608729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872608727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1b2e6f8248b064886b5109936932ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0}
-  moveTo: {x: 0, y: 0}
-  canWidth: 0
-  canHeight: 0
---- !u!114 &872608730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872608727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -8787216720047154378, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &872608731
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872608727}
   m_CullTransparentMesh: 1
 --- !u!1 &1014469706
 GameObject:
@@ -677,7 +617,6 @@ RectTransform:
   - {fileID: 1814148389}
   - {fileID: 537291148}
   - {fileID: 2049101559}
-  - {fileID: 872608728}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -699,7 +638,7 @@ GameObject:
   - component: {fileID: 1516196986}
   - component: {fileID: 1516196985}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Pawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,6 +675,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2e6f8248b064886b5109936932ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprites:
+  - {fileID: -3600760417838252270, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -6586634513764253979, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -5498093659680887456, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 5199120747287873557, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -29271536426729124, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -7244711813887038594, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1374556122527884467, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -3440593094111880514, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -7029370484382500448, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 8270892870027986124, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4922842564307519153, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -3520016828368208567, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -5797987850275968274, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 5130956362225430185, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1077204589285899347, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   position: {x: 0, y: 0}
   moveTo: {x: 0, y: 0}
   canWidth: 0
@@ -791,7 +746,7 @@ GameObject:
   - component: {fileID: 1814148391}
   - component: {fileID: 1814148390}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Rook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,6 +783,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2e6f8248b064886b5109936932ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprites:
+  - {fileID: -8180466097428595000, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 9027225603588764440, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 4469557650476252251, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 4503077507022280024, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 8942303448474606734, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 1744731474660604150, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -7142848622475081782, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -6484586006948601755, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -5937214533435205225, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 1501239537343037199, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2508473309160633021, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 9068356715945491166, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4077729740435555186, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -8977347498862908210, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4192663141034736347, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   position: {x: 0, y: 0}
   moveTo: {x: 0, y: 0}
   canWidth: 0
@@ -883,7 +854,7 @@ GameObject:
   - component: {fileID: 2049101561}
   - component: {fileID: 2049101560}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Bishop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,6 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1b2e6f8248b064886b5109936932ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSprites: []
   position: {x: 0, y: 0}
   moveTo: {x: 0, y: 0}
   canWidth: 0
