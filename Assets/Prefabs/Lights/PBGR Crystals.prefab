@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 5151472979588023670}
   - component: {fileID: 5514432695054104796}
   m_Layer: 0
-  m_Name: LightOrbLightPurple
+  m_Name: PBGR Crystals
   m_TagString: crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

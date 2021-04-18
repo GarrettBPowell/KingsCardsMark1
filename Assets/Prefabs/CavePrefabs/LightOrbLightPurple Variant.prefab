@@ -7,6 +7,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3152549682797106541, guid: d170028757648334e9fbddab85cd4e58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.61259174
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152549682797106541, guid: d170028757648334e9fbddab85cd4e58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.11098258
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152549682797106541, guid: d170028757648334e9fbddab85cd4e58, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152549682797106541, guid: d170028757648334e9fbddab85cd4e58, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.6901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152549682797106541, guid: d170028757648334e9fbddab85cd4e58, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.20392154
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152549682797106541, guid: d170028757648334e9fbddab85cd4e58, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.5514723
+      objectReference: {fileID: 0}
     - target: {fileID: 3986686314106081060, guid: d170028757648334e9fbddab85cd4e58, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -81,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3986686315873330267, guid: d170028757648334e9fbddab85cd4e58, type: 3}
       propertyPath: m_Name
-      value: LightOrbLightPurple
+      value: LightOrbLightPurple Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d170028757648334e9fbddab85cd4e58, type: 3}

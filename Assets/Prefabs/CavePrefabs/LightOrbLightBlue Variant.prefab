@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3986686315873330267, guid: d170028757648334e9fbddab85cd4e58, type: 3}
       propertyPath: m_Name
-      value: LightOrbLightBlue
+      value: LightOrbLightBlue Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d170028757648334e9fbddab85cd4e58, type: 3}
