@@ -14,19 +14,20 @@ public class getCardData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        Description.text = card.description;
-        Name.text = card.name;
+        Description.text = card.descriptions[0 + card.upgradeNum];
+        Name.text = card.names[0 + card.upgradeNum];
     }
 
     // Update is called once per frame
     void Update()
     {
         if(cardSpriteUI.sprite == null)
-            cardSpriteUI.sprite = card.cardSprite;
-        if (Description.text != card.description)
+            cardSpriteUI.sprite = card.cardSprites[0 + card.upgradeNum];
+        if (Description.text != card.descriptions[0 + card.upgradeNum])
         {
-            cardSpriteUI.sprite = card.cardSprite;
-            Description.text = card.description;
+            cardSpriteUI.sprite = card.cardSprites[0 + card.upgradeNum];
+            Description.text = card.descriptions[0 + card.upgradeNum];
+            Name.text = card.names[0 + card.upgradeNum];
         }
     }
 }

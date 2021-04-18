@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
+  m_Name: Swift Strike
+  m_EditorClassIdentifier: 
+  names:
+  - Swift Strike
+  - Swift Strike+
+  - Swift Strike++
+  cardType: Knight
+  cardArea: Start
+  descriptions:
+  - 'Deal 2 Damage, Draw 1  '
+  - 'Deal 4 Damage, Draw 2  '
+  - 'Deal 8 Damage, Draw 3  '
+  cardSprites:
+  - {fileID: -2236378799552006621, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -1356627835348795808, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4107848299078292755, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  statusEffects: 
+  damages: 020000000400000008000000
+  statusEffectName: draw
+  defenses: 010000000200000003000000
+  heals: 
+  upgradable: 1
+  upgradeNum: 0
+  canAttackEnemy: 1

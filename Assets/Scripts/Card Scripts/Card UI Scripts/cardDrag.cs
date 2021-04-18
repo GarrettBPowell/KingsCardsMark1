@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
+public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler {
     GameManager gameManager;
 
     [SerializeField] private Canvas canvas;
@@ -13,7 +13,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private Dictionary<Vector3, WorldTile> tiles = new Dictionary<Vector3, WorldTile>();
     WorldTile tileDroppedOn;
 
-
+    bool canAttackEnemy;
     //spawn position
     private Vector2 cardPosition;
     bool moved;
@@ -27,10 +27,36 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
         cardPosition = gameObject.transform.position;
+        canAttackEnemy = gameObject.GetComponent<getCardData>().card.canAttackEnemy;
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (gameObject.transform.localScale.y == 1f)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 100);
+            gameObject.transform.localScale = new Vector2(.8f, .8f);
+        }
+        else
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 100);
+            gameObject.transform.localScale = new Vector2(1f, 1f);
+        }
+    }
+               /* public void OnPointerEnter(PointerEventData eventData)
+                {
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 100);
+                    gameObject.transform.localScale = new Vector2(1f, 1f);
+                }
+
+                public void OnPointerExit(PointerEventData eventData)
+                {
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 100);
+                    gameObject.transform.localScale = new Vector2(0.8f, 0.8f);
+                }*/
+
     public void OnBeginDrag(PointerEventData eventData) {
-        canvasGroup.alpha = .3f;
+        canvasGroup.alpha = .2f;
         canvasGroup.blocksRaycasts = false;
         gameObject.transform.localScale = new Vector2(0.5f, 0.5f);
     }
@@ -66,27 +92,75 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if (tiles.TryGetValue(dictKey, out tileDroppedOn))
         {
-            if (tileDroppedOn.getOccupied())
+            Card c = gameObject.GetComponent<getCardData>().card;
+            gameManager.playerAttacked = true;
+
+            //if card lets you draw more
+            if(c.statusEffectName != null && c.statusEffectName.Equals("draw"))
             {
-                Enemy enemyToAttack;
+                gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
+            }
+
+            if (!canAttackEnemy)
+            {
+                if (c.heals.Count > 0)
+                {
+                    c.heal(gameManager);
+                }
+                else if (c.statusEffectName != "")
+                {
+                    c.addEffect(gameManager);
+                }
+                else if(c.defenses.Count > 0)
+                {
+                    c.defend(gameManager);
+                }
+                Destroy(gameObject);
+            }
+            else if(c.cardType.Equals("Queen"))
+            {
+                foreach(GameObject g in tileDroppedOn.GetComponentInParent<EnemiesInRoom>().enemiesInRoomList)
+                {
+                    if (c.statusEffectName != "")
+                    {
+                        Dictionary<string, int> checkDict = g.GetComponent<Enemy>().enemyStatusEffects;
+
+                        if (checkDict.ContainsKey(c.statusEffectName))
+                        {
+                            g.GetComponent<Enemy>().enemyStatusEffects[c.statusEffectName] += c.statusEffects[0 + c.upgradeNum];
+                        }
+                        else
+                            g.GetComponent<Enemy>().enemyStatusEffects.Add(c.statusEffectName, c.statusEffects[0 + c.upgradeNum]);
+                    }
+
+                    if(c.damages.Count > 0)
+                    {
+                        c.attack(gameManager, g.GetComponent<Enemy>());
+                    }
+                }
+                Destroy(gameObject);
+            }
+            else if (tileDroppedOn.getOccupied())
+            {       
                 if (tileDroppedOn.getObject().CompareTag("enemy"))
                 {
-                    gameManager.playerAttacked = true;
+                    Enemy enemyToAttack;
 
                     enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
-                    gameObject.GetComponent<getCardData>().card.attack(enemyToAttack.GetComponent<Enemy>());
+                    gameObject.GetComponent<getCardData>().card.attack(gameManager, enemyToAttack.GetComponent<Enemy>());
                     Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
                     Destroy(gameObject);
                 }
                 else
                     gameObject.transform.position = cardPosition;
-            }
-            else
-                gameObject.transform.position = cardPosition;
+            } 
+            gameObject.transform.position = cardPosition;
         }
         else
             gameObject.transform.position = cardPosition;
-        gameObject.transform.localScale = new Vector2(1f, 1f);
+
+        //change back
+        gameObject.transform.localScale = new Vector2(.8f, .8f);
     }
 
     private void Update()

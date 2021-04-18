@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170381476626188548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5742089399154909896}
@@ -140,7 +140,7 @@ Transform:
   - {fileID: 3028158771764563453}
   - {fileID: 6791435107336120475}
   - {fileID: 8225346567928868012}
-  m_Father: {fileID: 2497664586978040344}
+  m_Father: {fileID: 8115883136463936291}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645593184252221480
@@ -174,7 +174,7 @@ Transform:
   - {fileID: 3382203818771256575}
   - {fileID: 504356615660145920}
   m_Father: {fileID: 2497664586978040344}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4011767488976574401
 GameObject:
@@ -206,9 +206,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4546570414988893913}
   m_Father: {fileID: 2497664586978040344}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3004019201737619364
 BoxCollider2D:
@@ -250,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesInRoom: 0
   playerInRoom: 0
+  enemiesInRoomList: []
 --- !u!50 &4637142242975749941
 Rigidbody2D:
   serializedVersion: 4
@@ -348,7 +350,7 @@ Transform:
   - {fileID: 5007670959743131032}
   - {fileID: 3038827624643657918}
   m_Father: {fileID: 2497664586978040344}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6953779620570622293
 GameObject:
@@ -414,7 +416,7 @@ Transform:
   - {fileID: 2826636044585932245}
   - {fileID: 8764727675803293460}
   m_Father: {fileID: 2497664586978040344}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8513241043402401254
 GameObject:
@@ -443,7 +445,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4546570414988893913}
   - {fileID: 556684800586302044}
   - {fileID: 6336552149008309046}
   - {fileID: 8115883136463936291}

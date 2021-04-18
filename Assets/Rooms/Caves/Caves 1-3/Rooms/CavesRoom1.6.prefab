@@ -27,7 +27,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5639090778659550704}
   - {fileID: 8566699144596826485}
   - {fileID: 2789221309823365151}
   - {fileID: 5985073029011515642}
@@ -99,7 +98,7 @@ Transform:
   - {fileID: 8985090157846245304}
   - {fileID: 7642682160937061189}
   m_Father: {fileID: 6049396628974891313}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3729810071541321388
 GameObject:
@@ -191,7 +190,7 @@ Transform:
   - {fileID: 1384085371196679790}
   - {fileID: 7024281661994565882}
   m_Father: {fileID: 6049396628974891313}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6741556059078600244
 GameObject:
@@ -223,9 +222,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5639090778659550704}
   m_Father: {fileID: 6049396628974891313}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &191770974498339400
 BoxCollider2D:
@@ -267,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesInRoom: 0
   playerInRoom: 0
+  enemiesInRoomList: []
 --- !u!50 &2336261777601763722
 Rigidbody2D:
   serializedVersion: 4
@@ -325,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288852674632491565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4536608585717795297}
@@ -424,7 +425,7 @@ Transform:
   - {fileID: 7448814257163525551}
   - {fileID: 2762964611330412810}
   - {fileID: 3394232685537428402}
-  m_Father: {fileID: 6049396628974891313}
+  m_Father: {fileID: 5985073029011515642}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8768263348314452737
@@ -456,7 +457,7 @@ Transform:
   m_Children:
   - {fileID: 1074819104924286037}
   m_Father: {fileID: 6049396628974891313}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &119484535160478452
 PrefabInstance:

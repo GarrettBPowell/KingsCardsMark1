@@ -20,12 +20,15 @@ public class GameManager : MonoBehaviour
 
     //hand cards
     public bool displayHand = true;
-    public bool drawExtra = false;
+    public int drawExtra = 0;
+    public bool drewExtraCards;
 
     //play stats, effects, anything else
     public int playerMaxHealth = 60;
     public int playerHealth = 60;
-    public List<string> playerStatusEffects = new List<string>();
+    public int playerDefense = 0;
+    public int playerMaxDefense = 60;
+    public Dictionary<string, int> playerStatusEffects = new Dictionary<string, int>();
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     public bool playerWantsToMove;
 
     public GameObject character;
+    public string playerFacing;
     public bool playerTurn = true;
     public bool enemyMoving = false;
 
@@ -57,6 +61,7 @@ public class GameManager : MonoBehaviour
     public Text healthText;
     public Slider healthSlider;
     public Image handDeckUI;
+    public Slider defenseSlider;
     
     public bool enemiesInRoomDiedHideMoveButton; //this is used to recall the hide button if all of the enemies the player is in the room with have died so the button now needs to be hidden due to being changed to out of conbat
 
@@ -68,7 +73,6 @@ public class GameManager : MonoBehaviour
             UICardDict.Add(g.name, g);
 
         }    
-
         DontDestroyOnLoad(transform.root.gameObject);
     }
     void Start()
@@ -83,9 +87,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerMaxDefense != playerMaxHealth)
+        {
+            playerMaxDefense = playerMaxHealth;
+            healthSlider.maxValue = playerMaxHealth;
+        }
 
         healthText.text = "Health: " + playerHealth + " / " + playerMaxHealth;
         healthSlider.value = playerHealth;
+        defenseSlider.value = playerDefense;
 
         if (enemyMoving || isInCombatMoving)
         {
@@ -133,6 +143,12 @@ public class GameManager : MonoBehaviour
             {
                 moveButton.gameObject.SetActive(false);
             }
+        }
+
+        if(drawExtra > 0)
+        {
+            attackButton.GetComponent<Attack>().drawExtra(drawExtra);
+            drawExtra = 0;
         }
     }
 }

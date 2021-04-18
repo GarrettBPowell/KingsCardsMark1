@@ -23,6 +23,7 @@ public class Attack : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         howManyAdded = 0.0f;
+        shuffle();
     }
 
     private void Update()
@@ -78,7 +79,7 @@ public class Attack : MonoBehaviour
             for (int i = 0; i < gameManager.numCardsToDraw; i++)
             {
                 if (gameManager.playerDeck.Count == 0)
-                    shuffle();
+                    shuffleDiscard();
                 GameObject g = gameManager.playerDeck[0];
                 gameManager.playerHand.Add(g);
 
@@ -97,18 +98,30 @@ public class Attack : MonoBehaviour
         for (int i = 0; i <cardsToDraw; i++)
         {
             if (gameManager.playerDeck.Count == 0)
-                shuffle();
+                shuffleDiscard();
             GameObject g = gameManager.playerDeck[0];
             gameManager.playerHand.Add(g);
 
             gameManager.playerDeck.RemoveAt(0);
 
             gameManager.displayHand = true;
-            gameManager.drawExtra = true;
+            gameManager.drewExtraCards = true;
         }
     }
 
     public void shuffle()
+    {
+        int index = 0;
+        for (int i = 0; i < gameManager.playerDeck.Count; i++)
+        {
+            int rand = Random.Range(0, gameManager.playerDeck.Count);
+            GameObject c = gameManager.playerDeck[index];
+            gameManager.playerDeck[index] = gameManager.playerDeck[rand];
+            gameManager.playerDeck[rand] = c;
+        }
+    }
+
+    public void shuffleDiscard()
     {
         int index = 0;
         for (int i = 0; i < gameManager.discardPile.Count; i++)

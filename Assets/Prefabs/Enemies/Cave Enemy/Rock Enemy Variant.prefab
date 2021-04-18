@@ -122,6 +122,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415915, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: enemyZone
+      value: cave
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
 --- !u!1 &3596727476392630598 stripped

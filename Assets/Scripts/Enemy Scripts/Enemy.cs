@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Enemy : MonoBehaviour
 {
@@ -21,12 +22,15 @@ public class Enemy : MonoBehaviour
     public int enemyHealth;
     public int enemyDamage;
 
+    public Dictionary<string, int> enemyStatusEffects = new Dictionary<string, int>();
+
     public List<GameObject> projectiles;
 
     public static int xdist = 0;
     public static int ydist = 0;
     WorldTile tiletoCheck;
 
+    bool endEnemyTurn = false;
 
     void Start()
     {
@@ -55,7 +59,18 @@ public class Enemy : MonoBehaviour
         {
             gettingMove = false;
             checkSecondPos = false;
+            if (endEnemyTurn)
+            {
+                endEnemyTurn = false;
+                foreach (string key in enemyStatusEffects.Keys.ToList())
+                {
+                    enemyStatusEffects[key] -= 1;
+                }
+            }
         }
+        else
+            endEnemyTurn = true;
+
 
         if (enemyTurn && !gettingMove)
             prepMove();
@@ -229,18 +244,30 @@ public class Enemy : MonoBehaviour
     public void attackPlayer()
     {
         int damageToDoToPlayer = enemyDamage;
-
-        foreach (string s in gameManager.playerStatusEffects)
+        if (enemyStatusEffects.ContainsKey("weak"))
         {
-            switch (s)
-            {
-                //defense reduces immediate damage going to be taken by 25%
-                case "defense":
-                    damageToDoToPlayer -= (int)(0.75 * damageToDoToPlayer);
-                    break;
-            }
+            if (enemyStatusEffects["weak"] <= 0)
+                enemyStatusEffects.Remove("weak");
+            else
+                damageToDoToPlayer = Mathf.FloorToInt(damageToDoToPlayer * 0.75f);
         }
 
+        if (gameManager.playerStatusEffects.ContainsKey("defense"))
+        {
+            damageToDoToPlayer = Mathf.FloorToInt(damageToDoToPlayer * 0.75f);
+        }
+
+        if(damageToDoToPlayer - gameManager.playerDefense < 0)
+        {
+            gameManager.playerDefense -= damageToDoToPlayer;
+            damageToDoToPlayer = 0;       
+        }
+        else
+        {
+            damageToDoToPlayer -= gameManager.playerDefense;
+            gameManager.playerDefense = 0;
+        }
+        
         gameManager.playerHealth -= damageToDoToPlayer;
         enemyTurn = false;
 
