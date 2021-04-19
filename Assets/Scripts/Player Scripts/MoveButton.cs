@@ -89,7 +89,9 @@ public class MoveButton : MonoBehaviour
 
     public void sceneChangeReset()
     {
-        gameManager.playerWantsToMove = false;
+        if(gameManager != null)
+            gameManager.playerWantsToMove = false;
+
         for (int i = 0; i < charStats.tilesInArray; i++)
         {
             charStats.tilesToMoveTo[i] = null;
