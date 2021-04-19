@@ -89,6 +89,7 @@ public class MoveButton : MonoBehaviour
 
     public void sceneChangeReset()
     {
+        Debug.Log(charStats == null);
         if(gameManager != null)
             gameManager.playerWantsToMove = false;
         if (charStats != null)
@@ -100,10 +101,11 @@ public class MoveButton : MonoBehaviour
                     charStats.tilesToMoveTo[i] = null;
                 }
             }
+
+            charStats.wantsToMove = false;
+            charStats.tilesInArray = 0;
         }
 
-        charStats.wantsToMove = false;
-        charStats.tilesInArray = 0;
         i = 0;
         cancelButton.gameObject.SetActive(false);
 
