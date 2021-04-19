@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class MoveButton : MonoBehaviour
 {
     GameObject player;
-    GameManager gameManager;
-    characterStats charStats;
+    [SerializeField] GameManager gameManager;
+    [SerializeField] characterStats charStats; //THIS IS SERIALIZED FOR DEBUGGING PURPOSES
 
     Vector3 specificPosition;
 
