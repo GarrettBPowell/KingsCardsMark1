@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
     public bool isInCombatMoving; //tells the out of combat player controller if the in combat controller is still moving the player
-    public bool playerWantsToMove;
+    public bool playerWantsToMove = false;
 
     public GameObject character;
     public string playerFacing;
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         {
             UICardDict.Add(g.name, g);
 
-        }    
+        }
         DontDestroyOnLoad(transform.root.gameObject);
     }
     void Start()
@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
         {
             moveButton.GetComponent<MoveButton>().sceneChangeReset();
         }
+
         if (playerMaxDefense != playerMaxHealth)
         {
             playerMaxDefense = playerMaxHealth;
