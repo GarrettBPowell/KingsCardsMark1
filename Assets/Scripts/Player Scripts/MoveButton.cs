@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MoveButton : MonoBehaviour
 {
@@ -116,4 +117,6 @@ public class MoveButton : MonoBehaviour
         gameManager.attackButton.GetComponent<Attack>().drewThisTurn = false;
         gameManager.cancelAttackHit = false;
     }
+
+    
 }
