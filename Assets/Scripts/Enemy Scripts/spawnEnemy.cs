@@ -27,10 +27,10 @@ public class spawnEnemy : MonoBehaviour
                 WorldTile tileToSpawnOn = null;
                 Vector3 spawnPosition = gameObject.transform.position;
                 int count = 0;
-                while (tileToSpawnOn == null && count < 5)
+                while (tileToSpawnOn == null && count < 10)
                 {
-                    int randX = Random.Range((int)spawnPosition.x - 4, (int)spawnPosition.x + 4);
-                    int randY = Random.Range((int)spawnPosition.y - 4, (int)spawnPosition.y + 4);
+                    int randX = Random.Range((int)spawnPosition.x - 5, (int)spawnPosition.x + 5);
+                    int randY = Random.Range((int)spawnPosition.y - 5, (int)spawnPosition.y + 5);
                     Vector3Int dictKey = new Vector3Int(randX, randY, 0);
 
 
