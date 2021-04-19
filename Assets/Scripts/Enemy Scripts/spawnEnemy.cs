@@ -26,7 +26,8 @@ public class spawnEnemy : MonoBehaviour
             {
                 WorldTile tileToSpawnOn = null;
                 Vector3 spawnPosition = gameObject.transform.position;
-                while (tileToSpawnOn == null)
+                int count = 0;
+                while (tileToSpawnOn == null && count < 5)
                 {
                     int randX = Random.Range((int)spawnPosition.x - 4, (int)spawnPosition.x + 4);
                     int randY = Random.Range((int)spawnPosition.y - 4, (int)spawnPosition.y + 4);
@@ -47,6 +48,8 @@ public class spawnEnemy : MonoBehaviour
                     }
                     else
                         tileToSpawnOn = null;
+
+                    count++;
                 }
             }
             Destroy(gameObject);
