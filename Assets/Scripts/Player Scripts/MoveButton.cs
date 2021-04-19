@@ -91,10 +91,15 @@ public class MoveButton : MonoBehaviour
     {
         if(gameManager != null)
             gameManager.playerWantsToMove = false;
-
-        for (int i = 0; i < charStats.tilesInArray; i++)
+        if (charStats != null)
         {
-            charStats.tilesToMoveTo[i] = null;
+            if(charStats.tilesToMoveTo[0] != null && charStats.tilesInArray != 0)
+            {
+                for (int i = 0; i < charStats.tilesInArray; i++)
+                {
+                    charStats.tilesToMoveTo[i] = null;
+                }
+            }
         }
 
         charStats.wantsToMove = false;

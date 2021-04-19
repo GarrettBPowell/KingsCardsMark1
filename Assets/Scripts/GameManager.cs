@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     public int level = 1;
     public int area = 1;
     public Light2D globalLight;
+    bool resetScene = true;
 
     //currently if its a moboile game allow joystick to show
     public bool isMobile = false;
@@ -92,10 +93,14 @@ public class GameManager : MonoBehaviour
         if (globalLight.enabled == false && SceneManager.GetActiveScene().name.Equals("Mountains 1"))
             globalLight.enabled = true;
 
-        if (SceneManager.GetActiveScene().name.Equals("Level Screen"))
+        if (SceneManager.GetActiveScene().name.Equals("Level Screen") && resetScene)
         {
+            resetScene = false;
             moveButton.GetComponent<MoveButton>().sceneChangeReset();
         }
+        else if (!SceneManager.GetActiveScene().name.Equals("Level Screen") && !resetScene)
+            resetScene = true;
+            
 
         if (playerMaxDefense != playerMaxHealth)
         {
