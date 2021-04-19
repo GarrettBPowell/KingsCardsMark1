@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     //level variables
     public int level = 1;
     public int area = 1;
-
+    public Light2D globalLight;
 
     //currently if its a moboile game allow joystick to show
     public bool isMobile = false;
@@ -88,6 +89,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (globalLight.enabled == false && SceneManager.GetActiveScene().name.Equals("Mountains 1"))
+            globalLight.enabled = true;
+
         if (SceneManager.GetActiveScene().name.Equals("Level Screen"))
         {
             moveButton.GetComponent<MoveButton>().sceneChangeReset();
