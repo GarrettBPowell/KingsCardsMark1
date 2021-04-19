@@ -90,8 +90,7 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("Level Screen"))
         {
-            Debug.Log("game");
-            moveButton.GetComponent<MoveButton>().resetStuff();
+            moveButton.GetComponent<MoveButton>().sceneChangeReset();
         }
         if (playerMaxDefense != playerMaxHealth)
         {

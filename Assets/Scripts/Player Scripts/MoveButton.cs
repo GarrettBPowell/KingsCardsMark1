@@ -86,6 +86,37 @@ public class MoveButton : MonoBehaviour
         cancelButtonClicked = true;
         resetStuff();
     }
+
+    public void sceneChangeReset()
+    {
+        gameManager.playerWantsToMove = false;
+        for (int i = 0; i < charStats.tilesInArray; i++)
+        {
+            charStats.tilesToMoveTo[i] = null;
+        }
+
+        charStats.wantsToMove = false;
+        charStats.tilesInArray = 0;
+        i = 0;
+        cancelButton.gameObject.SetActive(false);
+
+        gameManager.isInCombatMoving = false;
+        gameManager.outOfCombat = true;
+        moveButton.interactable = true;
+
+        if (gameManager.outOfCombat)
+            moveButton.gameObject.SetActive(false);
+
+        if (!cancelButtonClicked)
+            gameManager.playerTurn = false;
+        else
+            cancelButtonClicked = false;
+
+        gameObject.GetComponent<Button>().interactable = true;
+        gameManager.attackButton.GetComponent<Attack>().drewThisTurn = false;
+        gameManager.cancelAttackHit = false;
+    }
+
     //reset the used values to be used again
     public void resetStuff()
     {
