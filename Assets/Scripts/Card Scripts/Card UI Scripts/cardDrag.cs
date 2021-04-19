@@ -96,9 +96,10 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             gameManager.playerAttacked = true;
 
             //if card lets you draw more
-            if(c.statusEffectName != null && c.statusEffectName.Equals("draw"))
+            if(c.statusEffectName != null && c.statusEffectName.Equals("draw") && !canAttackEnemy)
             {
                 gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
+                Destroy(gameObject);
             }
 
             if (!canAttackEnemy)
