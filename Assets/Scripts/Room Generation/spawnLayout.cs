@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class spawnLayout : MonoBehaviour
 {
-    public GameObject[] caveLayouts;
+    public GameObject[] Layouts;
     public string levelType = "caves";
     public Transform roomParent;
     void Start()
     {
         Vector3 spawnPosition = gameObject.transform.position;
-        if (levelType.Equals("caves"))
-        {
-            Instantiate(caveLayouts[Random.Range(0, caveLayouts.Length)], spawnPosition, Quaternion.identity, roomParent);
-        }
+        Instantiate(Layouts[Random.Range(0, Layouts.Length)], spawnPosition, Quaternion.identity, roomParent);
+        
     }
 }
 
