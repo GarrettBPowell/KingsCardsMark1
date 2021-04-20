@@ -5,7 +5,6 @@ using UnityEngine;
 public class spawnLayout : MonoBehaviour
 {
     public GameObject[] Layouts;
-    public string levelType = "caves";
     public Transform roomParent;
     void Start()
     {

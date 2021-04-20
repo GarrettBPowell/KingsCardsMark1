@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186225307766855460}
   m_Layer: 0
-  m_Name: MountainsLayout1
+  m_Name: MountainsLayout1W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
