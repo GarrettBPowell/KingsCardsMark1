@@ -28,6 +28,7 @@ public class displayEnemyStats : MonoBehaviour
 
     private void OnDestroy()
     {
-        enemyHealth.GetComponent<Text>().text = "";
+        if (enemyHealth != null)
+            enemyHealth.GetComponent<Text>().text = "";
     }
 }
