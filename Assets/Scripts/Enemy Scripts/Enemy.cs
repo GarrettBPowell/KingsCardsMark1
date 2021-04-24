@@ -40,7 +40,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (enemyHealth <= 0)
+        {
+            gameObject.GetComponent<spawnCard>().spawnTheCard();
             Destroy(gameObject);
+        }
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
         
@@ -292,5 +295,4 @@ public class Enemy : MonoBehaviour
                 Instantiate(projectiles[0], new Vector2(gameObject.transform.position.x - 0.5f, transform.position.y), Quaternion.identity, gameObject.transform);
         }
     }
-    
 }

@@ -130,6 +130,8 @@ public class GameManager : MonoBehaviour
 
         if (outOfCombat)
         {
+            playerStatusEffects.Clear();
+            playerDefense = 0;
             playerTurn = true;
             attackButton.gameObject.SetActive(false);
             handDeckUI.enabled = false;
