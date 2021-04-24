@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2231836176384415910}
   - component: {fileID: 2231836176384415911}
   - component: {fileID: 2231836176384415915}
+  - component: {fileID: 3884834915321991727}
   m_Layer: 0
   m_Name: Base Ememy
   m_TagString: enemy
@@ -138,6 +139,26 @@ MonoBehaviour:
   enemyTurn: 0
   moveEnemy: 0
   gettingMove: 0
+  playerPos: {x: 0, y: 0, z: 0}
   enemyType: melee
+  enemyZone: 
   enemyHealth: 10
   enemyDamage: 5
+  projectiles: []
+--- !u!114 &3884834915321991727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231836176384415908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a4ef41c2d430a49ad73dd3a2cdbe91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chance: 10
+  caveCards:
+  - {fileID: 4863293144466588253, guid: 90210911bb352544399faf89b778b6c1, type: 3}
+  mountainCards: []
+  forestCards: []
