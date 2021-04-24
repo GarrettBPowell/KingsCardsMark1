@@ -25,16 +25,16 @@ public class onClick : MonoBehaviour
             if (character.GetComponent<characterStats>().wantsToMove)
             {
                 //if tile clicked is not occupied and the player still has tiles left to move
-                if(!gameObject.GetComponent<WorldTile>().getOccupied() && (!gameObject.GetComponent<WorldTile>().addedToMoveArray) && character.GetComponent<characterStats>().tilesInArray < character.GetComponent<characterStats>().moveDistance)
+                if (!gameObject.GetComponent<WorldTile>().getOccupied() && (!gameObject.GetComponent<WorldTile>().addedToMoveArray) && character.GetComponent<characterStats>().tilesInArray < character.GetComponent<characterStats>().moveDistance)
                 {
                     //there are no previous tiles in the array
-                    if(character.GetComponent<characterStats>().tilesToMoveTo[0] == null)
+                    if (character.GetComponent<characterStats>().tilesToMoveTo[0] == null)
                     {
                         //if character and tile to move to is within 1
                         if ((Mathf.Abs(character.transform.position.x - thisTilePosition.x) == 1 && character.transform.position.y == thisTilePosition.y) || (Mathf.Abs(character.transform.position.y - thisTilePosition.y) == 1 && character.transform.position.x == thisTilePosition.x))
                         {
                             character.GetComponent<characterStats>().tilesToMoveTo[0] = gameObject.GetComponent<WorldTile>();
-                            character.GetComponent<characterStats>().tilesInArray ++;
+                            character.GetComponent<characterStats>().tilesInArray++;
                             gameObject.GetComponent<WorldTile>().setAddedBool(true);
                         }
                     }
@@ -54,5 +54,6 @@ public class onClick : MonoBehaviour
                 }
             }
         }
+
     }
 }

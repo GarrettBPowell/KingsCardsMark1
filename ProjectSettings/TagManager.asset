@@ -16,6 +16,7 @@ TagManager:
   - card
   - crystal
   - titleCanvas
+  - displayEnemyStats
   layers:
   - Default
   - TransparentFX
