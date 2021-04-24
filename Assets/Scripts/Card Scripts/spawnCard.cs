@@ -8,7 +8,7 @@ public class spawnCard : MonoBehaviour
     public List<GameObject> caveCards;
     public List<GameObject> mountainCards;
     public List<GameObject> forestCards;
-    private void OnDestroy()
+    public void spawnTheCard()
     {
         int randNum = Random.Range(0, 100);
         if(randNum < chance)

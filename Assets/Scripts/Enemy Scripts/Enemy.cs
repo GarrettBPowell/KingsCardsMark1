@@ -40,7 +40,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (enemyHealth <= 0)
+        {
+            gameObject.GetComponent<spawnCard>().spawnTheCard();
             Destroy(gameObject);
+        }
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
         
