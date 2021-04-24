@@ -292,5 +292,4 @@ public class Enemy : MonoBehaviour
                 Instantiate(projectiles[0], new Vector2(gameObject.transform.position.x - 0.5f, transform.position.y), Quaternion.identity, gameObject.transform);
         }
     }
-    
 }
