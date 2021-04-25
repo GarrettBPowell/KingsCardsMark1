@@ -43,7 +43,7 @@ public class audioManager : MonoBehaviour
                     if(gameManager.outOfCombat)
                     {
                         StartCoroutine(StartFade(caveInCombat, 1f, 0));
-                        StartCoroutine(StartFade(caveOutofCombat, 1f, 1));
+                        StartCoroutine(StartFade(caveOutofCombat, 2f, 1));
                     }
                     else
                     {
@@ -56,13 +56,13 @@ public class audioManager : MonoBehaviour
                 case 2:
                     if (gameManager.outOfCombat)
                     {
-                        StartFade(mountainInCombat, 1f, 0);
-                        StartFade(mountainOutofCombat, 1f, 1);
+                        StartCoroutine(StartFade(mountainInCombat, 1f, 0));
+                        StartCoroutine(StartFade(mountainOutofCombat, 2f, 1));
                     }
                     else
                     {
-                        StartFade(mountainOutofCombat, 1f, 0);
-                        StartFade(mountainInCombat, 1f, 1);
+                        StartCoroutine(StartFade(mountainOutofCombat, 1f, 0));
+                        StartCoroutine(StartFade(mountainInCombat, 1f, 1));
                     }
 
                     break;

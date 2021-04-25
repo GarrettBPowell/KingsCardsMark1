@@ -17,6 +17,7 @@ TagManager:
   - crystal
   - titleCanvas
   - displayEnemyStats
+  - dontDestroyOnLoad
   layers:
   - Default
   - TransparentFX

@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public string playerFacing;
     public bool playerTurn = true;
     public bool enemyMoving = false;
+    public bool screenPaused = false;
 
     //attack vars
     public bool playerAttacked = false;

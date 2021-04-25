@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         //add bool wrapper here
         if (!gameManager.isInCombatMoving)
         {
-            if (outOfCombat)
+            if (outOfCombat && !gameManager.screenPaused)
             {
                 if (!isMovePlayer)
                 {
