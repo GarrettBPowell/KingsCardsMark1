@@ -1250,12 +1250,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c7fd94f3919f1b14192a2a10a8432eff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 37cf9bd2f3c47f14cad41c56ac0c3eff, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -2335,6 +2335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1595228038}
+  - component: {fileID: 1595228039}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -2357,6 +2358,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595228039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595228037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a9c9c6fc65f0446a30741184a7ea9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caveOutofCombat: {fileID: 1056325676}
+  caveInCombat: {fileID: 783893554}
+  mountainOutofCombat: {fileID: 0}
+  mountainInCombat: {fileID: 0}
+  currentArea: 0
+  needToSwitchAudio: 1
 --- !u!224 &1670992134 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
