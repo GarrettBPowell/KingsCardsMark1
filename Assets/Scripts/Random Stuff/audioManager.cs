@@ -35,7 +35,6 @@ public class audioManager : MonoBehaviour
 
         if(gameManager.outOfCombat != needToSwitchAudio)
         {
-            Debug.Log("bool worked");
             needToSwitchAudio = gameManager.outOfCombat;
             switch(currentArea)
             {
@@ -76,13 +75,14 @@ public class audioManager : MonoBehaviour
         switch(currentArea)
         {
             case 2:
-                caveOutofCombat.Stop();
-                caveInCombat.Stop();
+                StartCoroutine(StartFadeStop(caveOutofCombat, 2f, 0));
+                StartCoroutine(StartFadeStop(caveInCombat, 2f, 0));
+
 
                 mountainOutofCombat.Play();
-                mountainOutofCombat.mute = false;
-                mountainInCombat.mute = true;
                 mountainInCombat.Play();
+                StartCoroutine(StartFade(mountainOutofCombat, 2f, 1));
+                
                 break;
         }
     }
@@ -98,6 +98,20 @@ public class audioManager : MonoBehaviour
             audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
             yield return null;
         }
+        yield break;
+    }
+    public static IEnumerator StartFadeStop(AudioSource audioSource, float duration, float targetVolume)
+    {
+        float currentTime = 0;
+        float start = audioSource.volume;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            yield return null;
+        }
+        audioSource.Stop();
         yield break;
     }
 
