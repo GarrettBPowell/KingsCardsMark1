@@ -1082,7 +1082,8 @@ PrefabInstance:
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
       value: 0.497757
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4890177946692436680, guid: b3e4563792e3ff84d9143505e53d684f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b3e4563792e3ff84d9143505e53d684f, type: 3}
 --- !u!1 &457857133
 GameObject:
