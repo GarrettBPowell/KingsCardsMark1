@@ -26,6 +26,10 @@ public class changeCameraColor : MonoBehaviour
                 else
                     gameObject.GetComponent<Camera>().backgroundColor = cameraColor[2];
             }
+            else if(gameManager.area == 3)
+            {
+                gameObject.GetComponent<Camera>().backgroundColor = cameraColor[3];
+            }
         }
     }
 }

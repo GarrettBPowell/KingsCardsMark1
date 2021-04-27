@@ -1039,6 +1039,7 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 1}
   - {r: 0.4901961, g: 0.37647063, b: 0.23529413, a: 1}
   - {r: 0.6784314, g: 0.82745105, b: 0.8588236, a: 1}
+  - {r: 0.18431373, g: 0.32941177, b: 0.2, a: 1}
 --- !u!4 &520381989 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4429247653225675790, guid: d1b97b4f80afd5d47b95d63a78ddb41c, type: 3}
