@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1162338284213686981}
   - component: {fileID: 1162338284213686983}
   - component: {fileID: 1162338284213686982}
+  - component: {fileID: 4890177946692436680}
   - component: {fileID: 1984104720}
   m_Layer: 0
   m_Name: CaveParticleSystem
@@ -4814,6 +4815,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4890177946692436680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162338284213686980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bc06f70a86a8c45a7e52eb5faa1cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1984104720
 MonoBehaviour:
   m_ObjectHideFlags: 0
