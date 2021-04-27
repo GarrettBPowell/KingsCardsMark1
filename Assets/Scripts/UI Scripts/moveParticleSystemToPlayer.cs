@@ -11,6 +11,6 @@ public class moveParticleSystemToPlayer : MonoBehaviour
     }
     void Update()
     {
-        transform.position = player.transform.position;
+        transform.position = new Vector3(player.transform.position.x + 9, player.transform.position.y + 9);
     }
 }
