@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
+
 
 public class GetLevelNumber : MonoBehaviour
 {
@@ -12,8 +14,22 @@ public class GetLevelNumber : MonoBehaviour
 
     public Text levelNumber;
     private string levelToLoad;
+
+    string gameId = "4091468";
+    bool testMode = true;
+
     void Start()
     {
+        //get the game manager
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+
+        Advertisement.Initialize(gameId, testMode);
+
+        if (gameManager.level % 2 != 0)
+        {
+            StartCoroutine(waitTwoSecs(2f));
+        }
+
         //pull any canvas from scene and find the one that is the player movement/attack/main game ui
         foreach(Canvas can in Canvas.FindObjectsOfType<Canvas>())
         {
@@ -26,8 +42,7 @@ public class GetLevelNumber : MonoBehaviour
         
 
 
-        //get the game manager
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        
 
         if (SceneManager.GetActiveScene().name.Equals("Level Screen"))
             canvas.gameObject.SetActive(false);
@@ -76,5 +91,24 @@ public class GetLevelNumber : MonoBehaviour
         character.GetComponent<SpriteRenderer>().enabled = true;
         character.transform.position = Vector2.zero;
         canvas.gameObject.SetActive(true);
+    }
+
+    private IEnumerator waitTwoSecs(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        ShowInterstitialAd();
+        
+    }
+    public void ShowInterstitialAd()
+    {
+        // Check if UnityAds ready before calling Show method:
+        if (Advertisement.IsReady())
+        {
+            Advertisement.Show();
+        }
+        else
+        {
+            Debug.Log("Interstitial ad not ready at the moment! Please try again later!");
+        }
     }
 }

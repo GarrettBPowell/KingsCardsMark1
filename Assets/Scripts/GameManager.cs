@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
-    public bool isInCombatMoving; //tells the out of combat player controller if the in combat controller is still moving the player
+    public bool isInCombatMoving = false; //tells the out of combat player controller if the in combat controller is still moving the player
     public bool playerWantsToMove = false;
 
     public GameObject character;
@@ -91,6 +91,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene("Gameover");
+            Destroy(GameObject.FindGameObjectWithTag("dontDestroyOnLoad"));
+        }
         if (globalLight.enabled == false && SceneManager.GetActiveScene().name.Equals("Mountains 1"))
             globalLight.enabled = true;
 
