@@ -1039,6 +1039,7 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 1}
   - {r: 0.4901961, g: 0.37647063, b: 0.23529413, a: 1}
   - {r: 0.6784314, g: 0.82745105, b: 0.8588236, a: 1}
+  - {r: 0.18431373, g: 0.32941177, b: 0.2, a: 1}
 --- !u!4 &520381989 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4429247653225675790, guid: d1b97b4f80afd5d47b95d63a78ddb41c, type: 3}
@@ -4442,6 +4443,7 @@ GameObject:
   - component: {fileID: 4906236927481993719}
   - component: {fileID: 4906236927481993716}
   - component: {fileID: 4906236927481993717}
+  - component: {fileID: 4906236927481993707}
   m_Layer: 5
   m_Name: Minimap
   m_TagString: Untagged
@@ -4449,6 +4451,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4906236927481993707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906236927481993706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7489ad7e6b9e10547818d1a769f28579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 4906236927481993717}
 --- !u!222 &4906236927481993716
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5713,6 +5728,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 4906236928095285585}
     m_Modifications:
     - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -5794,7 +5813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5819,6 +5838,14 @@ PrefabInstance:
     - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: snapY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: deadZone
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
