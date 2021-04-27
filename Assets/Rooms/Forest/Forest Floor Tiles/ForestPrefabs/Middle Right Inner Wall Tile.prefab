@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6845450514531776979}
   - component: {fileID: 6845450514531776976}
   m_Layer: 0
-  m_Name: Moddle Right Inner Wall Tile
+  m_Name: Middle Right Inner Wall Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
