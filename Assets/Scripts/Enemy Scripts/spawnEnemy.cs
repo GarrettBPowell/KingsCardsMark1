@@ -35,8 +35,14 @@ public class spawnEnemy : MonoBehaviour
 
                     if (tiles.TryGetValue(dictKey, out tileToSpawnOn))
                     {
+                        int floor = 1;
+                        if(Random.Range(0,4) == 0)
+                        {
+                            floor = 0;
+                        }
+
                         if (!tileToSpawnOn.occupied)
-                            Instantiate(enemies[Random.Range(0, enemies.Count)], dictKey, Quaternion.identity, roomParent);
+                            Instantiate(enemies[Random.Range(floor, enemies.Count)], dictKey, Quaternion.identity, roomParent);
 
                         else
                             tileToSpawnOn = null;
