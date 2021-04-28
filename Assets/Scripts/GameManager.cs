@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public bool playerAttacked = false;
     public bool wantsToAttack = false;
     public bool cancelAttackHit = false;
+    public bool decPlayerEffects = false;
 
     //level variables
     public int level = 1;
@@ -150,6 +151,15 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (!playerTurn && decPlayerEffects)
+            {
+                character.GetComponent<characterStats>().decEffects();
+                decPlayerEffects = false;
+            }
+            else if (playerTurn)
+                decPlayerEffects = true;
+
+
             joystick.gameObject.SetActive(false);
 
             handDeckUI.enabled = true;

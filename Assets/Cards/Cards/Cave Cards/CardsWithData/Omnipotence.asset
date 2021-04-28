@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
-  m_Name: CrystalSmash
+  m_Name: Omnipotence
   m_EditorClassIdentifier: 
   names:
-  - Crystal Smash
-  cardType: Pawn
+  - Omnipotence
+  cardType: Queen
   cardArea: Caves
-  attackRange: 1
   descriptions:
-  - Deal 6 Damage
+  - Summon a Blinding Light
   cardSprites:
-  - {fileID: 5199120747287873557, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -2669806269793722079, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -29271536426729124, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2539220493790732777, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   statusEffects: 
-  damages: 06000000
-  statusEffectName: 
+  damages: 
+  statusEffectName: summon
   defenses: 
   heals: 
   upgradable: 0
   upgradeNum: 0
-  canAttackEnemy: 1
-  summon: {fileID: 0}
+  canAttackEnemy: 0
+  summon: {fileID: 8009308095874481733, guid: 439928ae8174eee41a8520041a24b541, type: 3}

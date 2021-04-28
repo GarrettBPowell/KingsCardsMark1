@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class characterStats : MonoBehaviour
 {
@@ -20,6 +21,15 @@ public class characterStats : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
+    public void decEffects()
+    {
+        foreach (string key in gameManager.playerStatusEffects.Keys.ToList())
+        {
+            Debug.Log("working");
+            gameManager.playerStatusEffects[key] -= 1;
+        }
     }
 }
 

@@ -96,11 +96,18 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             gameManager.playerAttacked = true;
 
             //if card lets you draw more
-            if(c.statusEffectName != null && c.statusEffectName.Equals("draw") && !canAttackEnemy)
+            if(c.statusEffectName != "" && !canAttackEnemy)
             {
-                gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
+
+                if(c.statusEffectName.Equals("draw"))
+                    gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
+
+                if (c.statusEffectName.Equals("summon"))
+                    Instantiate(c.summon, tileDroppedOn.transform.position, Quaternion.identity);
+
                 Destroy(gameObject);
             }
+
 
             if (!canAttackEnemy)
             {
@@ -142,21 +149,25 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 Destroy(gameObject);
             }
             else if (tileDroppedOn.getOccupied())
-            {       
-                if (tileDroppedOn.getObject() != null && tileDroppedOn.getObject().CompareTag("enemy"))
+            {
+                if (Mathf.Abs(Vector2.Distance(worldPosition, gameManager.character.transform.position)) <= c.attackRange)
                 {
-                    if(c.statusEffectName.Equals("draw") && canAttackEnemy)
-                        gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
+                    Debug.Log(Vector2.Distance(worldPosition, gameManager.character.transform.position));
+                    if (tileDroppedOn.getObject() != null && tileDroppedOn.getObject().CompareTag("enemy"))
+                    {
+                        if (c.statusEffectName.Equals("draw") && canAttackEnemy)
+                            gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
 
-                    Enemy enemyToAttack;
+                        Enemy enemyToAttack;
 
-                    enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
-                    gameObject.GetComponent<getCardData>().card.attack(gameManager, enemyToAttack.GetComponent<Enemy>());
-                    Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
-                    Destroy(gameObject);
+                        enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
+                        gameObject.GetComponent<getCardData>().card.attack(gameManager, enemyToAttack.GetComponent<Enemy>());
+                        Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
+                        Destroy(gameObject);
+                    }
+                    else
+                        gameObject.transform.position = cardPosition;
                 }
-                else
-                    gameObject.transform.position = cardPosition;
             } 
             gameObject.transform.position = cardPosition;
         }

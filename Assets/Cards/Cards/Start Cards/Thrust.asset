@@ -18,6 +18,7 @@ MonoBehaviour:
   - Thrust++
   cardType: Pawn
   cardArea: Start
+  attackRange: 2
   descriptions:
   - Deal 4 Damage
   - Deal 7 Damage
@@ -34,3 +35,4 @@ MonoBehaviour:
   upgradable: 1
   upgradeNum: 0
   canAttackEnemy: 1
+  summon: {fileID: 0}
