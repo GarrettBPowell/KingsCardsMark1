@@ -6,7 +6,6 @@ public class spawnEnemy : MonoBehaviour
 {
     public int numTimes = 0;
     public List<GameObject> enemies;
-    public string levelType = "caves";
 
     public Transform roomParent;
 
@@ -37,12 +36,8 @@ public class spawnEnemy : MonoBehaviour
                     if (tiles.TryGetValue(dictKey, out tileToSpawnOn))
                     {
                         if (!tileToSpawnOn.occupied)
-                        {
-                            if (levelType.Equals("caves"))
-                            {
-                                Instantiate(enemies[Random.Range(0, enemies.Count)], dictKey, Quaternion.identity, roomParent);
-                            }
-                        }
+                            Instantiate(enemies[Random.Range(0, enemies.Count)], dictKey, Quaternion.identity, roomParent);
+
                         else
                             tileToSpawnOn = null;
                     }
