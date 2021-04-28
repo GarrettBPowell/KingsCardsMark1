@@ -163,17 +163,18 @@ public class PlayerController : MonoBehaviour
         if(!SceneManager.GetActiveScene().name.Equals("Level Screen"))
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
     }
-    void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "FloorTile")
+        if (collision.gameObject.CompareTag("FloorTile"))
         {
             collision.gameObject.GetComponent<WorldTile>().setOccupied(true);
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.tag == "FloorTile")
+        if (collision.gameObject.CompareTag("FloorTile"))
         {
             collision.gameObject.GetComponent<WorldTile>().setOccupied(false);
         }
