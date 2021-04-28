@@ -152,7 +152,6 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             {
                 if (Mathf.Abs(Vector2.Distance(worldPosition, gameManager.character.transform.position)) <= c.attackRange)
                 {
-                    Debug.Log(Vector2.Distance(worldPosition, gameManager.character.transform.position));
                     if (tileDroppedOn.getObject() != null && tileDroppedOn.getObject().CompareTag("enemy"))
                     {
                         if (c.statusEffectName.Equals("draw") && canAttackEnemy)
@@ -162,7 +161,6 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
                         enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();
                         gameObject.GetComponent<getCardData>().card.attack(gameManager, enemyToAttack.GetComponent<Enemy>());
-                        Debug.Log("Enemy health: " + enemyToAttack.enemyHealth);
                         Destroy(gameObject);
                     }
                     else

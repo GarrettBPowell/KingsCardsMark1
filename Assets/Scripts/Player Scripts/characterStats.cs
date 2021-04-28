@@ -27,7 +27,6 @@ public class characterStats : MonoBehaviour
     {
         foreach (string key in gameManager.playerStatusEffects.Keys.ToList())
         {
-            Debug.Log("working");
             gameManager.playerStatusEffects[key] -= 1;
         }
     }

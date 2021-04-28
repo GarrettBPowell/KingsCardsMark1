@@ -35,8 +35,12 @@ public class Card : ScriptableObject
 	{
 		int damageToDo = damages[0 + upgradeNum];
 
-		if (gameManager.playerStatusEffects["strength"]<= 0)
-			gameManager.playerStatusEffects.Remove("strength");
+		if (gameManager.playerStatusEffects.ContainsKey("strength"))
+        {
+			if(gameManager.playerStatusEffects["strength"] <= 0)
+				gameManager.playerStatusEffects.Remove("strength");
+		}
+			
 
 		if (damages[0 + upgradeNum] != 0 && gameManager.playerStatusEffects.ContainsKey("strength"))
 			damageToDo += 2;

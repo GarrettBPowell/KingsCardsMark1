@@ -1564,7 +1564,7 @@ MonoBehaviour:
   - {fileID: 2248528264595422801, guid: aac4f2e4b78fa324c86c069996c666c2, type: 3}
   playerHand: []
   discardPile: []
-  numCardsToDraw: 5
+  numCardsToDraw: 2
   displayHand: 1
   drawExtra: 0
   drewExtraCards: 0
@@ -1583,6 +1583,7 @@ MonoBehaviour:
   playerAttacked: 0
   wantsToAttack: 0
   cancelAttackHit: 0
+  decPlayerEffects: 0
   level: 0
   area: 1
   globalLight: {fileID: 457857135}
@@ -2936,7 +2937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbb0174958b5074ab1a1f819bf3bca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 5
+  moveDistance: 2
   wantsToMove: 0
   tilesToMoveTo:
   - {fileID: 0}
