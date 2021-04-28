@@ -32,6 +32,7 @@ public class pauseScreen : MonoBehaviour
     {
         
         SceneManager.LoadScene("Title Screen");
-        Destroy(GameObject.FindGameObjectWithTag("dontDestroyOnLoad"));
+        if(GameObject.FindGameObjectWithTag("dontDestroyOnLoad") != null)
+            Destroy(GameObject.FindGameObjectWithTag("dontDestroyOnLoad"));
     }
 }

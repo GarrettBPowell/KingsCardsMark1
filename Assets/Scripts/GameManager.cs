@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     //movement vars
     public bool outOfCombat = true; //tells any movement and any other scripts that need to know if the player is in combat (enemies are in room the player is in) or not in combat
-    public bool isInCombatMoving; //tells the out of combat player controller if the in combat controller is still moving the player
+    public bool isInCombatMoving = false; //tells the out of combat player controller if the in combat controller is still moving the player
     public bool playerWantsToMove = false;
 
     public GameObject character;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public bool playerAttacked = false;
     public bool wantsToAttack = false;
     public bool cancelAttackHit = false;
+    public bool decPlayerEffects = false;
 
     //level variables
     public int level = 1;
@@ -91,11 +92,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene("Gameover");
+            Destroy(GameObject.FindGameObjectWithTag("dontDestroyOnLoad"));
+        }
         if (globalLight.enabled == false && SceneManager.GetActiveScene().name.Equals("Mountains 1"))
             globalLight.enabled = true;
 
         if (SceneManager.GetActiveScene().name.Equals("Level Screen") && resetScene)
         {
+            character.GetComponent<characterStats>().moveDistance = 1 + area;
+            numCardsToDraw = 1 + area;
             resetScene = false;
             moveButton.GetComponent<MoveButton>().sceneChangeReset();
         }
@@ -145,6 +153,15 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (!playerTurn && decPlayerEffects)
+            {
+                character.GetComponent<characterStats>().decEffects();
+                decPlayerEffects = false;
+            }
+            else if (playerTurn)
+                decPlayerEffects = true;
+
+
             joystick.gameObject.SetActive(false);
 
             handDeckUI.enabled = true;

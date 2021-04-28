@@ -11,6 +11,9 @@ public class audioManager : MonoBehaviour
     public AudioSource mountainOutofCombat;
     public AudioSource mountainInCombat;
 
+    public AudioSource forestOutofCombat;
+    public AudioSource forestInCombat;
+
     public int currentArea;
     GameManager gameManager;
 
@@ -65,6 +68,18 @@ public class audioManager : MonoBehaviour
                     }
 
                     break;
+                case 3:
+                    if (gameManager.outOfCombat)
+                    {
+                        StartCoroutine(StartFade(forestInCombat, 1f, 0));
+                        StartCoroutine(StartFade(forestOutofCombat, 2f, 1));
+                    }
+                    else
+                    {
+                        StartCoroutine(StartFade(forestOutofCombat, 1f, 0));
+                        StartCoroutine(StartFade(forestInCombat, 1f, 1));
+                    }
+                    break;
             }
         }
     }
@@ -83,6 +98,16 @@ public class audioManager : MonoBehaviour
                 mountainInCombat.Play();
                 StartCoroutine(StartFade(mountainOutofCombat, 2f, 1));
                 
+                break;
+            case 3:
+                StartCoroutine(StartFadeStop(mountainOutofCombat, 2f, 0));
+                StartCoroutine(StartFadeStop(mountainInCombat, 2f, 0));
+
+
+                forestOutofCombat.Play();
+                forestInCombat.Play();
+                StartCoroutine(StartFade(forestOutofCombat, 2f, 1));
+
                 break;
         }
     }

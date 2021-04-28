@@ -16,6 +16,7 @@ MonoBehaviour:
   - Crystal Smash
   cardType: Pawn
   cardArea: Caves
+  attackRange: 1
   descriptions:
   - Deal 6 Damage
   cardSprites:
@@ -28,3 +29,4 @@ MonoBehaviour:
   upgradable: 0
   upgradeNum: 0
   canAttackEnemy: 1
+  summon: {fileID: 0}

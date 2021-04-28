@@ -18,6 +18,7 @@ MonoBehaviour:
   - Swift Strike++
   cardType: Knight
   cardArea: Start
+  attackRange: 2
   descriptions:
   - 'Deal 2 Damage, Draw 1  '
   - 'Deal 4 Damage, Draw 2  '
@@ -34,3 +35,4 @@ MonoBehaviour:
   upgradable: 1
   upgradeNum: 0
   canAttackEnemy: 1
+  summon: {fileID: 0}

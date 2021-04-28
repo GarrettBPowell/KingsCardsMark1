@@ -9,6 +9,7 @@ public class Card : ScriptableObject
 
 	public string cardType;
 	public string cardArea;
+	public int attackRange;
 
 	[TextArea(1, 3)]
 	public List<string> descriptions;
@@ -28,11 +29,20 @@ public class Card : ScriptableObject
 	public int upgradeNum = 0;
 
 	public bool canAttackEnemy;
+
+	public GameObject summon;
 	public void attack(GameManager gameManager, Enemy enemy)
 	{
 		int damageToDo = damages[0 + upgradeNum];
 
 		if (gameManager.playerStatusEffects.ContainsKey("strength"))
+        {
+			if(gameManager.playerStatusEffects["strength"] <= 0)
+				gameManager.playerStatusEffects.Remove("strength");
+		}
+			
+
+		if (damages[0 + upgradeNum] != 0 && gameManager.playerStatusEffects.ContainsKey("strength"))
 			damageToDo += 2;
 		if (gameManager.playerStatusEffects.ContainsKey("weak"))
 			damageToDo = Mathf.CeilToInt(damageToDo * 0.75f);
@@ -50,16 +60,17 @@ public class Card : ScriptableObject
 
 	public void addEffect(GameManager gameManager)
     {
-		if(gameManager.playerStatusEffects.ContainsKey(statusEffectName))
-        {
-			Debug.Log("first block");
-			gameManager.playerStatusEffects[statusEffectName] += statusEffects[0 + upgradeNum];
-        }
-		else
-        {
-			Debug.Log("else block");
-			gameManager.playerStatusEffects.Add(statusEffectName, statusEffects[0 + upgradeNum]);
-        }
+		if (statusEffects.Count > 0)
+		{
+			if (gameManager.playerStatusEffects.ContainsKey(statusEffectName))
+			
+				gameManager.playerStatusEffects[statusEffectName] += statusEffects[0 + upgradeNum];
+			
+			else
+			
+				gameManager.playerStatusEffects.Add(statusEffectName, statusEffects[0 + upgradeNum]);
+			
+		}
     }
 
 	public void defend(GameManager gameManager)

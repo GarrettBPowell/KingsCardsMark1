@@ -18,15 +18,16 @@ MonoBehaviour:
   - Strength++
   cardType: Bishop
   cardArea: Start
+  attackRange: 0
   descriptions:
-  - Gain +2 Attack for 2 turns
-  - Gain +2 Attack for 4 turns
-  - Gain +2 Attack for 6 turns
+  - Gain strength for 1 Turn
+  - Gain strength for 2 Turns
+  - Gain strength for for 3 Turns
   cardSprites:
   - {fileID: -1022000610950033633, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   - {fileID: -1781568088692537680, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   - {fileID: -4402802223600834248, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
-  statusEffects: 020000000300000004000000
+  statusEffects: 010000000200000003000000
   damages: 
   statusEffectName: strength
   defenses: 
@@ -34,3 +35,4 @@ MonoBehaviour:
   upgradable: 1
   upgradeNum: 0
   canAttackEnemy: 0
+  summon: {fileID: 0}
