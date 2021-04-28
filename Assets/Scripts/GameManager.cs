@@ -102,6 +102,8 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name.Equals("Level Screen") && resetScene)
         {
+            character.GetComponent<characterStats>().moveDistance = 1 + area;
+            numCardsToDraw = 1 + area;
             resetScene = false;
             moveButton.GetComponent<MoveButton>().sceneChangeReset();
         }
