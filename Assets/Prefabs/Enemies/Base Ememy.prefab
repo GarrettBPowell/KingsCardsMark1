@@ -158,15 +158,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a4ef41c2d430a49ad73dd3a2cdbe91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 10
+  chance: 100
   caveCards:
   - {fileID: 4863293144466588253, guid: 90210911bb352544399faf89b778b6c1, type: 3}
   - {fileID: 7579628532222930893, guid: 8817880c37f129a4982cf073bc62d5d4, type: 3}
   - {fileID: 1199730086459876895, guid: e81c02960218a004f946ba84ea941129, type: 3}
   - {fileID: 5269992671676172810, guid: fbf74363dea3ceb458399ff0e0c1ace9, type: 3}
   - {fileID: 1772213668581695373, guid: 854bb785ee19ee54885f12ee0b6b6fea, type: 3}
-  mountainCards: []
-  forestCards: []
+  mountainRainCards: []
+  mountainSnowCards:
+  - {fileID: 3991911220025413710, guid: de960ba220f3bb04b993602e467e7ff1, type: 3}
+  - {fileID: 2511058716158842148, guid: 67798e94a9f705f4e9cd8aabe3a7e10c, type: 3}
+  - {fileID: 666145189321774192, guid: 67b729e6bbb3eb64d81a8cfde2509b00, type: 3}
+  - {fileID: 3306281321898602409, guid: e9658d6abd174d64e8bd70ee3d30456a, type: 3}
+  forestCards:
+  - {fileID: 7215469889701304084, guid: 76b01e67e436eec40ba97418f86cb9cf, type: 3}
+  - {fileID: 4943527291804381563, guid: 08640c9fa73343741af98176e6cb82ba, type: 3}
+  - {fileID: 3477587881046123984, guid: 4fd16a88c240b274bb100f85340d0c5c, type: 3}
+  - {fileID: 5063145806168208990, guid: 0ef5eb7dc9f61924a9835d92f14eb4f7, type: 3}
 --- !u!114 &1576957964507087726
 MonoBehaviour:
   m_ObjectHideFlags: 0

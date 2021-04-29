@@ -12,18 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
   m_Name: Snow Shoes
   m_EditorClassIdentifier: 
-  names: []
-  cardType: 
-  cardArea: 
-  attackRange: 0
-  descriptions: []
-  cardSprites: []
+  names:
+  - Snow Shoes
+  cardType: Knight
+  cardArea: Snow
+  attackRange: 2
+  descriptions:
+  - Deal 1 Damage Draw 2 Cards
+  cardSprites:
+  - {fileID: -8468205245085413617, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2746199878106706279, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4467796234881307738, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   statusEffects: 
-  damages: 
-  statusEffectName: 
-  defenses: 
+  damages: 010000000100000001000000
+  statusEffectName: draw
+  defenses: 010000000200000003000000
   heals: 
   upgradable: 0
   upgradeNum: 0
-  canAttackEnemy: 0
+  canAttackEnemy: 1
   summon: {fileID: 0}

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
-  m_Name: Ice Punch
+  m_Name: Leaf Storm
   m_EditorClassIdentifier: 
   names:
-  - Ice Punch
-  cardType: Pawn
-  cardArea: Snow
+  - Leaf Snow
+  cardType: Queen
+  cardArea: Foresst
   attackRange: 0
   descriptions:
-  - Deal 7 Damage
+  - Deal 4 Damage to All Enemies
   cardSprites:
-  - {fileID: 8270892870027986124, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
-  - {fileID: -3520016828368208567, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
-  - {fileID: -4922842564307519153, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -8787216720047154378, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2502583334019176726, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 3912282095566644014, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   statusEffects: 
-  damages: 07000000
+  damages: 040000000400000004000000
   statusEffectName: 
   defenses: 
   heals: 

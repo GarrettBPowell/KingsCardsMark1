@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
-  m_Name: Ice Punch
+  m_Name: Overgrowth
   m_EditorClassIdentifier: 
   names:
-  - Ice Punch
-  cardType: Pawn
-  cardArea: Snow
-  attackRange: 0
+  - Overgrowth
+  cardType: Rook
+  cardArea: Forest
+  attackRange: 1.5
   descriptions:
-  - Deal 7 Damage
+  - Deal 4 Damage, Gain 4 Defense
   cardSprites:
-  - {fileID: 8270892870027986124, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
-  - {fileID: -3520016828368208567, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
-  - {fileID: -4922842564307519153, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -7142848622475081782, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -5937214533435205225, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -6484586006948601755, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   statusEffects: 
-  damages: 07000000
+  damages: 040000000400000004000000
   statusEffectName: 
-  defenses: 
+  defenses: 040000000400000004000000
   heals: 
   upgradable: 0
   upgradeNum: 0

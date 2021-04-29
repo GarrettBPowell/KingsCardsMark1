@@ -12,16 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
   m_Name: Snowy Embrace
   m_EditorClassIdentifier: 
-  names: []
-  cardType: 
-  cardArea: 
+  names:
+  - Snowy Embrace
+  - Snowy Embrace
+  - Snowy Embrace
+  cardType: Rook
+  cardArea: Snow
   attackRange: 0
-  descriptions: []
-  cardSprites: []
+  descriptions:
+  - Gain 8 Defense
+  cardSprites:
+  - {fileID: 1501239537343037199, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 9068356715945491166, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: 2508473309160633021, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
   statusEffects: 
   damages: 
   statusEffectName: 
-  defenses: 
+  defenses: 080000000800000008000000
   heals: 
   upgradable: 0
   upgradeNum: 0
