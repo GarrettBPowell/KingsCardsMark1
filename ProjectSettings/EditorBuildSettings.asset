@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: e4a14c87aebdfab488bdcf3b5617c33e
+  - enabled: 1
     path: Assets/Scenes/First Level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -44,9 +47,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest/Forest 4.unity
     guid: 50669acf67b9d944996afa9cac07f8df
-  - enabled: 1
-    path: Assets/Scenes/Title Screen.unity
-    guid: e4a14c87aebdfab488bdcf3b5617c33e
   - enabled: 1
     path: Assets/Scenes/Gameover.unity
     guid: ec3667b498330a24797596b643511ed5
