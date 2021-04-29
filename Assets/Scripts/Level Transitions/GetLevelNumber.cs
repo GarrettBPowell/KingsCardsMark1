@@ -76,6 +76,20 @@ public class GetLevelNumber : MonoBehaviour
                 levelToLoad = "Forest 1";
             }
         }
+        else if (gameManager.area == 3)
+        {
+            if (gameManager.level == 1 || gameManager.level == 2 || gameManager.level == 3)
+            {
+                gameManager.level++;
+                levelToLoad = "Forest " + gameManager.level;
+            }
+            else
+            {
+                gameManager.level = 1;
+                gameManager.area = 4;
+                levelToLoad = "Castle 1";
+            }
+        }
 
 
         levelNumber.text = gameManager.area + " - " + gameManager.level;

@@ -7,9 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1877029434894191463, guid: af3f634185aac324aa9621f9138b1add, type: 3}
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1454100757625378053, guid: 2648e76fc51545b45abbbe25d26c4f5b, type: 3}
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 3955654424737302210, guid: 4391eb4f314b6394a8ee206ce5f51dad, type: 3}
     - target: {fileID: 6610025987847888107, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: m_Name
-      value: Forest Enemy Spawner
+      value: Forest Enemy Spawner Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8687945005930351231, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: m_RootOrder
