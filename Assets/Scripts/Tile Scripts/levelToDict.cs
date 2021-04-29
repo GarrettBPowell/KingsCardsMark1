@@ -9,7 +9,6 @@ public class levelToDict : MonoBehaviour
     public void OnTriggerEnter2D (Collider2D collision)
     {
         var localPlace = new Vector3Int((int)collision.transform.position.x, (int)collision.transform.position.y, (int)collision.transform.position.z);
-
         if (collision.gameObject.tag == "FloorTile" && !tiles.ContainsKey(localPlace))  
             tiles.Add(localPlace, collision.gameObject.GetComponent<WorldTile>()); 
     }
