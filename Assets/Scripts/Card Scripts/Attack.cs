@@ -79,6 +79,7 @@ public class Attack : MonoBehaviour
 
         if (!drewThisTurn)
         {
+            gameManager.playerDefense = 0;
             drewThisTurn = true;
             for (int i = 0; i < gameManager.numCardsToDraw; i++)
             {

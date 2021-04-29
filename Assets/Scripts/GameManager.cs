@@ -159,8 +159,10 @@ public class GameManager : MonoBehaviour
                 character.GetComponent<characterStats>().decEffects();
                 decPlayerEffects = false;
             }
-            else if (playerTurn)
+            else if (playerTurn && !decPlayerEffects)
+            {
                 decPlayerEffects = true;
+            }
 
 
             joystick.gameObject.SetActive(false);
