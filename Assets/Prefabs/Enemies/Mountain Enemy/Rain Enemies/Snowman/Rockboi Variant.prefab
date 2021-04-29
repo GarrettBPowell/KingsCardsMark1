@@ -9,12 +9,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2231836176384415908, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
       propertyPath: m_Name
-      value: Rockboi
+      value: Rockboi Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2231836176384415911, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ea35c11196d21f94d876e434b541ad1c, type: 3}
+    - target: {fileID: 2231836176384415911, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: m_Color.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415911, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: m_Color.g
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415911, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: m_Color.r
+      value: 0.754717
+      objectReference: {fileID: 0}
     - target: {fileID: 2231836176384415912, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
       propertyPath: m_RootOrder
       value: 0
