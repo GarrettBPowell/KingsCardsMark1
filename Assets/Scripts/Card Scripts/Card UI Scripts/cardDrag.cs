@@ -156,7 +156,10 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                     {
                         if (c.statusEffectName.Equals("draw") && canAttackEnemy)
                             gameManager.drawExtra = c.defenses[0 + c.upgradeNum];
-
+                        else if (c.defenses.Count > 0)
+                        {
+                            c.defend(gameManager);
+                        }
                         Enemy enemyToAttack;
 
                         enemyToAttack = tileDroppedOn.getObject().GetComponent<Enemy>();

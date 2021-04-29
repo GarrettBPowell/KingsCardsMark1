@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
+  m_Name: Toxic Slash
+  m_EditorClassIdentifier: 
+  names:
+  - Toxic Slash
+  cardType: Pawn
+  cardArea: Forest
+  attackRange: 1.5
+  descriptions:
+  - Deal 6 Damaage
+  - Deal 6 Damaage
+  - Deal 6 Damaage
+  cardSprites:
+  - {fileID: -1374556122527884467, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -7029370484382500448, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -3440593094111880514, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  statusEffects: 
+  damages: 060000000600000006000000
+  statusEffectName: 
+  defenses: 
+  heals: 
+  upgradable: 0
+  upgradeNum: 0
+  canAttackEnemy: 1
+  summon: {fileID: 0}

@@ -9,7 +9,7 @@ public class Card : ScriptableObject
 
 	public string cardType;
 	public string cardArea;
-	public int attackRange;
+	public float attackRange;
 
 	[TextArea(1, 3)]
 	public List<string> descriptions;

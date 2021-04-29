@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3445d27441a07fc40b67f7cef46d86a5, type: 3}
+  m_Name: Ice Punch
+  m_EditorClassIdentifier: 
+  names:
+  - Ice Punch
+  cardType: Pawn
+  cardArea: Snow
+  attackRange: 0
+  descriptions:
+  - Deal 7 Damage
+  cardSprites:
+  - {fileID: 8270892870027986124, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -3520016828368208567, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  - {fileID: -4922842564307519153, guid: 66b455eabb04ae049b2797fc03b1d2e8, type: 3}
+  statusEffects: 
+  damages: 07000000
+  statusEffectName: 
+  defenses: 
+  heals: 
+  upgradable: 0
+  upgradeNum: 0
+  canAttackEnemy: 1
+  summon: {fileID: 0}
