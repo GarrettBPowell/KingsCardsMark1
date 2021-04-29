@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a4ef41c2d430a49ad73dd3a2cdbe91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 100
+  chance: 20
   caveCards:
   - {fileID: 4863293144466588253, guid: 90210911bb352544399faf89b778b6c1, type: 3}
   - {fileID: 7579628532222930893, guid: 8817880c37f129a4982cf073bc62d5d4, type: 3}
