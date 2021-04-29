@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2231836176384415908, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
       propertyPath: m_Name
-      value: Rockboi
+      value: Rockboi Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2231836176384415911, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
       propertyPath: m_Sprite
@@ -83,5 +83,9 @@ PrefabInstance:
       propertyPath: projectiles.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415915, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: projectiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 130367659053659035, guid: 0d8e0ef9f90774b4396bba5eb652221d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48074ff1d302e194393ef395baa8de92, type: 3}

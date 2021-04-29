@@ -105,10 +105,7 @@ public class Enemy : MonoBehaviour
         //if ranged enemy then fire
         if((Mathf.Abs(xdist) == 0 ||  Mathf.Abs(ydist) == 0) && enemyType.Equals("ranged"))
         {
-            if (enemyZone.Equals("cave"))
-            {
                 spawnProjectile();
-            }
 
             enemyTurn = false;
         }
@@ -177,10 +174,7 @@ public class Enemy : MonoBehaviour
         //if ranged enemy then fire
         if ((Mathf.Abs(xdist) == 0 || Mathf.Abs(ydist) == 0) && enemyType.Equals("ranged"))
         {
-            if (enemyZone.Equals("cave"))
-            {
                 spawnProjectile();
-            }
 
             enemyTurn = false;
         }

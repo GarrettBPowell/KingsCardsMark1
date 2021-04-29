@@ -61,7 +61,7 @@ public class spawnEnemy : MonoBehaviour
                 floor = 0;
             }
 
-            numTimes = Random.Range(floor, gameManager.level + 2);
+            numTimes = Random.Range(floor, gameManager.level + gameManager.area + 1);
         }
     }
 }
