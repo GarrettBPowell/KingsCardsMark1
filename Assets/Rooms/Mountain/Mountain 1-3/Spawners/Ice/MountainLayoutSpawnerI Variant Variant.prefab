@@ -9,12 +9,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4712363127960536488, guid: a796390aa34bec1468d629260f75e230, type: 3}
       propertyPath: Layouts.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4712363127960536488, guid: a796390aa34bec1468d629260f75e230, type: 3}
       propertyPath: Layouts.Array.data[0]
       value: 
       objectReference: {fileID: 937449400595859910, guid: ff8168bf80abf954d90e86735c6b1211, type: 3}
+    - target: {fileID: 4712363127960536488, guid: a796390aa34bec1468d629260f75e230, type: 3}
+      propertyPath: Layouts.Array.data[1]
+      value: 
+      objectReference: {fileID: 6125414824799004588, guid: c0738ae05a88a4845aa2668e210d679e, type: 3}
     - target: {fileID: 5596342105675710022, guid: a796390aa34bec1468d629260f75e230, type: 3}
       propertyPath: m_Name
       value: MountainLayoutSpawnerI Variant Variant
