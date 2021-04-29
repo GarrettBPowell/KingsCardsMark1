@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7730660791286062552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1179659441412048069, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_Name
+      value: MountainsRoom1.6EW Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+--- !u!4 &596088203716476334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7137475435716632694, guid: 5cb2a5fe710be474ab3b1332981fcef9, type: 3}
+  m_PrefabInstance: {fileID: 7730660791286062552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8296311073577894205
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 596088203716476334}
+    m_Modifications:
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491555382219519390, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736107341732487946, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}
+      propertyPath: m_Name
+      value: Mountain Rain Enemy Spawner Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fd2654951b17264bbf5f32df428fcaf, type: 3}

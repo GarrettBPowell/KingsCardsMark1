@@ -7,9 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 2012629403187475213, guid: f5d6d4eab1d508c44b7547509ddeeb89, type: 3}
+    - target: {fileID: 1435772245374785650, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 228939278105266234, guid: d4a0dc1e710ab264bafdf6e660abec51, type: 3}
     - target: {fileID: 6610025987847888107, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: m_Name
-      value: Mountain Snow Enemy Spawner
+      value: Mountain Snow Enemy Spawner Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8687945005930351231, guid: e25ef96cb5f15b448a9a5b9fe26e0c58, type: 3}
       propertyPath: m_RootOrder

@@ -35,14 +35,10 @@ public class spawnEnemy : MonoBehaviour
 
                     if (tiles.TryGetValue(dictKey, out tileToSpawnOn))
                     {
-                        int floor = 1;
-                        if(Random.Range(0,10) == 0)
-                        {
-                            floor = 0;
-                        }
+
 
                         if (!tileToSpawnOn.occupied)
-                            Instantiate(enemies[Random.Range(floor, enemies.Count)], dictKey, Quaternion.identity, roomParent);
+                            Instantiate(enemies[Random.Range(0, enemies.Count)], dictKey, Quaternion.identity, roomParent);
 
                         else
                             tileToSpawnOn = null;
@@ -58,6 +54,14 @@ public class spawnEnemy : MonoBehaviour
         if (tiles.Count == 0)
             tiles = GameObject.FindGameObjectWithTag("levelCollider").GetComponent<levelToDict>().tiles;
         if (numTimes == 0)
-            numTimes = Random.Range(0, gameManager.level + 2);
+        {
+            int floor = 1;
+            if (Random.Range(0, 10) == 0)
+            {
+                floor = 0;
+            }
+
+            numTimes = Random.Range(floor, gameManager.level + 2);
+        }
     }
 }
