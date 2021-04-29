@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1576957964507087726, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: enemyHealth
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2231836176384415908, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
       propertyPath: m_Name
       value: Snowboi Variant
@@ -83,5 +87,9 @@ PrefabInstance:
       propertyPath: projectiles.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2231836176384415915, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
+      propertyPath: projectiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 7360635972196171824, guid: a77ca9010844bd14ea569aa785a5c318, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48074ff1d302e194393ef395baa8de92, type: 3}
