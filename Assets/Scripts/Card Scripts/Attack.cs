@@ -38,6 +38,10 @@ public class Attack : MonoBehaviour
             endTurnButton.gameObject.SetActive(false);
         }
     }
+    private void OnEnable()
+    {
+        drewThisTurn = false;
+    }
 
     public void endTurn()
     {
@@ -78,7 +82,7 @@ public class Attack : MonoBehaviour
             drewThisTurn = true;
             for (int i = 0; i < gameManager.numCardsToDraw; i++)
             {
-                if (gameManager.playerDeck.Count == 0)
+                if (gameManager.playerDeck.Count <= 0)
                     shuffleDiscard();
                 GameObject g = gameManager.playerDeck[0];
                 gameManager.playerHand.Add(g);

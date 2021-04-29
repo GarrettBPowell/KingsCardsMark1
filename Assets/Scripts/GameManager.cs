@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
             attackButton.gameObject.SetActive(false);
             handDeckUI.enabled = false;
             wantsToAttack = false;
+            playerAttacked = false;
             if(!moveButton.gameObject.activeSelf)
             {
                 if(isMobile)
