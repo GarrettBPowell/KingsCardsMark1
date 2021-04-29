@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
             if (tiles.ContainsKey(enemyMove))
             {
                 tiles.TryGetValue(enemyMove, out tiletoCheck);
-                if (tiletoCheck != null && !tiletoCheck.occupied)
+                if (tiletoCheck != null && !tiletoCheck.getOccupied())
                     moveEnemy = true;
                 else if (!checkSecondPos)
                 {
@@ -142,7 +142,7 @@ public class Enemy : MonoBehaviour
             if (tiles.ContainsKey(enemyMove))
             {
                 tiles.TryGetValue(enemyMove, out tiletoCheck);
-                if (tiletoCheck != null && !tiletoCheck.occupied)
+                if (tiletoCheck != null && !tiletoCheck.getOccupied())
                     moveEnemy = true;
                 else if (!checkSecondPos)
                 {
@@ -186,7 +186,7 @@ public class Enemy : MonoBehaviour
             if (tiles.ContainsKey(enemyMove))
             {
                 tiles.TryGetValue(enemyMove, out tiletoCheck);
-                if (tiletoCheck != null && !tiletoCheck.occupied)
+                if (tiletoCheck != null && !tiletoCheck.getOccupied())
                     moveEnemy = true;
                 else if (!checkSecondPos)
                 {
@@ -211,7 +211,7 @@ public class Enemy : MonoBehaviour
             if (tiles.ContainsKey(enemyMove))
             {
                 tiles.TryGetValue(enemyMove, out tiletoCheck);
-                if (tiletoCheck != null && !tiletoCheck.occupied)
+                if (tiletoCheck != null && !tiletoCheck.getOccupied())
                     moveEnemy = true;
                 else if (!checkSecondPos)
                 {

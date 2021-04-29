@@ -150,7 +150,7 @@ public class cardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             }
             else if (tileDroppedOn.getOccupied())
             {
-                if (Mathf.Abs(Vector2.Distance(worldPosition, gameManager.character.transform.position)) <= c.attackRange)
+                if (Mathf.Abs(Vector2.Distance(tileDroppedOn.transform.position, gameManager.character.transform.position)) <= c.attackRange)
                 {
                     if (tileDroppedOn.getObject() != null && tileDroppedOn.getObject().CompareTag("enemy"))
                     {
