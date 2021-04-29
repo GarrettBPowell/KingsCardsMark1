@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
             attackButton.gameObject.SetActive(false);
             handDeckUI.enabled = false;
             wantsToAttack = false;
+            playerAttacked = false;
             if(!moveButton.gameObject.activeSelf)
             {
                 if(isMobile)
@@ -158,8 +159,10 @@ public class GameManager : MonoBehaviour
                 character.GetComponent<characterStats>().decEffects();
                 decPlayerEffects = false;
             }
-            else if (playerTurn)
+            else if (playerTurn && !decPlayerEffects)
+            {
                 decPlayerEffects = true;
+            }
 
 
             joystick.gameObject.SetActive(false);

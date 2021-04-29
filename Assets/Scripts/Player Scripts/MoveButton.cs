@@ -51,6 +51,7 @@ public class MoveButton : MonoBehaviour
     //basically the button handler - first click activates it to accept tile inputs and store in array - second click executes the movements
     public void changePlayerMove() 
     {
+        gameManager.playerDefense = 0;
         gameObject.GetComponent<Button>().interactable = false;
         gameManager.playerWantsToMove = true;
         if (charStats.wantsToMove)

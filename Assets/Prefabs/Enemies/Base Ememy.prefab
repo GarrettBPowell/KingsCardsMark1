@@ -163,6 +163,8 @@ MonoBehaviour:
   - {fileID: 4863293144466588253, guid: 90210911bb352544399faf89b778b6c1, type: 3}
   - {fileID: 7579628532222930893, guid: 8817880c37f129a4982cf073bc62d5d4, type: 3}
   - {fileID: 1199730086459876895, guid: e81c02960218a004f946ba84ea941129, type: 3}
+  - {fileID: 5269992671676172810, guid: fbf74363dea3ceb458399ff0e0c1ace9, type: 3}
+  - {fileID: 1772213668581695373, guid: 854bb785ee19ee54885f12ee0b6b6fea, type: 3}
   mountainCards: []
   forestCards: []
 --- !u!114 &1576957964507087726
