@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardData:
-  - {fileID: 397522471657736981, guid: 3fdc630307483c649a58c32a46bdc960, type: 3}
+  - {fileID: 9183613101207135077, guid: 962b7d705d0f6764ba6f05d5877d8d80, type: 3}
 --- !u!95 &7650787645048034884
 Animator:
   serializedVersion: 3
