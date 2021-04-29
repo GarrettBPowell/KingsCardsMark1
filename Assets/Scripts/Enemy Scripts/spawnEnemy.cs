@@ -36,7 +36,7 @@ public class spawnEnemy : MonoBehaviour
                     if (tiles.TryGetValue(dictKey, out tileToSpawnOn))
                     {
                         int floor = 1;
-                        if(Random.Range(0,4) == 0)
+                        if(Random.Range(0,10) == 0)
                         {
                             floor = 0;
                         }
